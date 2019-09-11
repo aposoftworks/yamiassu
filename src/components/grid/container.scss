@@ -1,0 +1,11 @@
+
+// Base class
+
+.#{$_container_name} {
+    display: flex;
+    margin: auto;
+    max-width: $__container_size;
+    position: relative;
+}
+
+// Responsivity

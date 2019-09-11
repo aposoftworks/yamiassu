@@ -1,0 +1,23 @@
+/*
+ * Solid main colors
+ */
+
+.#{$_background_name} {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+ * Solid main colors
+ */
+
+ @import "taints";
+
+ /*
+  * Placeholder images
+  */
+
+.#{$_background_name}.#{$_placeholder_name} {
+    background-image: url(https://picsum.photos/1920/1080);
+}

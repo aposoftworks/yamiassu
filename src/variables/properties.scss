@@ -1,0 +1,54 @@
+/*
+ * The default divisions that subdivide the page layout into columns
+ */
+
+$__column_count: 12;
+
+ /*
+ * The breakpoints to be assisted on the responsivity
+ */
+
+$__extra_small_breakpoint: 576px;
+$__small_breakpoint:       768px;
+$__medium_breakpoint:      992px;
+$__large_breakpoint:       1200px;
+$__extra_large_breakpoint: 4000px;
+
+
+ /*
+ * Change the default size of the container, of course you
+ * can define it as a default sizes (such as small or large)
+ */
+
+$__container_size: $__large_breakpoint;
+
+ /*
+ * Font default sizes
+ */
+
+$__font_normal_size: 12px;
+ 
+ /*
+ * Border related settings
+ */
+
+$__border_size: 12px;
+ 
+/*
+* Marging/padding related settings
+*/
+
+$__margin_size:     4px;
+$__padding_size:    4px;
+
+/*
+* The quantity of margins and paddings that will be created by the multiplier loop
+*/
+
+$__loop_count: 9;
+ 
+/*
+* The size multiplier affects the multiplier that guides the responsivity
+*/
+
+$__size_multiplier: 2;

@@ -1,0 +1,9 @@
+// After setting everything up, we should be able to create css variables
+// that will communicate sass with css
+
+// Color variables
+:root {
+    @each $key, $color in $final_colors {
+        --#{$key}: #{$color};
+    }
+}

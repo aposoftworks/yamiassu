@@ -1,0 +1,45 @@
+/*
+ * Let appropriate borders be created around certain elements.
+ */
+
+$__use_rounded:     true;
+
+/*
+ * Enable conceptual transitions to create simple animations to smooth
+ * the use of the framework
+ */
+
+$__use_transitions: true;
+
+/*
+ * Use the entire word or just its abbreviation.
+ *
+ * PS: This will be ignored if you use a custom naming
+ */
+
+$__use_abbreviation: true;
+
+/*
+ * Have imported some default images that may help you quickstart your
+ * project for later change
+ */
+
+$__use_placeholders: true;
+
+/*
+ * You can use a custom naming convetion leading to another file.
+ * And leave the configuration alone if you wish to easily toggle between
+ * the both.
+ *
+ * PS: Leave empty to use the default naming
+ */
+
+$__custom_naming: "custom/naming.scss";
+
+/*
+ * You can preset some default fonts for starters, if not set.
+ * Those values will be set by us.
+ */
+
+$__default_font: "Oxygen";
+$__titling_font: "Oxygen";

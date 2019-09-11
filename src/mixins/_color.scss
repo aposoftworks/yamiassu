@@ -1,0 +1,31 @@
+@mixin taint ($color, $opacity: 0.5) {
+    &:before {
+        //variable
+        background: print_var($color);
+        opacity: $opacity;
+
+        //static
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+@mixin gradient_taint ($color, $opacity: 0.5) {
+    &:before {
+        //variable
+        background: $color;
+        opacity: $opacity;
+
+        //static
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}

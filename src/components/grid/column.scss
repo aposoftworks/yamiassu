@@ -1,0 +1,50 @@
+
+// Base class
+
+.#{$_column_name} {
+    // General
+    display: flex;
+    flex-direction: column;
+    background-color: $light_color;
+    min-height: $__font_normal_size;
+    flex-grow: 1;
+    width: 100%;
+
+    // Padding
+    &:not(.#{$_padless_name}) {
+        padding: 12px;
+    }
+
+    // Border
+    @if ($__use_rounded) {
+        border-radius: $__border_size;
+    }
+
+    //Default sizing
+    @include media_size();
+
+    //Calculate grid size based on screen size - extra small
+    &-#{$_extra_small_name} {
+        @include media_size($__column_count);
+    }
+    
+    //Calculate grid size based on screen size - small
+    &-#{$_small_name} {
+        @include media_size(1, $__column_count);
+    }
+    
+    //Calculate grid size based on screen size - medium
+    &-#{$_medium_name} {
+        @include media_size(1, 1, $__column_count);
+    }
+    
+    //Calculate grid size based on screen size - large
+    &-#{$_large_name} {
+        @include media_size(1, 1, 1, $__column_count);
+    }
+    
+    //Calculate grid size based on screen size - extra large
+    &-#{$_extra_large_name} {
+        @include media_size(1, 1, 1, 1, $__column_count);
+    }
+}

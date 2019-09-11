@@ -1,0 +1,50 @@
+// Grid
+$_column_name:              if($__use_abbreviation, "bc",   "block");
+$_column_offset_name:       if($__use_abbreviation, "os",   "offset");
+$_container_name:           if($__use_abbreviation, "cntr", "container");
+$_row_name:                 if($__use_abbreviation, "shf",  "shelf");
+
+// Text
+$_text_name:                if($__use_abbreviation, "tx",   "text");
+$_font_name:                if($__use_abbreviation, "fnt",  "font");
+$_title_name:               if($__use_abbreviation, "ttl",  "title");
+
+// Responsivity
+$_extra_small_name:         if($__use_abbreviation, "xs",   "extra-small");
+$_small_name:               if($__use_abbreviation, "sm",   "small");
+$_medium_name:              if($__use_abbreviation, "md",   "medium");
+$_large_name:               if($__use_abbreviation, "lg",   "large");
+$_extra_large_name:         if($__use_abbreviation, "xl",   "extra-large");
+
+// Responsivity - general
+$_emulate_name:             if($__use_abbreviation, "em",   "emulate");
+$_breakpoint_name:          if($__use_abbreviation, "bkpt", "breakpoint");
+
+// Aligment
+
+// Padding
+$_padding_name:             if($__use_abbreviation, "pd",   "padding");
+$_padless_name:             if($__use_abbreviation, "pl",   "padless");
+
+// Positioning
+$_top_name:                 if($__use_abbreviation, "tp",   "top");
+$_bottom_name:              if($__use_abbreviation, "bt",   "bottom");
+$_left_name:                if($__use_abbreviation, "lf",   "left");
+$_right_name:               if($__use_abbreviation, "rg",   "right");
+
+// Background
+$_background_name:          if($__use_abbreviation, "bg",   "background");
+$_taint_name:               if($__use_abbreviation, "tnt",  "taint");
+
+// General
+$_placeholder_name:         if($__use_abbreviation, "ph",   "placeholder");
+$_gradient_name:            if($__use_abbreviation, "gdnt", "gradient");
+
+// Coloring
+$_primary_name:             if($__use_abbreviation, "pmr",  "primary");
+$_secondary_name:           if($__use_abbreviation, "sdr",  "secondary");
+$_success_name:             if($__use_abbreviation, "scss", "success");
+$_danger_name:              if($__use_abbreviation, "dngr", "danger");
+$_warning_name:             if($__use_abbreviation, "wng",  "warning");
+$_light_name:               if($__use_abbreviation, "lgt",  "light");
+$_dark_name:                if($__use_abbreviation, "drk",  "dark");

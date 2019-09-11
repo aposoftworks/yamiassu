@@ -1,0 +1,9 @@
+// default font
+* {
+    font-family: $__default_font, "sans-serif";
+}
+
+// default title font
+h1,h2,h3,h4,h5,h6,.#{$_title_name} {
+    font-family: if(variable-exists($__titling_font), $__titling_font, $__default_font), "sans-serif";
+}

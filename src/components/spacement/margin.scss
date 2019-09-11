@@ -1,0 +1,29 @@
+.#{$_margin_name} {
+    //Default sizing
+    @include margin_count();
+
+    //Calculate grid size based on screen size - extra small
+    &-#{$_extra_small_name} {
+        @include margin_size($__margin_size, $__margin_size * $__size_multiplier, $__margin_size * $__size_multiplier * 2, $__margin_size * $__size_multiplier * 3, $__margin_size * $__size_multiplier * 4);
+    }
+    
+    //Calculate grid size based on screen size - small
+    &-#{$_small_name} {
+        @include margin_size($__margin_size / $__size_multiplier, $__margin_size, $__margin_size * $__size_multiplier, $__margin_size * $__size_multiplier * 2, $__margin_size * $__size_multiplier * 3);
+    }
+    
+    //Calculate grid size based on screen size - medium
+    &-#{$_medium_name} {
+        @include margin_size($__margin_size / ($__size_multiplier * 2), $__margin_size / $__size_multiplier, $__margin_size, $__margin_size * $__size_multiplier, $__margin_size * $__size_multiplier * 2 );
+    }
+    
+    //Calculate grid size based on screen size - large
+    &-#{$_large_name} {
+        @include margin_size($__margin_size / ($__size_multiplier * 3), $__margin_size / ($__size_multiplier * 2), $__margin_size / $__size_multiplier, $__margin_size, $__margin_size * $__size_multiplier);
+    }
+    
+    //Calculate grid size based on screen size - extra large
+    &-#{$_extra_large_name} {
+        @include margin_size($__margin_size / ($__size_multiplier * 4), $__margin_size / ($__size_multiplier * 3), $__margin_size / ($__size_multiplier * 2), $__margin_size / $__size_multiplier, $__margin_size);
+    }
+}

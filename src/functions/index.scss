@@ -1,0 +1,9 @@
+//Simple function to clamp a number within a certain range
+@function clamp ($number, $max: 100, $min: 0) {
+    @return min(max($number, $max), $min);
+}
+
+//Print the sass variable as a css variable
+@function print_var ($variable) {
+    @return var(--#{$variable});
+}
