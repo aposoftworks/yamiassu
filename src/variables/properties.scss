@@ -4,6 +4,14 @@
 
 $__column_count: 12;
 
+/*
+ * This value is responsible for gluing values to near to the column count limit
+ * into the actual limit. If you want to disable this feature, place down the
+ * value 100.
+ */
+
+$__fill_size_threshold: 50;
+
  /*
  * The breakpoints to be assisted on the responsivity
  */
@@ -12,7 +20,6 @@ $__extra_small_breakpoint: 576px;
 $__small_breakpoint:       768px;
 $__medium_breakpoint:      992px;
 $__large_breakpoint:       1200px;
-$__extra_large_breakpoint: 4000px;
 
 
  /*

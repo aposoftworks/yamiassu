@@ -22,22 +22,22 @@
     }
 
     //Small
-    @media screen and (min-width: $__small_breakpoint) and (max-width: $__medium_breakpoint) {
+    @media screen and (min-width: $__extra_small_breakpoint) and (max-width: $__small_breakpoint) {
         @include margin_count($sm);
     }
 
     //Medium
-    @media screen and (min-width: $__medium_breakpoint) and (max-width: $__large_breakpoint) {
+    @media screen and (min-width: $__small_breakpoint) and (max-width: $__medium_breakpoint) {
         @include margin_count($md);
     }
 
     //Large
-    @media screen and (min-width: $__large_breakpoint) and (max-width: $__extra_large_breakpoint) {
+    @media screen and (min-width: $__medium_breakpoint) and (max-width: $__large_breakpoint) {
         @include margin_count($lg);
     }
 
     //Extra large
-    @media screen and (min-width: $__extra_large_breakpoint) {
+    @media screen and (min-width: $__large_breakpoint) {
         @include margin_count($xl);
     }
 }

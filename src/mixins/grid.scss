@@ -1,31 +1,42 @@
-@mixin column_count ($column_count: $__column_count) {
+@mixin column_count ($column_count) {
 
     //Calculate grid size
-    @for $col from 1 to round($column_count) {
+    @for $col from 1 to $__column_count {
+        @if ($col == 1) {
+            & {
+                width: 100%;
+            }
+        }
+
         &-#{$col} {
-            width: (100% / $column_count) * $col;
+            @if ((100% / $column_count) * $col < $__fill_size_threshold) {
+                width: (100% / $column_count) * $col;
+            }
+            @else {
+                width: 100%;
+            }
         }
     }
 }
 
 @mixin media_size ($xs:$__column_count, $sm:$__column_count, $md:$__column_count, $lg:$__column_count, $xl:$__column_count) {
     @media screen and (max-width: $__extra_small_breakpoint) {
-        @include column_count(ceil(clamp($xs, $__column_count, 1)));
+        @include column_count(fill_size($xs));
+    }
+
+    @media screen and (min-width: $__extra_small_breakpoint) and (max-width: $__small_breakpoint) {
+        @include column_count(fill_size($sm));
     }
 
     @media screen and (min-width: $__small_breakpoint) and (max-width: $__medium_breakpoint) {
-        @include column_count(ceil(clamp($sm, $__column_count, 1)));
+        @include column_count(fill_size($md));
     }
 
     @media screen and (min-width: $__medium_breakpoint) and (max-width: $__large_breakpoint) {
-        @include column_count(ceil(clamp($md, $__column_count, 1)));
+        @include column_count(fill_size($lg));
     }
 
-    @media screen and (min-width: $__large_breakpoint) and (max-width: $__extra_large_breakpoint) {
-        @include column_count(ceil(clamp($lg, $__column_count, 1)));
-    }
-
-    @media screen and (min-width: $__extra_large_breakpoint) {
-        @include column_count(ceil(clamp($xl, $__column_count, 1)));
+    @media screen and (min-width: $__large_breakpoint) {
+        @include column_count(fill_size($xl));
     }
 }

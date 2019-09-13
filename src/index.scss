@@ -32,26 +32,10 @@
 @import "https://fonts.googleapis.com/css?family=Oxygen";
 @import "components/fonts";
 
-// Grid
+// Components
 //##########################
 
-@import "components/grid";
-
-// Spacement
-//##########################
-
-@import "components/spacement";
-
-// Alignment
-//##########################
-
-@import "components/alignment/text";
-
-// Background
-//##########################
-
-@import "components/backgrounds";
-
+@import "components";
 
 // Finish booting everything up
 //##########################

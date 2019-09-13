@@ -1,9 +1,23 @@
 //Simple function to clamp a number within a certain range
 @function clamp ($number, $max: 100, $min: 0) {
-    @return min(max($number, $max), $min);
+    @return if($number < $min, $min, if($number > $max, $max, $number));
 }
 
 //Print the sass variable as a css variable
 @function print_var ($variable) {
     @return var(--#{$variable});
+}
+
+/*
+ * fill_size is responsible for making sizes to near to the limit actually become the limit,
+ * you can tweak this change with the fill_size_threshold
+ */
+@function fill_size ($size) {
+    $ceiled: ceil(clamp($size, $__column_count, 1));
+
+    @if ($ceiled / $__column_count * 100 > $__fill_size_threshold) {
+        @return $__column_count;
+    }
+
+    @return $ceiled;
 }

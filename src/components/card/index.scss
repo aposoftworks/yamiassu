@@ -1,0 +1,14 @@
+// Base class
+.#{$_card_name} {
+    background-color: $light_color;
+
+    // Padding
+    &:not(.#{$_padless_name}) {
+        padding: 12px;
+    }
+
+    // Border
+    @if ($__use_rounded) {
+        border-radius: $__border_size;
+    }
+}
