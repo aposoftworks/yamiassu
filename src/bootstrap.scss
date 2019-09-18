@@ -1,9 +1,58 @@
-// After setting everything up, we should be able to create css variables
-// that will communicate sass with css
 
-// Color variables
-:root {
-    @each $key, $color in $final_colors {
-        --#{$key}: #{$color};
+//-------------------------------------------------
+// Serialization functions
+//-------------------------------------------------
+
+
+// Serialized variables (we keep this data so they won't be serialized twice)
+$bootstrap_variables: ();
+
+// Get a serialized variable
+@function get_var ($key) {
+    // Default response
+    @return var(--#{$key});
+}
+
+// Special function that converts a serialized var back to its normal value
+@function get_raw ($key) {
+    @return map-get($bootstrap_variables, $key);
+}
+
+// Insert a variable for serialization
+@function set_var ($key, $value) {
+    // Serialize
+    $bootstrap_variables: map-merge($bootstrap_variables, ($key:$value)) !global;
+    
+    // Return the actual value
+    @return get_var($key);
+}
+
+// Print to a context all the variables saved
+@mixin print_var {
+    :root {
+        @each $key, $var in $bootstrap_variables {
+            $is_map: map_to_gradient(get_raw($key));
+            
+            // Map type
+            @if ($is_map != false) {
+                --#{$key}: #{$is_map};
+            }
+            // Base type
+            @else {
+                --#{$key}: #{$var};
+            }
+        }
     }
+}
+
+//-------------------------------------------------
+// color functions
+//-------------------------------------------------
+
+@function lighten_color ($key, $value) {
+    @return var(--#{lighten(map-get($bootstrap_variables, $key), $value)});
+}
+
+@function darken_color ($key, $value) {
+    @return var(--#{darken(map-get($bootstrap_variables, $key), $value)});
 }

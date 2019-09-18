@@ -11,17 +11,190 @@
     </head>
 
     <body>
-        <div class="background taint-primary-gradient placeholder" style="height: 100vh">
+        <div class="background taint-primary-gradient placeholder fullscreen">
             <div class="container">
                 <div class="block">
                     <div class="card">
-                        <button class="button-primary">Hey</button>
-                        <button class="button-secondary">Hey</button>
-                        <button class="button-success">Hey</button>
-                        <button class="button-warning">Hey</button>
-                        <button class="button-danger">Hey</button>
-                        <button class="button-light">Hey</button>
-                        <button class="button-dark">Hey</button>
+                        <h1>Grid</h1>
+
+                        <section class="block sample text-center">
+                            <div class="block background taint-secondary">
+                                BLOCK-12
+                            </div>
+                            <div class="block-6 background taint-secondary">
+                                BLOCK-6
+                            </div>
+                            <div class="block-6 background taint-secondary">
+                                BLOCK-6
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                            <div class="block-1 background taint-secondary">
+                                BLOCK-01
+                            </div>
+                        </section>
+
+                        <h1>Offset</h1>
+
+                        <section class="block sample">
+                                <div class="block-6 push-6 background taint-secondary">
+                                    BLOCK-6 OFFSET-6
+                                </div>
+                                <div class="block-2 background taint-secondary">
+                                    BLOCK-2
+                                </div>
+                                <div class="block-2 push-8 background taint-secondary">
+                                    BLOCK-2 OFFSET-8
+                                </div>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="card">
+                        <h1>Headers</h1>
+
+                        <section class="block padding-1 sample">
+                            <h1>Header 1</h1>
+                            <h2>Header 2</h2>
+                            <h3>Header 3</h3>
+                            <h4>Header 4</h4>
+                            <h5>Header 5</h5>
+                            <h6>Header 6</h6>
+                        </section>
+
+                        <h1>Titles</h1>
+
+                        <section class="block sample">
+                            <h1 class="title">Title</h1>
+                        </section>
+
+                        <h1>Sub titles</h1>
+
+                        <section class="block sample" title="code sample">
+                            <h1 class="subtitle">Subtitle</h1>
+                        </section>
+                    </div>
+                </div>
+
+
+                <div class="block">
+                    <div class="card">
+                        <h1>Buttons</h1>
+
+                        <h2>Main types</h2>
+
+                        <div class="block">
+                            <button class="button-primary">Primary button</button>
+                            <button class="button-secondary">Secondary button</button>
+                            <button class="button-success">Success button</button>
+                            <button class="button-warning">Warning button</button>
+                            <button class="button-danger">Danger button</button>
+                            <button class="button-light">Light button</button>
+                            <button class="button-dark">Dark button</button>
+                        </div>
+
+                        <h2>Line types</h2>
+
+                        <div class="block">
+                            <button class="button-primary-line">Primary button</button>
+                            <button class="button-secondary-line">Secondary button</button>
+                            <button class="button-success-line">Success button</button>
+                            <button class="button-warning-line">Warning button</button>
+                            <button class="button-danger-line">Danger button</button>
+                            <button class="button-light-line">Light button</button>
+                            <button class="button-dark-line">Dark button</button>
+                        </div>
+
+                        <h2>Gradient types</h2>
+
+                        <div class="block">
+                            <button class="button-primary-gradient">Primary button</button>
+                            <button class="button-secondary-gradient">Secondary button</button>
+                            <button class="button-success-gradient">Success button</button>
+                            <button class="button-warning-gradient">Warning button</button>
+                            <button class="button-danger-gradient">Danger button</button>
+                            <button class="button-light-gradient">Light button</button>
+                            <button class="button-dark-gradient">Dark button</button>
+                        </div>
+
+                        <h2>Grouping</h2>
+
+                        <div class="block">
+                            <button class="button-primary group">Primary button</button>
+                            <button class="button-secondary group">Secondary button</button>
+                            <button class="button-success group">Success button</button>
+                        </div>
+                        
+                        <h2>Rounded</h2>
+                        
+                        <div class="block">
+                            <button class="button-primary round">Primary button</button>
+                        </div>
+                        
+                        <h2>Flat</h2>
+                        
+                        <div class="block">
+                            <button class="button-primary-gradient flat">Primary button</button>
+                        </div>
+                        
+                        <h2>Disabled</h2>
+                        
+                        <div class="block">
+                            <button class="button-primary" disabled>Primary button</button>
+                        </div>
+                        
+                        <h2>Icon</h2>
+                        
+                        <div class="block">
+                            <button class="button-primary icon">i</button>
+                            <button class="button-primary icon-2">i</button>
+                            <button class="button-primary icon-3">i</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="card">
+                        <h1>Inputs</h1>
+
+                        <div class="block">
+                            <div class="form-group">
+                                <label>input label</label>
+                                <input class="form-input" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

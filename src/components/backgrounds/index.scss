@@ -8,11 +8,12 @@
     background-position: center;
 }
 
-/*
- * Solid main colors
- */
+.#{$_fullscreen_name} {
+    min-height: 100vh;
+}
 
- @import "taints";
+// Imports
+@import "taints";
 
  /*
   * Placeholder images

@@ -1,0 +1,26 @@
+// Grouping
+.#{$_form_name}-#{$_group_name} {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    // Label
+    label {
+        width: 100%;
+        padding: $__padding_size;
+        margin-left: $__margin_size * 2;
+        margin-bottom: $__margin_size * 2;
+    }
+
+    // Input
+    input.#{$_form_name}-#{$_input_name} {
+        width: 100%;
+        padding: $__padding_size * 2;
+        border: 2px solid print_var("primary_color");
+
+        // Border
+        //&.#{$}
+
+        @include round_border;
+    }
+}

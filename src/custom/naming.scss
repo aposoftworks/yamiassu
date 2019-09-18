@@ -1,61 +1,76 @@
 // Grid
-$_column_name:              "block";
-$_column_offset_name:       "offset";
-$_container_name:           "container";
-$_row_name:                 "shelf";
+$_column_name:              "block"     !default;
+$_column_offset_name:       "push"      !default;
+$_container_name:           "container" !default;
+$_row_name:                 "shelf"     !default;
 
 // Text
-$_text_name:                "text";
-$_font_name:                "font";
-$_title_name:               "title";
-$_subtitle_name:            "subtitle";
+$_text_name:                "text"      !default;
+$_font_name:                "font"      !default;
+$_title_name:               "title"     !default;
+$_subtitle_name:            "subtitle"  !default;
 
 // Responsivity
-$_extra_small_name:         "xs";
-$_small_name:               "sm";
-$_medium_name:              "md";
-$_large_name:               "lg";
-$_extra_large_name:         "xl";
+$_extra_small_name:         "xs"        !default;
+$_small_name:               "sm"        !default;
+$_medium_name:              "md"        !default;
+$_large_name:               "lg"        !default;
+$_extra_large_name:         "xl"        !default;
 
 // Responsivity - general
-$_emulate_name:             "emulate";
-$_breakpoint_name:          "breakpoint";
+$_emulate_name:             "emulate"       !default;
+$_breakpoint_name:          "breakpoint"    !default;
 
 // Aligment
 
 // Padding
-$_padding_name:             "padding";
-$_padless_name:             "padless";
+$_padding_name:             "padding"   !default;
+$_padless_name:             "padless"   !default;
 
 // Margin
-$_margin_name:              "margin";
-$_marginless_name:          "marginless";
+$_margin_name:              "margin"        !default;
+$_marginless_name:          "marginless"    !default;
 
 // Positioning
-$_top_name:                 "top";
-$_bottom_name:              "bottom";
-$_left_name:                "left";
-$_right_name:               "right";
-$_center_name:              "center";
-$_middle_name:              "middle";
+$_top_name:                 "top"           !default;
+$_bottom_name:              "bottom"        !default;
+$_left_name:                "left"          !default;
+$_right_name:               "right"         !default;
+$_center_name:              "center"        !default;
+$_middle_name:              "middle"        !default;
 
 // Background
-$_background_name:          "background";
-$_taint_name:               "taint";
+$_background_name:          "background"    !default;
+$_taint_name:               "taint"         !default;
 
 // General
-$_placeholder_name:         "placeholder";
-$_gradient_name:            "gradient";
-$_card_name:                "card";
-$_header_name:              "header";
-$_footer_name:              "footer";
-$_button_name:              "button";
+$_placeholder_name:         "placeholder"   !default;
+$_gradient_name:            "gradient"      !default;
+$_card_name:                "card"          !default;
+$_header_name:              "header"        !default;
+$_footer_name:              "footer"        !default;
+$_button_name:              "button"        !default;
+$_active_name:              "active"        !default;
+$_group_name:               "group"         !default;
+$_disabled_name:            "disabled"      !default;
+$_round_name:               "round"         !default;
+$_flat_name:                "flat"          !default;
+$_icon_name:                "icon"          !default;
+$_fullscreen_name:          "fullscreen"    !default;
+$_sample_name:              "sample"        !default;
+$_line_name:                "line"          !default;
+
+// Form
+$_form_name:                "form"          !default;
+$_input_name:               "input"         !default;
+$_select_name:              "select"        !default;
+$_textarea_name:            "textarea"      !default;
 
 // Coloring
-$_primary_name:             "primary";
-$_secondary_name:           "secondary";
-$_success_name:             "success";
-$_danger_name:              "danger";
-$_warning_name:             "warning";
-$_light_name:               "light";
-$_dark_name:                "dark";
+$_primary_name:             "primary"   !default;
+$_secondary_name:           "secondary" !default;
+$_success_name:             "success"   !default;
+$_danger_name:              "danger"    !default;
+$_warning_name:             "warning"   !default;
+$_light_name:               "light"     !default;
+$_dark_name:                "dark"      !default;

@@ -3,47 +3,22 @@
  * Solid main colors
  */
 
-$primary_color:     #2d0f55;
-$secondary_color:   #3c5d9e;
-$success_color:     #06424c;
-$danger_color:      #a2577e;
-$warning_color:     #da657b;
-$light_color:       #eeebf1;
-$dark_color:        #2e2737;
+$primary_color:     set_var("primary_color",    #2d0f55);
+$secondary_color:   set_var("secondary_color",  #3c5d9e);
+$success_color:     set_var("success_color",    #06424c);
+$danger_color:      set_var("danger_color",     #a2577e);
+$warning_color:     set_var("warning_color",    #da657b);
+$light_color:       set_var("light_color",      #eeebf1);
+$dark_color:        set_var("dark_color",       #2e2737);
 
 /*
  * Gradient main colors
  */
-$primary_gradient_color:    linear-gradient(to bottom, #462273, #100020);
-$secondary_gradient_color:  linear-gradient(to bottom, #6987c4, #1c3971);
-$success_gradient_color:    linear-gradient(to bottom, #378e9d, #04353d);
-$danger_gradient_color:     linear-gradient(to bottom, #bd8181, #712c4f);
-$warning_gradient_color:    linear-gradient(to bottom, #df7185, #c0475d);
-$light_gradient_color:      linear-gradient(to bottom, #dcdadf, #6a5f77);
-$dark_gradient_color:       linear-gradient(to bottom, #544d5e, #000000);
 
-/*
- * Extra colors
- */
-
-$glass_special_color: ();
-
-/*
- * Colors to be serialized into css
- */
-$final_colors: (
-    "primary_color":    $primary_color,
-    "secondary_color":  $secondary_color,
-    "success_color":    $success_color,
-    "danger_color":     $danger_color,
-    "warning_color":    $warning_color,
-    "light_color":      $light_color,
-    "dark_color":       $dark_color,
-    "primary_gradient_color":   $primary_gradient_color,
-    "secondary_gradient_color": $secondary_gradient_color,
-    "success_gradient_color":   $success_gradient_color,
-    "danger_gradient_color":    $danger_gradient_color,
-    "warning_gradient_color":   $warning_gradient_color,
-    "light_gradient_color":     $light_gradient_color,
-    "dark_gradient_color":      $dark_gradient_color,
-);
+$primary_gradient_color:    set_var("primary_gradient_color",   create_gradient(to bottom, #462273, #2c104e));
+$secondary_gradient_color:  set_var("secondary_gradient_color", create_gradient(to bottom, #6987c4, #4c69a5));
+$success_gradient_color:    set_var("success_gradient_color",   create_gradient(to bottom, #378e9d, #236a77));
+$danger_gradient_color:     set_var("danger_gradient_color",    create_gradient(to bottom, #bd8181, #a55757));
+$warning_gradient_color:    set_var("warning_gradient_color",   create_gradient(to bottom, #df7185, #be4b60));
+$light_gradient_color:      set_var("light_gradient_color",     create_gradient(to bottom, #ffffff, #eeeeee));
+$dark_gradient_color:       set_var("dark_gradient_color",      create_gradient(to bottom, #423c4b, #242121));

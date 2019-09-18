@@ -4,7 +4,8 @@
 [class*=#{$_column_name}] {
     // General
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     min-height: $__font_normal_size;
 
     // Padding

@@ -1,6 +1,9 @@
 // Base class
 .#{$_card_name} {
     background-color: $light_color;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
     // Padding
     &:not(.#{$_padless_name}) {

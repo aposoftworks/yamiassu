@@ -1,0 +1,21 @@
+//Default icon properties
+[class*=#{$_icon_name}][class*=#{$_button_name}] {
+    border-radius: 50%;
+    width: $__font_normal_size * 2;
+    height: $__font_normal_size * 2;
+    line-height: $__font_normal_size * 2;
+    padding: 0;
+
+}
+
+//Sizing icons
+[class*=#{$_button_name}].#{$_icon_name} {
+    @for $i from 2 to $__loop_count {
+        &-#{($i - 1)} {
+            width: $__font_normal_size * $i;
+            height: $__font_normal_size * $i;
+            line-height: $__font_normal_size * $i;
+            font-size: $__font_normal_size * ($i - 1);
+        }
+    }
+}

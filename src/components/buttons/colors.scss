@@ -1,0 +1,213 @@
+
+
+// Coloring
+.#{$_button_name} {
+    /*
+     * Solid main colors
+     */
+
+    &-#{$_primary_name} {
+        color: white;
+        background: get_var("primary_color");
+        @include taint("primary_color");
+        
+        &:hover:not([disabled]) {
+            background: lighten_color("primary_color", 20%);
+            box-shadow: 0px 0px 3px 1px get_var("primary_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_secondary_name} {
+        color: white;
+        background: get_var("secondary_color");
+        @include taint("secondary_color");
+        
+        &:hover:not([disabled]) {
+            background: lighten_color("secondary_color", 20%);
+            box-shadow: 0px 0px 3px 1px get_var("secondary_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_success_name} {
+        color: white;
+        background: get_var("success_color");
+        @include taint("success_color");
+        
+        &:hover:not([disabled]) {
+            background: lighten_color("success_color", 20%);
+            box-shadow: 0px 0px 3px 1px get_var("success_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_warning_name} {
+        color: white;
+        background: get_var("warning_color");
+        @include taint("warning_color");
+        
+        &:hover:not([disabled]) {
+            background: lighten_color("warning_color", 20%);
+            box-shadow: 0px 0px 3px 1px get_var("warning_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_danger_name} {
+        color: white;
+        background: get_var("danger_color");
+        @include taint("danger_color");
+        
+        &:hover:not([disabled]) {
+            background: lighten_color("danger_color", 20%);
+            box-shadow: 0px 0px 3px 1px get_var("danger_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_light_name} {
+        background: lighten_color("light_color", 50%);
+        @include taint("light_color");
+        
+        &:hover:not([disabled]) {
+            background: lighten_color("light_color", 20%);
+            box-shadow: 0px 0px 3px 1px lighten_color("light_color", 50%);
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_dark_name} {
+        color: white;
+        background: get_var("dark_color");
+        @include taint("dark_color");
+        
+        &:hover:not([disabled]) {
+            background: darken_color("dark_color", 10%);
+            box-shadow: 0px 0px 3px 1px get_var("dark_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    /*
+    * Gradient main colors
+    */
+
+    &-#{$_primary_name}-#{$_gradient_name} {
+        color: white;
+        background: get_var("primary_gradient_color");
+        @include taint("primary_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px get_var("primary_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_secondary_name}-#{$_gradient_name} {
+        color: white;
+        background: get_var("secondary_gradient_color");
+        @include taint("secondary_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px get_var("secondary_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_success_name}-#{$_gradient_name} {
+        color: white;
+        background: get_var("success_gradient_color");
+        @include taint("success_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px get_var("success_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_warning_name}-#{$_gradient_name} {
+        color: white;
+        background: get_var("warning_gradient_color");
+        @include taint("warning_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px get_var("warning_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_danger_name}-#{$_gradient_name} {
+        color: white;
+        background: get_var("danger_gradient_color");
+        @include taint("danger_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px get_var("danger_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_light_name}-#{$_gradient_name} {
+        background: get_var("light_gradient_color");
+        @include taint("light_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px lighten_color("light_color", 10%);
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+
+    &-#{$_dark_name}-#{$_gradient_name} {
+        color: white;
+        background: get_var("dark_gradient_color");
+        @include taint("dark_gradient_color");
+        
+        &:hover:not([disabled]) {
+            box-shadow: 0px 0px 3px 1px get_var("dark_color");
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+}

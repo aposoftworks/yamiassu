@@ -1,0 +1,34 @@
+.#{$_text_name} {
+    // Left
+    &-#{$_left_name} {
+        text-align: left;
+    }
+
+    // Center
+    &-#{$_center_name} {
+        text-align: center;
+    }
+
+    // Right
+    &-#{$_right_name} {
+        text-align: right;
+    }
+
+    // Media cases
+    @include media {
+        // Left
+        &-#{$_left_name} {
+            text-align: left;
+        }
+    
+        // Center
+        &-#{$_center_name} {
+            text-align: center;
+        }
+    
+        // Right
+        &-#{$_right_name} {
+            text-align: right;
+        }
+    }
+}

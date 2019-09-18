@@ -3,11 +3,6 @@
     @return if($number < $min, $min, if($number > $max, $max, $number));
 }
 
-//Print the sass variable as a css variable
-@function print_var ($variable) {
-    @return var(--#{$variable});
-}
-
 /*
  * fill_size is responsible for making sizes to near to the limit actually become the limit,
  * you can tweak this change with the fill_size_threshold
@@ -21,3 +16,6 @@
 
     @return $ceiled;
 }
+
+// Imports
+@import "color";

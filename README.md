@@ -25,6 +25,10 @@ If you ever need to fit this framework into a different scope, you may do so edi
 
 ## Conventions
 
+### File conventions
+To keep things organized, and easy to find, we created a simple set of rules to follow:
+- Imports can only be made in index files
+
 ### Naming conventions
 
 When creating variables, we have certain rules to maintain readability, such as follows:

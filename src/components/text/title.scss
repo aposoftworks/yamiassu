@@ -1,0 +1,35 @@
+//Title
+.#{$_title_name} {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    
+    &:after {
+        content: "";
+        border-bottom: 2px solid black;
+        position: relative;
+        display: inline-block;
+        flex-grow: 1;
+        margin: 0 20px;
+        transform: translate(0, -15px);
+    }
+}
+
+//Subtitle
+.#{$_subtitle_name} {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    
+    &:before,&:after {
+        content: "";
+        border-bottom: 2px solid black;
+        position: relative;
+        display: inline-block;
+        flex-grow: 1;
+        margin: 0 20px;
+        transform: translate(0, -15px);
+    }
+}

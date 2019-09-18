@@ -1,11 +1,12 @@
 @mixin taint ($color, $opacity: 0.5) {
     &:before {
         //variable
-        background: print_var($color);
+        background: get_var($color);
         opacity: $opacity;
 
         //static
         content: "";
+        pointer-events: none;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -19,9 +20,10 @@
         //variable
         background: $color;
         opacity: $opacity;
-
+        
         //static
         content: "";
+        pointer-events: none;
         position: absolute;
         width: 100%;
         height: 100%;

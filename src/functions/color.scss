@@ -1,0 +1,37 @@
+/*
+ * Check if the map is a valid gradient
+ */
+
+@function map_to_gradient ($map) {
+    // We don't care about the value, its not a map
+    @if (type-of($map) != "map") {
+        @return false;
+    }
+
+    @if (map-get($map, "type") == "gradient") {
+        @return print_gradient($map);
+    }
+
+    // Not valid gradient
+    @return false;
+}
+
+/*
+ * Create a standard map gradient to be used in serialization
+ */
+
+@function create_gradient ($direction, $colors...) {
+    @return (
+        "colors":$colors,
+        "type":"gradient",
+        "direction":$direction
+    );
+}
+
+/*
+ * Create a standard map gradient to be used in serialization
+ */
+
+@function print_gradient ($gradient) {
+    @return linear-gradient(map-get($gradient, "direction"), map-get($gradient, "colors"));
+}

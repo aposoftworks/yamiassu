@@ -1,3 +1,9 @@
+// Bootstrap is responsible for handling variable serialization
+// and start css modularization
+//##########################
+
+@import "bootstrap";
+
 // Properties
 //##########################
 
@@ -37,7 +43,5 @@
 
 @import "components";
 
-// Finish booting everything up
-//##########################
-
-@import "bootstrap";
+// Finish Yamiassu with the actual variable instanciation
+@include print_var;

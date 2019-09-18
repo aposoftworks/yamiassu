@@ -1,0 +1,28 @@
+// Button grouping
+.#{$_group_name}[class*=#{$_button_name}] {
+
+    // First element
+    &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-right: 0;
+    }
+
+    // Middle elements
+    &:not(:last-child):not(:first-child) {
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+        
+        &:before {
+            border-radius: 0;
+        }
+    }
+    
+    // First element
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+    }
+}

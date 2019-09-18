@@ -3,6 +3,7 @@
     padding: 10px 20px;
     position: relative;
     transition: all .2s;
+    margin: $__margin_size;
 
     // Fix problem due to indexing
     &:before {
@@ -19,149 +20,44 @@
         }
     }
 
+    // Force rounding
+    &.#{$_round_name} {
+        border-radius: $__border_size;
+
+        //Prepare the before element for being rounded
+        &:before {
+            border-radius: $__border_size;
+        }
+    }
+    
+    // Force no border radius
+    &.#{$_flat_name} {
+        border-radius: 0;
+
+        //Prepare the before element for being flat
+        &:before {
+            border-radius: 0;
+        }
+    }
+
+    // Disabled properties
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
 }
 
 // Coloring
-.#{$_button_name} {
-    /*
-     * Solid main colors
-     */
+@import "colors";
 
-    &-#{$_primary_name} {
-        color: white;
-        background: print_var("primary_color");
-        @include taint("primary_color");
-        
-        &:hover {
-            background: lighten($primary_color, 20%);
-            box-shadow: 0px 0px 3px 1px print_var("primary_color");
-        }
+// Grouping
+@import "grouping";
 
-        &:active {
-            box-shadow: none;
-        }
-    }
+// Circle
+@import "icon";
 
-    &-#{$_secondary_name} {
-        color: white;
-        background: print_var("secondary_color");
-        @include taint("secondary_color");
-        
-        &:hover {
-            background: lighten($secondary_color, 20%);
-            box-shadow: 0px 0px 3px 1px print_var("secondary_color");
-        }
+// Image
+@import "image";
 
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    &-#{$_success_name} {
-        color: white;
-        background: print_var("success_color");
-        @include taint("success_color");
-        
-        &:hover {
-            background: lighten($success_color, 20%);
-            box-shadow: 0px 0px 3px 1px print_var("success_color");
-        }
-
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    &-#{$_warning_name} {
-        color: white;
-        background: print_var("warning_color");
-        @include taint("warning_color");
-        
-        &:hover {
-            background: lighten($warning_color, 20%);
-            box-shadow: 0px 0px 3px 1px print_var("warning_color");
-        }
-
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    &-#{$_danger_name} {
-        color: white;
-        background: print_var("danger_color");
-        @include taint("danger_color");
-        
-        &:hover {
-            background: lighten($danger_color, 20%);
-            box-shadow: 0px 0px 3px 1px print_var("danger_color");
-        }
-
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    &-#{$_light_name} {
-        background: lighten($light_color, 50%);
-        @include taint("light_color");
-        
-        &:hover {
-            background: lighten($light_color, 20%);
-            box-shadow: 0px 0px 3px 1px lighten($light_color, 50%);
-        }
-
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    &-#{$_dark_name} {
-        color: white;
-        background: print_var("dark_color");
-        @include taint("dark_color");
-        
-        &:hover {
-            background: lighten($dark_color, 20%);
-            box-shadow: 0px 0px 3px 1px print_var("dark_color");
-        }
-
-        &:active {
-            box-shadow: none;
-        }
-    }
-
-    /*
-    * Gradient main colors
-    */
-
-    $gradient_opacity: 0.9;
-
-    &.#{$_taint_name}-#{$_primary_name}-#{$_gradient_name} {
-        @include taint("primary_gradient_color", $gradient_opacity);
-    }
-
-    &.#{$_taint_name}-#{$_secondary_name}-#{$_gradient_name} {
-        @include taint("secondary_gradient_color", $gradient_opacity);
-    }
-
-    &.#{$_taint_name}-#{$_success_name}-#{$_gradient_name} {
-        @include taint("success_gradient_color", $gradient_opacity);
-    }
-
-    &.#{$_taint_name}-#{$_warning_name}-#{$_gradient_name} {
-        @include taint("warning_gradient_color", $gradient_opacity);
-    }
-
-    &.#{$_taint_name}-#{$_danger_name}-#{$_gradient_name} {
-        @include taint("danger_gradient_color", $gradient_opacity);
-    }
-
-    &.#{$_taint_name}-#{$_light_name}-#{$_gradient_name} {
-        @include taint("light_gradient_color", $gradient_opacity);
-    }
-
-    &.#{$_taint_name}-#{$_dark_name}-#{$_gradient_name} {
-        @include taint("dark_gradient_color", $gradient_opacity);
-    }
-}
+// Line art button
+@import "line";

@@ -1,0 +1,12 @@
+// Sample base
+.#{$_sample_name} {
+    background-color: lighten(get_raw("primary_color"), 70%);
+
+    // Title
+    &:before {
+        content: attr(title);
+    }
+
+    // Border
+    @include round_border;
+}

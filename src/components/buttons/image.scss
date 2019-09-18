@@ -1,0 +1,3 @@
+[src][class*=#{$_button_name}] {
+    background-image: attr(src);
+}

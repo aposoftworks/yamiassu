@@ -1,0 +1,36 @@
+
+// Base class
+.#{$_column_offset_name} {
+    /*
+     * Philosophy:
+     * 
+     */
+
+    //Default sizing
+    @include offset_size();
+
+    //Calculate grid size based on screen size - extra small
+    &-#{$_extra_small_name} {
+        @include offset_size();
+    }
+    
+    //Calculate grid size based on screen size - small
+    &-#{$_small_name} {
+        @include offset_size($__column_count/2, $__column_count, $__column_count ,$__column_count, $__column_count);
+    }
+    
+    //Calculate grid size based on screen size - medium
+    &-#{$_medium_name} {
+        @include offset_size($__column_count/4, $__column_count/2, $__column_count, $__column_count, $__column_count);
+    }
+    
+    //Calculate grid size based on screen size - large
+    &-#{$_large_name} {
+        @include offset_size($__column_count/8, $__column_count/4, $__column_count/2, $__column_count, $__column_count);
+    }
+    
+    //Calculate grid size based on screen size - extra large
+    &-#{$_extra_large_name} {
+        @include offset_size($__column_count/16, $__column_count/8, $__column_count/4, $__column_count/2, $__column_count);
+    }
+}
