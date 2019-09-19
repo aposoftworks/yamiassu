@@ -5470,7 +5470,7 @@ h6 {
 }
 
 .button-primary:hover:not([disabled]) {
-  background: var(--#5b1eac);
+  background: #5b1eac;
   box-shadow: 0px 0px 3px 1px var(--primary_color);
 }
 
@@ -5496,7 +5496,7 @@ h6 {
 }
 
 .button-secondary:hover:not([disabled]) {
-  background: var(--#7592cb);
+  background: #7592cb;
   box-shadow: 0px 0px 3px 1px var(--secondary_color);
 }
 
@@ -5522,7 +5522,7 @@ h6 {
 }
 
 .button-success:hover:not([disabled]) {
-  background: var(--#0d94ab);
+  background: #0d94ab;
   box-shadow: 0px 0px 3px 1px var(--success_color);
 }
 
@@ -5548,7 +5548,7 @@ h6 {
 }
 
 .button-warning:hover:not([disabled]) {
-  background: var(--#eeb7c1);
+  background: #eeb7c1;
   box-shadow: 0px 0px 3px 1px var(--warning_color);
 }
 
@@ -5574,7 +5574,7 @@ h6 {
 }
 
 .button-danger:hover:not([disabled]) {
-  background: var(--#c798b0);
+  background: #c798b0;
   box-shadow: 0px 0px 3px 1px var(--danger_color);
 }
 
@@ -5583,7 +5583,7 @@ h6 {
 }
 
 .button-light {
-  background: var(--white);
+  background: white;
 }
 
 .button-light:before {
@@ -5599,8 +5599,8 @@ h6 {
 }
 
 .button-light:hover:not([disabled]) {
-  background: var(--white);
-  box-shadow: 0px 0px 3px 1px var(--white);
+  background: white;
+  box-shadow: 0px 0px 3px 1px white;
 }
 
 .button-light:active:not([disabled]) {
@@ -5625,7 +5625,7 @@ h6 {
 }
 
 .button-dark:hover:not([disabled]) {
-  background: var(--#151219);
+  background: #151219;
   box-shadow: 0px 0px 3px 1px var(--dark_color);
 }
 
@@ -5775,7 +5775,7 @@ h6 {
 }
 
 .button-light-gradient:hover:not([disabled]) {
-  box-shadow: 0px 0px 3px 1px var(--white);
+  box-shadow: 0px 0px 3px 1px linear-gradient(to bottom, white, white);
 }
 
 .button-light-gradient:active:not([disabled]) {
@@ -5978,13 +5978,13 @@ h6 {
 
 .button-light-line {
   background: none;
-  color: var(--white);
-  border: solid 2px var(--white);
+  color: white;
+  border: solid 2px white;
 }
 
 .button-light-line:hover:not([disabled]) {
-  background: var(--white);
-  box-shadow: 0px 0px 3px 1px var(--white);
+  background: white;
+  box-shadow: 0px 0px 3px 1px white;
 }
 
 .button-light-line:active:not([disabled]) {

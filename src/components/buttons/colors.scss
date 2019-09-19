@@ -189,7 +189,7 @@
         @include taint("light_gradient_color");
         
         &:hover:not([disabled]) {
-            box-shadow: 0px 0px 3px 1px lighten_color("light_color", 10%);
+            box-shadow: 0px 0px 3px 1px lighten_color("light_gradient_color", 10%);
         }
 
         &:active:not([disabled]) {

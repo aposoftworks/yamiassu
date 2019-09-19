@@ -50,9 +50,71 @@ $bootstrap_variables: ();
 //-------------------------------------------------
 
 @function lighten_color ($key, $value) {
-    @return var(--#{lighten(map-get($bootstrap_variables, $key), $value)});
+    //Get color
+    $color: map-get($bootstrap_variables, $key);
+
+    //Check if it is a map
+    @if (type-of($color) == "map") {
+        //Check if is a gradient
+        @if (map-get($color, "type") == "gradient") {
+            $colors: map-get($color, "colors");
+    
+            @for $iteration from 1 to (length($colors) + 1) {
+                $iteration_color: nth($colors, $iteration);
+    
+                //Simple color
+                @if (type-of($iteration_color) == "color") {
+                    $colors: set-nth($colors, $iteration, lighten($iteration_color, $value));
+                }
+                //Sample color
+                @else if (type-of($iteration_color) == "list") {
+                    //We only care about the first index
+                    @if (type-of(nth($iteration_color, 1)) == "color") {
+                        $iteration_color: set-nth($iteration_color, 1, lighten(nth($iteration_color, 1), $value));
+                    }
+                }
+            }
+
+            @return print_gradient(map-merge($color, ("colors":$colors)));
+        }
+    }
+    //Just a normal color
+    @else {
+        @return #{lighten(map-get($bootstrap_variables, $key), $value)};
+    }
 }
 
 @function darken_color ($key, $value) {
-    @return var(--#{darken(map-get($bootstrap_variables, $key), $value)});
+    //Get color
+    $color: map-get($bootstrap_variables, $key);
+
+    //Check if it is a map
+    @if (type-of($color) == "map") {
+        //Check if is a gradient
+        @if (map-get($color, "type") == "gradient") {
+            $colors: map-get($color, "colors");
+    
+            @for $iteration from 1 to (length($colors) + 1) {
+                $iteration_color: nth($colors, $iteration);
+    
+                //Simple color
+                @if (type-of($iteration_color) == "color") {
+                    $colors: set-nth($colors, $iteration, darken($iteration_color, $value));
+                }
+                //Sample color
+                @else if (type-of($iteration_color) == "list") {
+                    //We only care about the first index
+                    @if (type-of(nth($iteration_color, 1)) == "color") {
+                        $iteration_color: set-nth($iteration_color, 1, darken(nth($iteration_color, 1), $value));
+                    }
+                }
+            }
+
+            @return print_gradient(map-merge($color, ("colors":$colors)));
+        }
+    }
+    //Just a normal color
+    @else {
+        @return #{darken(map-get($bootstrap_variables, $key), $value)};
+    }
 }
