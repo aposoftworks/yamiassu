@@ -3,7 +3,7 @@
     padding: 10px 20px;
     position: relative;
     transition: all .2s;
-    margin: $__margin_size;
+    margin: get_var("__margin_size");
 
     // Fix problem due to indexing
     &:before {
@@ -11,34 +11,7 @@
     }
 
     // Border
-    @if ($__use_rounded) {
-        border-radius: $__border_size;
-
-        //Prepare the before element for being rounded
-        &:before {
-            border-radius: $__border_size;
-        }
-    }
-
-    // Force rounding
-    &.#{$_round_name} {
-        border-radius: $__border_size;
-
-        //Prepare the before element for being rounded
-        &:before {
-            border-radius: $__border_size;
-        }
-    }
-    
-    // Force no border radius
-    &.#{$_flat_name} {
-        border-radius: 0;
-
-        //Prepare the before element for being flat
-        &:before {
-            border-radius: 0;
-        }
-    }
+    @include round_border;
 
     // Disabled properties
     &[disabled] {

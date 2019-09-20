@@ -1,6 +1,6 @@
 // Base class
 .#{$_card_name} {
-    background-color: $light_color;
+    background-color: get_var("light_color");
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -12,6 +12,6 @@
 
     // Border
     @if ($__use_rounded) {
-        border-radius: $__border_size;
+        border-radius: get_var("__border_size");
     }
 }

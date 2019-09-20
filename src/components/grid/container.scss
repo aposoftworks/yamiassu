@@ -4,7 +4,7 @@
 .#{$_container_name} {
     display: flex;
     margin: auto;
-    max-width: $__container_size;
+    max-width: get_var("__container_size");
     position: relative;
     flex-wrap: wrap;
 }

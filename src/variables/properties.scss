@@ -2,7 +2,7 @@
  * The default divisions that subdivide the page layout into columns
  */
 
-$__column_count: 12;
+$__column_count: set_var("__column_count", 12);
 
 /*
  * This value is responsible for gluing values to near to the column count limit
@@ -10,16 +10,16 @@ $__column_count: 12;
  * value 100.
  */
 
-$__fill_size_threshold: 75;
+$__fill_size_threshold: set_var("__fill_size_threshold", 75);
 
  /*
  * The breakpoints to be assisted on the responsivity
  */
 
-$__extra_small_breakpoint: 576px;
-$__small_breakpoint:       768px;
-$__medium_breakpoint:      992px;
-$__large_breakpoint:       1200px;
+$__extra_small_breakpoint: set_var("__extra_small_breakpoint",  576px);
+$__small_breakpoint:       set_var("__small_breakpoint",        768px);
+$__medium_breakpoint:      set_var("__medium_breakpoint",       992px);
+$__large_breakpoint:       set_var("__large_breakpoint",        1200px);
 
 
  /*
@@ -27,35 +27,35 @@ $__large_breakpoint:       1200px;
  * can define it as a default sizes (such as small or large)
  */
 
-$__container_size: $__large_breakpoint;
+$__container_size: set_var("__container_size", get_var("__large_breakpoint"));
 
  /*
  * Font default sizes
  */
 
-$__font_normal_size: 12px;
+$__font_normal_size: set_var("__font_normal_size", 12px);
  
  /*
  * Border related settings
  */
 
-$__border_size: 12px;
+$__border_size: set_var("__border_size", 12px);
  
 /*
 * Marging/padding related settings
 */
 
-$__margin_size:     4px;
-$__padding_size:    4px;
+$__margin_size:     set_var("__margin_size",    4px);
+$__padding_size:    set_var("__padding_size",   4px);
 
 /*
 * The quantity of margins and paddings that will be created by the multiplier loop
 */
 
-$__loop_count: 9;
+$__loop_count: set_var("__loop_count", 9);
  
 /*
 * The size multiplier affects the multiplier that guides the responsivity
 */
 
-$__size_multiplier: 2;
+$__size_multiplier: set_var("__size_multiplier", 2);

@@ -7,16 +7,16 @@
     // Label
     label {
         width: 100%;
-        padding: $__padding_size;
-        margin-left: $__margin_size * 2;
-        margin-bottom: $__margin_size * 2;
+        padding: get_var("__padding_size");
+        margin-left: calc(#{get_var("__margin_size")} * 2);
+        margin-bottom: calc(#{get_var("__margin_size")} * 2);
     }
 
     // Input
     input.#{$_form_name}-#{$_input_name} {
         width: 100%;
-        padding: $__padding_size * 2;
-        border: 2px solid print_var("primary_color");
+        padding: calc(#{get_var("__padding_size")} * 2);
+        border: 2px solid get_var("primary_color");
 
         // Border
         //&.#{$}

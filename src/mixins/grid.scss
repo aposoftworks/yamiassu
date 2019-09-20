@@ -44,21 +44,21 @@
 @mixin round_border () {
     // Border
     @if ($__use_rounded) {
-        border-radius: $__border_size;
+        border-radius: get_var("__border_size");
 
         //Prepare the before element for being rounded
         &:before {
-            border-radius: $__border_size;
+            border-radius: get_var("__border_size");
         }
     }
 
     // Force rounding
     &.#{$_round_name} {
-        border-radius: $__border_size;
+        border-radius: get_var("__border_size");
 
         //Prepare the before element for being rounded
         &:before {
-            border-radius: $__border_size;
+            border-radius: get_var("__border_size");
         }
     }
     

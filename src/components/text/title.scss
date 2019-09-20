@@ -7,7 +7,7 @@
     
     &:after {
         content: "";
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid get_var("dark_color");
         position: relative;
         display: inline-block;
         flex-grow: 1;
@@ -25,7 +25,7 @@
     
     &:before,&:after {
         content: "";
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid get_var("dark_color");
         position: relative;
         display: inline-block;
         flex-grow: 1;

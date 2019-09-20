@@ -1,6 +1,6 @@
 @for $i from 1 to 7 {
     h#{$i} {
-        margin-left: ($__margin_size * 16) / ($i + 1);
-        margin-bottom: ($__margin_size * 8) / ($i + 1);
+        margin-left: calc((#{get_var("__margin_size")} * 16) / (#{$i + 1}));
+        margin-bottom: calc((#{get_var("__margin_size")} * 8) / (#{$i + 1}));
     }
 }

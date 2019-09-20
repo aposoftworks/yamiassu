@@ -167,7 +167,7 @@ h6,
 .container {
   display: flex;
   margin: auto;
-  max-width: 1200px;
+  max-width: var(--__container_size);
   position: relative;
   flex-wrap: wrap;
 }
@@ -180,11 +180,11 @@ h6,
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  min-height: 12px;
+  min-height: var(--__font_normal_size);
 }
 
 [class*=block]:not(.padless) {
-  padding: 12px;
+  padding: var(--__padding_size);
 }
 
 .block {
@@ -5265,7 +5265,7 @@ h6,
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .card:not(.padless) {
@@ -5274,7 +5274,7 @@ h6,
 
 .sample {
   background-color: #e2d2f7;
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .sample:before {
@@ -5282,15 +5282,15 @@ h6,
 }
 
 .sample:before {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .sample.round {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .sample.round:before {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .sample.flat {
@@ -5309,28 +5309,28 @@ h6,
 
 .form-group label {
   width: 100%;
-  padding: 4px;
-  margin-left: 8px;
-  margin-bottom: 8px;
+  padding: var(--__padding_size);
+  margin-left: calc(var(--__margin_size) * 2);
+  margin-bottom: calc(var(--__margin_size) * 2);
 }
 
 .form-group input.form-input {
   width: 100%;
-  padding: 8px;
-  border: 2px solid print_var("primary_color");
-  border-radius: 12px;
+  padding: calc(var(--__padding_size) * 2);
+  border: 2px solid var(--primary_color);
+  border-radius: var(--__border_size);
 }
 
 .form-group input.form-input:before {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .form-group input.form-input.round {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .form-group input.form-input.round:before {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 .form-group input.form-input.flat {
@@ -5342,33 +5342,33 @@ h6,
 }
 
 h1 {
-  margin-left: 32px;
-  margin-bottom: 16px;
+  margin-left: calc((var(--__margin_size) * 16) / (2));
+  margin-bottom: calc((var(--__margin_size) * 8) / (2));
 }
 
 h2 {
-  margin-left: 21.3333333333px;
-  margin-bottom: 10.6666666667px;
+  margin-left: calc((var(--__margin_size) * 16) / (3));
+  margin-bottom: calc((var(--__margin_size) * 8) / (3));
 }
 
 h3 {
-  margin-left: 16px;
-  margin-bottom: 8px;
+  margin-left: calc((var(--__margin_size) * 16) / (4));
+  margin-bottom: calc((var(--__margin_size) * 8) / (4));
 }
 
 h4 {
-  margin-left: 12.8px;
-  margin-bottom: 6.4px;
+  margin-left: calc((var(--__margin_size) * 16) / (5));
+  margin-bottom: calc((var(--__margin_size) * 8) / (5));
 }
 
 h5 {
-  margin-left: 10.6666666667px;
-  margin-bottom: 5.3333333333px;
+  margin-left: calc((var(--__margin_size) * 16) / (6));
+  margin-bottom: calc((var(--__margin_size) * 8) / (6));
 }
 
 h6 {
-  margin-left: 9.1428571429px;
-  margin-bottom: 4.5714285714px;
+  margin-left: calc((var(--__margin_size) * 16) / (7));
+  margin-bottom: calc((var(--__margin_size) * 8) / (7));
 }
 
 .title {
@@ -5380,7 +5380,7 @@ h6 {
 
 .title:after {
   content: "";
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--dark_color);
   position: relative;
   display: inline-block;
   flex-grow: 1;
@@ -5398,7 +5398,7 @@ h6 {
 .subtitle:before,
 .subtitle:after {
   content: "";
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--dark_color);
   position: relative;
   display: inline-block;
   flex-grow: 1;
@@ -5410,8 +5410,8 @@ h6 {
   padding: 10px 20px;
   position: relative;
   transition: all 0.2s;
-  margin: 4px;
-  border-radius: 12px;
+  margin: var(--__margin_size);
+  border-radius: var(--__border_size);
 }
 
 [class*=button]:before {
@@ -5419,15 +5419,15 @@ h6 {
 }
 
 [class*=button]:before {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 [class*=button].round {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 [class*=button].round:before {
-  border-radius: 12px;
+  border-radius: var(--__border_size);
 }
 
 [class*=button].flat {
@@ -5453,7 +5453,7 @@ h6 {
 }
 
 .button-primary {
-  color: white;
+  color: var(--light_color);
   background: var(--primary_color);
 }
 
@@ -5479,7 +5479,7 @@ h6 {
 }
 
 .button-secondary {
-  color: white;
+  color: var(--light_color);
   background: var(--secondary_color);
 }
 
@@ -5505,7 +5505,7 @@ h6 {
 }
 
 .button-success {
-  color: white;
+  color: var(--light_color);
   background: var(--success_color);
 }
 
@@ -5531,7 +5531,7 @@ h6 {
 }
 
 .button-warning {
-  color: white;
+  color: var(--light_color);
   background: var(--warning_color);
 }
 
@@ -5557,7 +5557,7 @@ h6 {
 }
 
 .button-danger {
-  color: white;
+  color: var(--light_color);
   background: var(--danger_color);
 }
 
@@ -5583,7 +5583,7 @@ h6 {
 }
 
 .button-light {
-  background: white;
+  background: var(--light_color);
 }
 
 .button-light:before {
@@ -5599,8 +5599,8 @@ h6 {
 }
 
 .button-light:hover:not([disabled]) {
-  background: white;
-  box-shadow: 0px 0px 3px 1px white;
+  background: var(--light_color);
+  box-shadow: 0px 0px 3px 1px var(--light_color);
 }
 
 .button-light:active:not([disabled]) {
@@ -5608,7 +5608,7 @@ h6 {
 }
 
 .button-dark {
-  color: white;
+  color: var(--light_color);
   background: var(--dark_color);
 }
 
@@ -5634,7 +5634,7 @@ h6 {
 }
 
 .button-primary-gradient {
-  color: white;
+  color: var(--light_color);
   background: var(--primary_gradient_color);
 }
 
@@ -5651,6 +5651,7 @@ h6 {
 }
 
 .button-primary-gradient:hover:not([disabled]) {
+  background: linear-gradient(to bottom, #5e2e9a, #441978);
   box-shadow: 0px 0px 3px 1px var(--primary_color);
 }
 
@@ -5659,7 +5660,7 @@ h6 {
 }
 
 .button-secondary-gradient {
-  color: white;
+  color: var(--light_color);
   background: var(--secondary_gradient_color);
 }
 
@@ -5676,6 +5677,7 @@ h6 {
 }
 
 .button-secondary-gradient:hover:not([disabled]) {
+  background: linear-gradient(to bottom, #8ea4d2, #6a84ba);
   box-shadow: 0px 0px 3px 1px var(--secondary_color);
 }
 
@@ -5684,7 +5686,7 @@ h6 {
 }
 
 .button-success-gradient {
-  color: white;
+  color: var(--light_color);
   background: var(--success_gradient_color);
 }
 
@@ -5701,6 +5703,7 @@ h6 {
 }
 
 .button-success-gradient:hover:not([disabled]) {
+  background: linear-gradient(to bottom, #48adbf, #2f8d9e);
   box-shadow: 0px 0px 3px 1px var(--success_color);
 }
 
@@ -5709,7 +5712,7 @@ h6 {
 }
 
 .button-warning-gradient {
-  color: white;
+  color: var(--light_color);
   background: var(--warning_gradient_color);
 }
 
@@ -5726,6 +5729,7 @@ h6 {
 }
 
 .button-warning-gradient:hover:not([disabled]) {
+  background: linear-gradient(to bottom, #e89ba9, #cc7081);
   box-shadow: 0px 0px 3px 1px var(--warning_color);
 }
 
@@ -5734,7 +5738,7 @@ h6 {
 }
 
 .button-danger-gradient {
-  color: white;
+  color: var(--light_color);
   background: var(--danger_gradient_color);
 }
 
@@ -5751,6 +5755,7 @@ h6 {
 }
 
 .button-danger-gradient:hover:not([disabled]) {
+  background: linear-gradient(to bottom, #cfa2a2, #b87777);
   box-shadow: 0px 0px 3px 1px var(--danger_color);
 }
 
@@ -5775,7 +5780,8 @@ h6 {
 }
 
 .button-light-gradient:hover:not([disabled]) {
-  box-shadow: 0px 0px 3px 1px linear-gradient(to bottom, white, white);
+  background: linear-gradient(to bottom, white, white);
+  box-shadow: 0px 0px 3px 1px var(--light_gradient_color);
 }
 
 .button-light-gradient:active:not([disabled]) {
@@ -5783,7 +5789,7 @@ h6 {
 }
 
 .button-dark-gradient {
-  color: white;
+  color: var(--light_color);
   background: var(--dark_gradient_color);
 }
 
@@ -5800,6 +5806,7 @@ h6 {
 }
 
 .button-dark-gradient:hover:not([disabled]) {
+  background: linear-gradient(to bottom, #5b5367, #3f3939);
   box-shadow: 0px 0px 3px 1px var(--dark_color);
 }
 
@@ -5831,59 +5838,59 @@ h6 {
 
 [class*=icon][class*=button] {
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: calc(var(--__font_normal_size) * 2);
+  height: calc(var(--__font_normal_size) * 2);
+  line-height: calc(var(--__font_normal_size) * 2);
   padding: 0;
 }
 
 [class*=button].icon-1 {
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  font-size: 12px;
+  width: calc(var(--__font_normal_size) * 2);
+  height: calc(var(--__font_normal_size) * 2);
+  line-height: calc(var(--__font_normal_size) * 2);
+  font-size: calc(var(--__font_normal_size) * 1);
 }
 
 [class*=button].icon-2 {
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  font-size: 24px;
+  width: calc(var(--__font_normal_size) * 3);
+  height: calc(var(--__font_normal_size) * 3);
+  line-height: calc(var(--__font_normal_size) * 3);
+  font-size: calc(var(--__font_normal_size) * 2);
 }
 
 [class*=button].icon-3 {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  font-size: 36px;
+  width: calc(var(--__font_normal_size) * 4);
+  height: calc(var(--__font_normal_size) * 4);
+  line-height: calc(var(--__font_normal_size) * 4);
+  font-size: calc(var(--__font_normal_size) * 3);
 }
 
 [class*=button].icon-4 {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 48px;
+  width: calc(var(--__font_normal_size) * 5);
+  height: calc(var(--__font_normal_size) * 5);
+  line-height: calc(var(--__font_normal_size) * 5);
+  font-size: calc(var(--__font_normal_size) * 4);
 }
 
 [class*=button].icon-5 {
-  width: 72px;
-  height: 72px;
-  line-height: 72px;
-  font-size: 60px;
+  width: calc(var(--__font_normal_size) * 6);
+  height: calc(var(--__font_normal_size) * 6);
+  line-height: calc(var(--__font_normal_size) * 6);
+  font-size: calc(var(--__font_normal_size) * 5);
 }
 
 [class*=button].icon-6 {
-  width: 84px;
-  height: 84px;
-  line-height: 84px;
-  font-size: 72px;
+  width: calc(var(--__font_normal_size) * 7);
+  height: calc(var(--__font_normal_size) * 7);
+  line-height: calc(var(--__font_normal_size) * 7);
+  font-size: calc(var(--__font_normal_size) * 6);
 }
 
 [class*=button].icon-7 {
-  width: 96px;
-  height: 96px;
-  line-height: 96px;
-  font-size: 84px;
+  width: calc(var(--__font_normal_size) * 8);
+  height: calc(var(--__font_normal_size) * 8);
+  line-height: calc(var(--__font_normal_size) * 8);
+  font-size: calc(var(--__font_normal_size) * 7);
 }
 
 [src][class*=button] {
@@ -5978,13 +5985,14 @@ h6 {
 
 .button-light-line {
   background: none;
-  color: white;
-  border: solid 2px white;
+  color: var(--light_color);
+  border: solid 2px var(--light_color);
 }
 
 .button-light-line:hover:not([disabled]) {
-  background: white;
-  box-shadow: 0px 0px 3px 1px white;
+  color: var(--dark_theme);
+  background: var(--light_color);
+  box-shadow: 0px 0px 3px 1px var(--light_color);
 }
 
 .button-light-line:active:not([disabled]) {
@@ -6022,5 +6030,18 @@ h6 {
   --warning_gradient_color: linear-gradient(to bottom, #df7185, #be4b60);
   --light_gradient_color: linear-gradient(to bottom, #ffffff, #eeeeee);
   --dark_gradient_color: linear-gradient(to bottom, #423c4b, #242121);
+  --__column_count: 12;
+  --__fill_size_threshold: 75;
+  --__extra_small_breakpoint: 576px;
+  --__small_breakpoint: 768px;
+  --__medium_breakpoint: 992px;
+  --__large_breakpoint: 1200px;
+  --__container_size: var(--__large_breakpoint);
+  --__font_normal_size: 12px;
+  --__border_size: 12px;
+  --__margin_size: 4px;
+  --__padding_size: 4px;
+  --__loop_count: 9;
+  --__size_multiplier: 2;
 }
 
