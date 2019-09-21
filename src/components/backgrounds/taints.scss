@@ -4,31 +4,31 @@
      */
 
     &.#{$_taint_name}-#{$_primary_name} {
-        @include taint("primary_color");
+        @include taint_before("primary_color");
     }
 
     &.#{$_taint_name}-#{$_secondary_name} {
-        @include taint("secondary_color");
+        @include taint_before("secondary_color");
     }
 
     &.#{$_taint_name}-#{$_success_name} {
-        @include taint("success_color");
+        @include taint_before("success_color");
     }
 
     &.#{$_taint_name}-#{$_warning_name} {
-        @include taint("warning_color");
+        @include taint_before("warning_color");
     }
 
     &.#{$_taint_name}-#{$_danger_name} {
-        @include taint("danger_color");
+        @include taint_before("danger_color");
     }
 
     &.#{$_taint_name}-#{$_light_name} {
-        @include taint("light_color");
+        @include taint_before("light_color");
     }
 
     &.#{$_taint_name}-#{$_dark_name} {
-        @include taint("dark_color");
+        @include taint_before("dark_color", 0.9);
     }
 
     /*
@@ -38,30 +38,30 @@
     $gradient_opacity: 0.9;
 
     &.#{$_taint_name}-#{$_primary_name}-#{$_gradient_name} {
-        @include taint("primary_gradient_color", $gradient_opacity);
+        @include taint_before("primary_gradient_color", $gradient_opacity);
     }
 
     &.#{$_taint_name}-#{$_secondary_name}-#{$_gradient_name} {
-        @include taint("secondary_gradient_color", $gradient_opacity);
+        @include taint_before("secondary_gradient_color", $gradient_opacity);
     }
 
     &.#{$_taint_name}-#{$_success_name}-#{$_gradient_name} {
-        @include taint("success_gradient_color", $gradient_opacity);
+        @include taint_before("success_gradient_color", $gradient_opacity);
     }
 
     &.#{$_taint_name}-#{$_warning_name}-#{$_gradient_name} {
-        @include taint("warning_gradient_color", $gradient_opacity);
+        @include taint_before("warning_gradient_color", $gradient_opacity);
     }
 
     &.#{$_taint_name}-#{$_danger_name}-#{$_gradient_name} {
-        @include taint("danger_gradient_color", $gradient_opacity);
+        @include taint_before("danger_gradient_color", $gradient_opacity);
     }
 
     &.#{$_taint_name}-#{$_light_name}-#{$_gradient_name} {
-        @include taint("light_gradient_color", $gradient_opacity);
+        @include taint_before("light_gradient_color", $gradient_opacity);
     }
 
     &.#{$_taint_name}-#{$_dark_name}-#{$_gradient_name} {
-        @include taint("dark_gradient_color", $gradient_opacity);
+        @include taint_before("dark_gradient_color", $gradient_opacity);
     }
 }

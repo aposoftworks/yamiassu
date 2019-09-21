@@ -8,106 +8,43 @@
 
     &-#{$_primary_name} {
         color: get_var("light_color");
-        background: get_var("primary_color");
-        @include taint("primary_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("primary_color", 20%);
-            box-shadow: 0px 0px 3px 1px get_var("primary_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("primary_color");
+        @include taint_before("primary_color");
     }
 
     &-#{$_secondary_name} {
         color: get_var("light_color");
-        background: get_var("secondary_color");
-        @include taint("secondary_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("secondary_color", 20%);
-            box-shadow: 0px 0px 3px 1px get_var("secondary_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("secondary_color");
+        @include taint_before("secondary_color");
     }
 
     &-#{$_success_name} {
         color: get_var("light_color");
-        background: get_var("success_color");
-        @include taint("success_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("success_color", 20%);
-            box-shadow: 0px 0px 3px 1px get_var("success_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("success_color");
+        @include taint_before("success_color");
     }
 
     &-#{$_warning_name} {
         color: get_var("light_color");
-        background: get_var("warning_color");
-        @include taint("warning_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("warning_color", 20%);
-            box-shadow: 0px 0px 3px 1px get_var("warning_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("warning_color");
+        @include taint_before("warning_color");
     }
 
     &-#{$_danger_name} {
         color: get_var("light_color");
-        background: get_var("danger_color");
-        @include taint("danger_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("danger_color", 20%);
-            box-shadow: 0px 0px 3px 1px get_var("danger_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("danger_color");
+        @include taint_before("danger_color");
     }
 
     &-#{$_light_name} {
-        background: get_var("light_color");
-        @include taint("light_color");
-        
-        &:hover:not([disabled]) {
-            background: get_var("light_color");
-            box-shadow: 0px 0px 3px 1px get_var("light_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("light_color");
+        @include taint_before("light_color");
     }
 
     &-#{$_dark_name} {
         color: get_var("light_color");
-        background: get_var("dark_color");
-        @include taint("dark_color");
-        
-        &:hover:not([disabled]) {
-            background: darken_color("dark_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("dark_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("dark_color");
+        @include taint_before("dark_color");
     }
 
     /*
@@ -116,105 +53,42 @@
 
     &-#{$_primary_name}-#{$_gradient_name} {
         color: get_var("light_color");
-        background: get_var("primary_gradient_color");
-        @include taint("primary_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("primary_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("primary_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("primary_gradient_color");
+        @include taint_before("primary_gradient_color");
     }
 
     &-#{$_secondary_name}-#{$_gradient_name} {
         color: get_var("light_color");
-        background: get_var("secondary_gradient_color");
-        @include taint("secondary_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("secondary_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("secondary_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("secondary_gradient_color");
+        @include taint_before("secondary_gradient_color");
     }
 
     &-#{$_success_name}-#{$_gradient_name} {
         color: get_var("light_color");
-        background: get_var("success_gradient_color");
-        @include taint("success_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("success_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("success_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("success_gradient_color");
+        @include taint_before("success_gradient_color");
     }
 
     &-#{$_warning_name}-#{$_gradient_name} {
         color: get_var("light_color");
-        background: get_var("warning_gradient_color");
-        @include taint("warning_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("warning_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("warning_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("warning_gradient_color");
+        @include taint_before("warning_gradient_color");
     }
 
     &-#{$_danger_name}-#{$_gradient_name} {
         color: get_var("light_color");
-        background: get_var("danger_gradient_color");
-        @include taint("danger_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("danger_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("danger_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("danger_gradient_color");
+        @include taint_before("danger_gradient_color");
     }
 
     &-#{$_light_name}-#{$_gradient_name} {
-        background: get_var("light_gradient_color");
-        @include taint("light_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("light_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("light_gradient_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("light_gradient_color");
+        @include taint_before("light_gradient_color");
     }
 
     &-#{$_dark_name}-#{$_gradient_name} {
         color: get_var("light_color");
-        background: get_var("dark_gradient_color");
-        @include taint("dark_gradient_color");
-        
-        &:hover:not([disabled]) {
-            background: lighten_color("dark_gradient_color", 10%);
-            box-shadow: 0px 0px 3px 1px get_var("dark_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_background("dark_gradient_color");
+        @include taint_before("dark_gradient_color");
     }
 }

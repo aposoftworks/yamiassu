@@ -59,3 +59,16 @@ $__loop_count: set_var("__loop_count", 9);
 */
 
 $__size_multiplier: set_var("__size_multiplier", 2);
+ 
+/*
+* Responsivity options. You can choose between the following:
+* - none: disable responsivity
+* - static: the rule will only be applied to the specific breakpoint
+* - positive: the rule will be applied to the breakpoint and upwards
+* - negative: the rule will be applied to the breakpoint and downwards
+* - dynamic_multiplier: the rule will be calculated relative to the __size_multiplier property to both up and down
+* - positive_multiplier: the rule will be calculated relative to the __size_multiplier property upwards
+* - negative_multiplier: the rule will be calculated relative to the __size_multiplier property downwards
+*/
+
+$__responsive_behaviour: "dynamic_multiplier";

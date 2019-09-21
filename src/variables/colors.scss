@@ -9,7 +9,7 @@ $success_color:     set_var("success_color",    #06424c);
 $danger_color:      set_var("danger_color",     #a2577e);
 $warning_color:     set_var("warning_color",    #da657b);
 $light_color:       set_var("light_color",      #eeebf1);
-$dark_color:        set_var("dark_color",       #2e2737);
+$dark_color:        set_var("dark_color",       #292929);
 
 /*
  * Gradient main colors
@@ -21,4 +21,4 @@ $success_gradient_color:    set_var("success_gradient_color",   create_gradient(
 $danger_gradient_color:     set_var("danger_gradient_color",    create_gradient(to bottom, #bd8181, #a55757));
 $warning_gradient_color:    set_var("warning_gradient_color",   create_gradient(to bottom, #df7185, #be4b60));
 $light_gradient_color:      set_var("light_gradient_color",     create_gradient(to bottom, #ffffff, #eeeeee));
-$dark_gradient_color:       set_var("dark_gradient_color",      create_gradient(to bottom, #423c4b, #242121));
+$dark_gradient_color:       set_var("dark_gradient_color",      create_gradient(to bottom, #222222, #1d1b1b));

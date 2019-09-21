@@ -1,0 +1,54 @@
+@mixin taint_before ($color, $opacity: 0.5) {
+    &:before {
+        //variable
+        background: get_var($color);
+        opacity: $opacity;
+
+        //static
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+        
+    //Hover
+    &:hover:not([disabled]) {
+        background: lighten_color($color, 20%);
+        box-shadow: 0px 0px 3px 1px get_var(str_replace($color,"_gradient",""));
+    }
+
+    //Active
+    &:active:not([disabled]) {
+        box-shadow: none;
+    }
+}
+
+@mixin taint_background ($color) {
+    & {
+        //variable
+        background: get_var($color);
+    }
+}
+
+@mixin taint_line ($color, $font_color: "dark_color") {
+    & {
+        //variable
+        color: get_var($color);
+        background: none;
+        border: 2px solid get_var($color);
+        
+        &:hover:not([disabled]) {
+            color: get_var($font_color);
+            background: get_var($color);
+            box-shadow: 0px 0px 3px 1px get_var($color);
+        }
+
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+}
+

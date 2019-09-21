@@ -7,114 +7,30 @@
      */
 
     &-#{$_primary_name}-#{$_line_name} {
-        color: get_var("primary_color");
-        background: none;
-        border: solid 2px get_var("primary_color");
-        
-        &:hover:not([disabled]) {
-            color: white;
-            background: get_var("primary_color");
-            box-shadow: 0px 0px 3px 1px get_var("primary_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("primary_color", "light_color");
     }
 
     &-#{$_secondary_name}-#{$_line_name} {
-        color: get_var("secondary_color");
-        background: none;
-        border: solid 2px get_var("secondary_color");
-        
-        &:hover:not([disabled]) {
-            color: white;
-            background: get_var("secondary_color");
-            box-shadow: 0px 0px 3px 1px get_var("secondary_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("secondary_color", "light_color");
     }
 
     &-#{$_success_name}-#{$_line_name} {
-        color: get_var("success_color");
-        background: none;
-        border: solid 2px get_var("success_color");
-        
-        &:hover:not([disabled]) {
-            color: white;
-            background: get_var("success_color");
-            box-shadow: 0px 0px 3px 1px get_var("success_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("success_color", "light_color");
     }
 
     &-#{$_warning_name}-#{$_line_name} {
-        color: get_var("warning_color");
-        background: none;
-        border: solid 2px get_var("warning_color");
-        
-        &:hover:not([disabled]) {
-            color: white;
-            background: get_var("warning_color");
-            box-shadow: 0px 0px 3px 1px get_var("warning_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("warning_color", "light_color");
     }
 
     &-#{$_danger_name}-#{$_line_name} {
-        color: get_var("danger_color");
-        background: none;
-        border: solid 2px get_var("danger_color");
-        
-        &:hover:not([disabled]) {
-            color: white;
-            background: get_var("danger_color");
-            box-shadow: 0px 0px 3px 1px get_var("danger_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("danger_color", "light_color");
     }
 
     &-#{$_light_name}-#{$_line_name} {
-        background: none;
-        color: get_var("light_color");
-        border: solid 2px get_var("light_color");
-        
-        &:hover:not([disabled]) {
-            color: get_var("dark_theme");
-            background: get_var("light_color");
-            box-shadow: 0px 0px 3px 1px get_var("light_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("light_color", "dark_color");
     }
 
     &-#{$_dark_name}-#{$_line_name} {
-        color: get_var("dark_color");
-        background: none;
-        border: solid 2px get_var("dark_color");
-        
-        &:hover:not([disabled]) {
-            color: white;
-            background: get_var("dark_color");
-            box-shadow: 0px 0px 3px 1px get_var("dark_color");
-        }
-
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+        @include taint_line("dark_color", "light_color");
     }
 }
