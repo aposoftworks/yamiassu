@@ -6,31 +6,9 @@
      * Solid main colors
      */
 
-    &-#{$_primary_name}-#{$_line_name} {
-        @include taint_line("primary_color", "light_color");
-    }
-
-    &-#{$_secondary_name}-#{$_line_name} {
-        @include taint_line("secondary_color", "light_color");
-    }
-
-    &-#{$_success_name}-#{$_line_name} {
-        @include taint_line("success_color", "light_color");
-    }
-
-    &-#{$_warning_name}-#{$_line_name} {
-        @include taint_line("warning_color", "light_color");
-    }
-
-    &-#{$_danger_name}-#{$_line_name} {
-        @include taint_line("danger_color", "light_color");
-    }
-
-    &-#{$_light_name}-#{$_line_name} {
-        @include taint_line("light_color", "dark_color");
-    }
-
-    &-#{$_dark_name}-#{$_line_name} {
-        @include taint_line("dark_color", "light_color");
+    @include loop_colors ($__official_colors) using ($color) {
+        &-#{str_replace(nth($color, 1), "_color", "")}-#{$_line_name} {
+            @include taint_line(nth($color, 1), nth($color, 2));
+        }
     }
 }

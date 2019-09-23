@@ -6,89 +6,23 @@
      * Solid main colors
      */
 
-    &-#{$_primary_name} {
-        color: get_var("light_color");
-        @include taint_background("primary_color");
-        @include taint_before("primary_color");
-    }
-
-    &-#{$_secondary_name} {
-        color: get_var("light_color");
-        @include taint_background("secondary_color");
-        @include taint_before("secondary_color");
-    }
-
-    &-#{$_success_name} {
-        color: get_var("light_color");
-        @include taint_background("success_color");
-        @include taint_before("success_color");
-    }
-
-    &-#{$_warning_name} {
-        color: get_var("light_color");
-        @include taint_background("warning_color");
-        @include taint_before("warning_color");
-    }
-
-    &-#{$_danger_name} {
-        color: get_var("light_color");
-        @include taint_background("danger_color");
-        @include taint_before("danger_color");
-    }
-
-    &-#{$_light_name} {
-        @include taint_background("light_color");
-        @include taint_before("light_color");
-    }
-
-    &-#{$_dark_name} {
-        color: get_var("light_color");
-        @include taint_background("dark_color");
-        @include taint_before("dark_color");
+    @include loop_colors ($__official_colors) using ($color) {
+        &-#{str_replace(nth($color, 1), "_color", "")} {
+            color: get_var(nth($color, 2));
+            @include taint_background(nth($color, 1));
+            @include taint_before(nth($color, 1), true);
+        }
     }
 
     /*
     * Gradient main colors
     */
 
-    &-#{$_primary_name}-#{$_gradient_name} {
-        color: get_var("light_color");
-        @include taint_background("primary_gradient_color");
-        @include taint_before("primary_gradient_color");
-    }
-
-    &-#{$_secondary_name}-#{$_gradient_name} {
-        color: get_var("light_color");
-        @include taint_background("secondary_gradient_color");
-        @include taint_before("secondary_gradient_color");
-    }
-
-    &-#{$_success_name}-#{$_gradient_name} {
-        color: get_var("light_color");
-        @include taint_background("success_gradient_color");
-        @include taint_before("success_gradient_color");
-    }
-
-    &-#{$_warning_name}-#{$_gradient_name} {
-        color: get_var("light_color");
-        @include taint_background("warning_gradient_color");
-        @include taint_before("warning_gradient_color");
-    }
-
-    &-#{$_danger_name}-#{$_gradient_name} {
-        color: get_var("light_color");
-        @include taint_background("danger_gradient_color");
-        @include taint_before("danger_gradient_color");
-    }
-
-    &-#{$_light_name}-#{$_gradient_name} {
-        @include taint_background("light_gradient_color");
-        @include taint_before("light_gradient_color");
-    }
-
-    &-#{$_dark_name}-#{$_gradient_name} {
-        color: get_var("light_color");
-        @include taint_background("dark_gradient_color");
-        @include taint_before("dark_gradient_color");
+    @include loop_colors ($__official_gradient_colors) using ($color) {
+        &-#{str_replace(nth($color, 1), "_gradient_color", "")}-#{$_gradient_name} {
+            color: get_var(nth($color, 2));
+            @include taint_background(nth($color, 1));
+            @include taint_before(nth($color, 1), true);
+        }
     }
 }

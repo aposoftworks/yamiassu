@@ -1,5 +1,6 @@
 // default font
 * {
+    color: get_var("dark_color");
     font-family: $__default_font, "sans-serif";
 }
 

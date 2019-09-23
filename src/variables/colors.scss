@@ -9,7 +9,7 @@ $success_color:     set_var("success_color",    #06424c);
 $danger_color:      set_var("danger_color",     #a2577e);
 $warning_color:     set_var("warning_color",    #da657b);
 $light_color:       set_var("light_color",      #eeebf1);
-$dark_color:        set_var("dark_color",       #292929);
+$dark_color:        set_var("dark_color",       #141414);
 
 /*
  * Gradient main colors
@@ -22,3 +22,28 @@ $danger_gradient_color:     set_var("danger_gradient_color",    create_gradient(
 $warning_gradient_color:    set_var("warning_gradient_color",   create_gradient(to bottom, #df7185, #be4b60));
 $light_gradient_color:      set_var("light_gradient_color",     create_gradient(to bottom, #ffffff, #eeeeee));
 $dark_gradient_color:       set_var("dark_gradient_color",      create_gradient(to bottom, #222222, #1d1b1b));
+
+/*
+ * Official colors
+ * Those colors will be used to create buttons and background
+ */
+
+$__official_colors: (
+    ("primary_color",   "light_color"),
+    ("secondary_color", "light_color"),
+    ("success_color",   "light_color"),
+    ("warning_color",   "light_color"),
+    ("warning_color",   "light_color"),
+    ("light_color",     "dark_color"),
+    ("dark_color",      "light_color"),
+);
+
+$__official_gradient_colors: (
+    ("primary_gradient_color",      "light_color"),
+    ("secondary_gradient_color",    "light_color"),
+    ("success_gradient_color",      "light_color"),
+    ("warning_gradient_color",      "light_color"),
+    ("warning_gradient_color",      "light_color"),
+    ("light_gradient_color",        "dark_color"),
+    ("dark_gradient_color",         "light_color"),
+);
