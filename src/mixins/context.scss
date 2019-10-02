@@ -1,0 +1,9 @@
+@mixin context_all {
+    & {
+        @content;
+    }
+
+    &-#{$_all_name} {
+        @content;
+    }
+}

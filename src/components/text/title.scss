@@ -4,15 +4,16 @@
     width: 100%;
     display: flex;
     margin-left: 0;
+    align-items: center;
     
     &:after {
         content: "";
-        border-bottom: 2px solid get_var("dark_color");
+        border-bottom: 2px solid get_var("light_color");
         position: relative;
         display: inline-block;
         flex-grow: 1;
         margin: 0 20px;
-        transform: translate(0, -15px);
+        height: 2px;
     }
 }
 
@@ -22,14 +23,15 @@
     width: 100%;
     display: flex;
     margin-left: 0;
+    align-items: center;
     
     &:before,&:after {
         content: "";
-        border-bottom: 2px solid get_var("dark_color");
+        border-bottom: 2px solid get_var("light_color");
         position: relative;
         display: inline-block;
         flex-grow: 1;
         margin: 0 20px;
-        transform: translate(0, -15px);
+        height: 2px;
     }
 }

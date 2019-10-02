@@ -8,19 +8,19 @@
  * you can tweak this change with the fill_size_threshold
  */
 @function fill_size ($size) {
-    $ceiled: ceil(clamp($size, $__column_count, 1));
+    $ceiled: ceil(clamp($size, $__column_count, 1)) * 100;
 
     @if ($ceiled / $__column_count * 100 > $__fill_size_threshold) {
         @return $__column_count;
     }
 
-    @return $ceiled;
+    @return clamp($ceiled,0,100)/100;
 }
 
 /*
  * A basic function to search for a pattern inside a string and replace its content
  */
-@function str_replace($string, $search, $replace: '') {
+@function str_replace ($string, $search, $replace: '') {
     $index: str-index($string, $search);
   
     @if $index {
@@ -28,7 +28,8 @@
     }
   
     @return $string;
-  }
+}
 
 // Imports
 @import "color";
+@import "media";

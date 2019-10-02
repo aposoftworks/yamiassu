@@ -1,8 +1,13 @@
-// Grouping
+// Grouping standard
 .#{$_form_name}-#{$_group_name} {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    // Control margin
+    &:not(:last-child) {
+        margin-bottom: calc(#{get_var("__margin_size")} * 4);
+    }
 
     // Label
     label {
@@ -14,13 +19,20 @@
 
     // Input
     input.#{$_form_name}-#{$_input_name} {
-        width: 100%;
-        padding: calc(#{get_var("__padding_size")} * 2);
-        border: 2px solid get_var("primary_color");
+        &[type=text],&:not([type]) {
+            width: 100%;
+            padding: calc(#{get_var("__padding_size")} * 4);
+            border: 2px solid get_var("primary_color");
+            background: transparent;
+            transition: all .2s;
+    
+            @include round_border;
+        }
 
-        // Border
-        //&.#{$}
-
-        @include round_border;
+        //Disabled input
+        &[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
     }
 }

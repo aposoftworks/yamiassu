@@ -1,10 +1,24 @@
 // Sample base
 .#{$_sample_name} {
-    background-color: lighten_color("primary_color", 70%);
-
+    background-color: get_var("dark_color");
+    
     // Title
     &:before {
+        color: get_var("light_color");
         content: attr(title);
+    }
+    
+    // Update color text
+    & * {
+        color: get_var("light_color");
+    }
+    & .#{$_title_name}:after {
+        border-bottom: 2px solid get_var("light_color");
+    }
+    & .#{$_subtitle_name} {
+        &:before,&:after {
+            border-bottom: 2px solid get_var("light_color");
+        }
     }
 
     // Border

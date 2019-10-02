@@ -3,11 +3,11 @@
  * Solid main colors
  */
 
-$primary_color:     set_var("primary_color",    #2d0f55);
+$primary_color:     set_var("primary_color",    #93278f);
 $secondary_color:   set_var("secondary_color",  #3c5d9e);
-$success_color:     set_var("success_color",    #06424c);
-$danger_color:      set_var("danger_color",     #a2577e);
-$warning_color:     set_var("warning_color",    #da657b);
+$success_color:     set_var("success_color",    #0e6d50);
+$danger_color:      set_var("danger_color",     #ce4f4f);
+$warning_color:     set_var("warning_color",    #c49653);
 $light_color:       set_var("light_color",      #eeebf1);
 $dark_color:        set_var("dark_color",       #141414);
 
@@ -15,13 +15,13 @@ $dark_color:        set_var("dark_color",       #141414);
  * Gradient main colors
  */
 
-$primary_gradient_color:    set_var("primary_gradient_color",   create_gradient(to bottom, #462273, #2c104e));
-$secondary_gradient_color:  set_var("secondary_gradient_color", create_gradient(to bottom, #6987c4, #4c69a5));
-$success_gradient_color:    set_var("success_gradient_color",   create_gradient(to bottom, #378e9d, #236a77));
-$danger_gradient_color:     set_var("danger_gradient_color",    create_gradient(to bottom, #bd8181, #a55757));
-$warning_gradient_color:    set_var("warning_gradient_color",   create_gradient(to bottom, #df7185, #be4b60));
-$light_gradient_color:      set_var("light_gradient_color",     create_gradient(to bottom, #ffffff, #eeeeee));
-$dark_gradient_color:       set_var("dark_gradient_color",      create_gradient(to bottom, #222222, #1d1b1b));
+$primary_gradient_color:    set_var("primary_gradient_color",   create_gradient(to right, #662d91, #93278f));
+$secondary_gradient_color:  set_var("secondary_gradient_color", create_gradient(to right, #6987c4, #4c69a5));
+$success_gradient_color:    set_var("success_gradient_color",   create_gradient(to right, #0e6d50, #0a5841));
+$danger_gradient_color:     set_var("danger_gradient_color",    create_gradient(to right, #ce4f4f, #9c3737));
+$warning_gradient_color:    set_var("warning_gradient_color",   create_gradient(to right, #c49653, #a37b3e));
+$light_gradient_color:      set_var("light_gradient_color",     create_gradient(to right, #ffffff, #eeeeee));
+$dark_gradient_color:       set_var("dark_gradient_color",      create_gradient(to right, #222222, #1d1b1b));
 
 /*
  * Official colors
@@ -32,7 +32,7 @@ $__official_colors: (
     ("primary_color",   "light_color"),
     ("secondary_color", "light_color"),
     ("success_color",   "light_color"),
-    ("warning_color",   "light_color"),
+    ("danger_color",   "light_color"),
     ("warning_color",   "light_color"),
     ("light_color",     "dark_color"),
     ("dark_color",      "light_color"),
@@ -42,7 +42,7 @@ $__official_gradient_colors: (
     ("primary_gradient_color",      "light_color"),
     ("secondary_gradient_color",    "light_color"),
     ("success_gradient_color",      "light_color"),
-    ("warning_gradient_color",      "light_color"),
+    ("danger_gradient_color",       "light_color"),
     ("warning_gradient_color",      "light_color"),
     ("light_gradient_color",        "dark_color"),
     ("dark_gradient_color",         "light_color"),

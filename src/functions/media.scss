@@ -1,0 +1,61 @@
+/*
+ * Control responsivity and check if should be calculated
+ */
+ @function media_track ($step: 0, $type: "default") {
+    $multiplier: $__size_multiplier;
+    
+    //Check if call is overriding type
+    @if ($type == "default") {
+        $type: $__responsive_behaviour;
+    }
+
+    //Return multiplier
+    @if ($type == "dynamic_multiplier") {
+        @return $multiplier * $step;
+    }
+    @if ($type == "positive_multiplier") {
+        @return $multiplier * $step;
+    }
+    @if ($type == "negative_multiplier") {
+        @return $multiplier * $step;
+    }
+
+    @return 1;
+}
+/*
+ * Individual tiles
+ */
+@function media_rule ($media, $step, $type: "default") {
+    //Check if call is overriding type
+    @if ($type == "default") {
+        $type: $__responsive_behaviour;
+    }
+    
+    // Check if this passage is enabled
+    @if ($type == "static" and $step != 0) {
+        @return "false";
+    }
+    @if (($type == "positive" or $type == "positive_multiplier") and $step < 0) {
+        @return "false";
+    }
+    @if (($type == "negative" or $type == "negative_multiplier") and $step > 0) {
+        @return "false";
+    }
+
+    // Return appropriate type
+    @if ($media == "xs") {
+        @return ("(max-width: " + $__extra_small_breakpoint + ")", $_extra_small_name);
+    }
+    @if ($media == "sm") {
+        @return ("(min-width: " + $__extra_small_breakpoint + ") and (max-width: " + $__small_breakpoint + ")", $_small_name);
+    }
+    @if ($media == "md") {
+        @return ("(min-width: " + $__small_breakpoint + ") and (max-width: " + $__medium_breakpoint + ")", $_medium_name);
+    }
+    @if ($media == "lg") {
+        @return ("(min-width: " + $__medium_breakpoint + ") and (max-width: " + $__large_breakpoint + ")", $_large_name);
+    }
+    @if ($media == "xl") {
+        @return ("(min-width: " + $__large_breakpoint + ")", $_extra_large_name);
+    }
+}

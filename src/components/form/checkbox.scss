@@ -1,0 +1,62 @@
+
+
+// Checkbox
+[class*=#{$_form_name}][class*=#{$_checkbox_name}] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    // Label
+    label {
+        padding: get_var("__padding_size");
+        margin-left: calc(#{get_var("__margin_size")} * 2);
+        margin-bottom: calc(#{get_var("__margin_size")} * 2);
+    }
+
+    // Input
+    input[type=checkbox] {
+        display: none;
+
+        //Container
+        & + label:before {
+            content: "";
+            display: inline-block;
+            width: calc(#{get_var("__font_normal_size")} / 2);
+            height: calc(#{get_var("__font_normal_size")} / 2);
+            padding: calc(#{get_var("__padding_size")} * 2);
+            border: 2px solid get_var("primary_color");
+            float: right;
+            margin-left: get_var("__font_normal_size");
+            
+            @include round_border(.75);
+        }
+        
+        //Check (not selected)
+        & + label:after {
+            content:"";
+            position: absolute;
+            display: inline-block;
+            background: get_var("primary_color");
+            width: calc(#{get_var("__font_normal_size")} / 2 - 4px);
+            height: calc(#{get_var("__font_normal_size")} / 2 - 4px);
+            padding: calc((#{get_var("__padding_size")} * 2));
+            margin: 4px;
+            opacity: 0;
+            transition: all .2s;
+            margin-left: calc(#{get_var("__font_normal_size")} + 4px);
+            
+            @include round_border(.6);
+        }
+
+        //Check (selected)
+        &:checked + label:after {
+            opacity: 1;
+        }
+
+        //Disabled input
+        &[disabled] + label {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}

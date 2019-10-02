@@ -12,197 +12,312 @@
     </head>
 
     <body>
-        <div class="background-dark fullscreen">
-            <div class="container">
-                <div class="block-2 push-5">
-                    <img src="img/yamiassu.png" class="margin-6">
-                </div>
-
-                <div class="block">
-                    <div class="card">
-                        <h1>Grid</h1>
-
-                        <section class="block sample text-center">
-                            <div class="block background taint-secondary">
-                                BLOCK-12
-                            </div>
-                            <div class="block-6 background taint-secondary">
-                                BLOCK-6
-                            </div>
-                            <div class="block-6 background taint-secondary">
-                                BLOCK-6
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                            <div class="block-1 background taint-secondary">
-                                BLOCK-01
-                            </div>
-                        </section>
-
-                        <h1>Offset</h1>
-
-                        <section class="block sample">
-                                <div class="block-6 push-6 background taint-secondary">
-                                    BLOCK-6 OFFSET-6
-                                </div>
-                                <div class="block-2 background taint-secondary">
-                                    BLOCK-2
-                                </div>
-                                <div class="block-2 push-8 background taint-secondary">
-                                    BLOCK-2 OFFSET-8
-                                </div>
-                        </section>
+        <div class="background-dark fullscreen text-light-all">
+            <!-- Header -->
+            <div class="background-dark fullscreen" style="overflow: hidden">
+                <canvas class="fullscreen starfield" data-starfield="300"></canvas>
+                <div class="background fullscreen" style="background-image:url(img/background_01.svg)">
+                    <div class="block-xl-2 push-xl-5 block-lg-4 push-lg-4 block-md-6 push-md-3 block-sm-10 push-sm-1 block-xs-10 push-xs-1">
+                        <div class="margin-6 block">
+                            <img src="img/yamiassu.png" class="img-responsive">
+                        </div>
+                        <h1 class="text-center margin-0">YAMIASSU</h1>
                     </div>
                 </div>
+            </div>
 
-                <div class="block">
-                    <div class="card">
-                        <h1>Headers</h1>
-
-                        <section class="block padding-1 sample">
-                            <h1>Header 1</h1>
-                            <h2>Header 2</h2>
-                            <h3>Header 3</h3>
-                            <h4>Header 4</h4>
-                            <h5>Header 5</h5>
-                            <h6>Header 6</h6>
-                        </section>
-
-                        <h1>Titles</h1>
-
-                        <section class="block sample">
-                            <h1 class="title">Title</h1>
-                        </section>
-
-                        <h1>Sub titles</h1>
-
-                        <section class="block sample" title="code sample">
-                            <h1 class="subtitle">Subtitle</h1>
-                        </section>
+            <div class="background-dark">
+                <div class="container">
+                    <!-- Description -->
+                    <div class="block-8 push-2">
+                        <h3 class="text-center">Welcome to Yamiassu, a framework oriented to variables developed by APO Softworks to enhance content creation and edition at runtime.</h3>
                     </div>
-                </div>
+    
+                    <p class="padding-xs-2">We welcome you to our framework.
+                        Here we develop a better way to build your applications in a record time and make it fully customizable to any need you may have.
+                        Yamiassu comes from the brazilian indigenous language Tupi-Guarani, it means the great(açu/assu) night(yami). Hence the theme of the style we created.
+                        You will find the conventions used by our team to make the best out of everything provided.</p>
+    
+                    <h2>About our philosophy</h2>
+                    
+                    <p class="padding-xs-2">We highly believe that less is more and that you shouldn't need to steep your eyes when using an application during the night. So sit back and enjoy the night sky.</p>
 
+                    <h2>Our color system</h2>
 
-                <div class="block">
-                    <div class="card">
-                        <h1>Buttons</h1>
+                    <p class="padding-xs-2">We modularly integrated the colors that are in the framework with the content, so they are not actually within each of the components.
+                        So they are easy to toggle and do not exponentially scale the size of the css file.
+                    </p>
 
-                        <h2>Main types</h2>
+                    <!-- Buttons -->
+                    <h2>Buttons</h2>
 
-                        <div class="block">
-                            <button class="button-primary">Primary button</button>
-                            <button class="button-secondary">Secondary button</button>
-                            <button class="button-success">Success button</button>
-                            <button class="button-warning">Warning button</button>
-                            <button class="button-danger">Danger button</button>
-                            <button class="button-light">Light button</button>
-                            <button class="button-dark">Dark button</button>
-                        </div>
-
-                        <h2>Line types</h2>
-
-                        <div class="block">
-                            <button class="button-primary-line">Primary button</button>
-                            <button class="button-secondary-line">Secondary button</button>
-                            <button class="button-success-line">Success button</button>
-                            <button class="button-warning-line">Warning button</button>
-                            <button class="button-danger-line">Danger button</button>
-                            <button class="button-light-line">Light button</button>
-                            <button class="button-dark-line">Dark button</button>
-                        </div>
-
-                        <h2>Gradient types</h2>
-
-                        <div class="block">
-                            <button class="button-primary-gradient">Primary button</button>
-                            <button class="button-secondary-gradient">Secondary button</button>
-                            <button class="button-success-gradient">Success button</button>
-                            <button class="button-warning-gradient">Warning button</button>
-                            <button class="button-danger-gradient">Danger button</button>
-                            <button class="button-light-gradient">Light button</button>
-                            <button class="button-dark-gradient">Dark button</button>
-                        </div>
-
-                        <h2>Grouping</h2>
-
-                        <div class="block">
-                            <button class="button-primary group">Primary button</button>
-                            <button class="button-secondary group">Secondary button</button>
-                            <button class="button-success group">Success button</button>
-                        </div>
-                        
-                        <h2>Rounded</h2>
-                        
-                        <div class="block">
-                            <button class="button-primary round">Primary button</button>
-                        </div>
-                        
-                        <h2>Flat</h2>
-                        
-                        <div class="block">
-                            <button class="button-primary-gradient flat">Primary button</button>
-                        </div>
-                        
-                        <h2>Disabled</h2>
-                        
-                        <div class="block">
-                            <button class="button-primary" disabled>Primary button</button>
-                        </div>
-                        
-                        <h2>Icon</h2>
-                        
-                        <div class="block">
-                            <button class="button-primary icon">i</button>
-                            <button class="button-primary icon-2">i</button>
-                            <button class="button-primary icon-3">i</button>
-                        </div>
+                    <h3>Basic buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                        <button class="block-md-1 block-xs-12 button background-primary">Primary Button</button>
+                        <button class="block-md-1 block-xs-12 button background-secondary">Secondary Button</button>
+                        <button class="block-md-1 block-xs-12 button background-success">Success Button</button>
+                        <button class="block-md-1 block-xs-12 button background-warning">Warning Button</button>
+                        <button class="block-md-1 block-xs-12 button background-danger">Danger Button</button>
+                        <button class="block-md-1 block-xs-12 button background-light">Light Button</button>
+                        <button class="block-md-1 block-xs-12 button background-dark">Dark Button</button>
+                    </div> 
+                    
+                    <h3>Gradient buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                        <button class="block-md-1 block-xs-12 button background-primary-gradient">Primary Button</button>
+                        <button class="block-md-1 block-xs-12 button background-secondary-gradient">Secondary Button</button>
+                        <button class="block-md-1 block-xs-12 button background-success-gradient">Success Button</button>
+                        <button class="block-md-1 block-xs-12 button background-warning-gradient">Warning Button</button>
+                        <button class="block-md-1 block-xs-12 button background-danger-gradient">Danger Button</button>
+                        <button class="block-md-1 block-xs-12 button background-light-gradient">Light Button</button>
+                        <button class="block-md-1 block-xs-12 button background-dark-gradient">Dark Button</button>
                     </div>
-                </div>
+                    
+                    <h3>Line buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                        <button class="block-md-1 block-xs-12 button line-primary">Primary Button</button>
+                        <button class="block-md-1 block-xs-12 button line-secondary">Secondary Button</button>
+                        <button class="block-md-1 block-xs-12 button line-success">Success Button</button>
+                        <button class="block-md-1 block-xs-12 button line-warning">Warning Button</button>
+                        <button class="block-md-1 block-xs-12 button line-danger">Danger Button</button>
+                        <button class="block-md-1 block-xs-12 button line-light">Light Button</button>
+                        <button class="block-md-1 block-xs-12 button line-dark">Dark Button</button>
+                    </div>
+                    
+                    <h3>Flat buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                            <button class="block-md-1 block-xs-12 flat button background-primary">Primary Button</button>
+                            <button class="block-md-1 block-xs-12 flat button background-secondary">Secondary Button</button>
+                            <button class="block-md-1 block-xs-12 flat button background-success-gradient">Success Button</button>
+                            <button class="block-md-1 block-xs-12 flat button background-warning-gradient">Warning Button</button>
+                            <button class="block-md-1 block-xs-12 flat button line-danger">Danger Button</button>
+                            <button class="block-md-1 block-xs-12 flat button line-light">Light Button</button>
+                    </div>
+                    
+                    <h3>Round buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                            <button class="block-md-1 block-xs-12 round button background-primary">Primary Button</button>
+                            <button class="block-md-1 block-xs-12 round button background-secondary">Secondary Button</button>
+                            <button class="block-md-1 block-xs-12 round button background-success-gradient">Success Button</button>
+                            <button class="block-md-1 block-xs-12 round button background-warning-gradient">Warning Button</button>
+                            <button class="block-md-1 block-xs-12 round button line-danger">Danger Button</button>
+                            <button class="block-md-1 block-xs-12 round button line-light">Light Button</button>
+                    </div>
+                    
+                    <h3>Group buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                            <button class="block-md-1 block-xs-12 group button background-primary">Primary Button</button>
+                            <button class="block-md-1 block-xs-12 group button background-secondary">Secondary Button</button>
+                            <button class="block-md-1 block-xs-12 group button background-success-gradient">Success Button</button>
+                            <button class="block-md-1 block-xs-12 group button background-warning-gradient">Warning Button</button>
+                            <button class="block-md-1 block-xs-12 group button line-danger">Danger Button</button>
+                            <button class="block-md-1 block-xs-12 group button line-light">Light Button</button>
+                    </div>
+                    
+                    <h3>Disabled buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                            <button class="block-md-1 block-xs-12 button background-primary" disabled>Primary Button</button>
+                            <button class="block-md-1 block-xs-12 button background-secondary" disabled>Secondary Button</button>
+                            <button class="block-md-1 block-xs-12 button background-success-gradient" disabled>Success Button</button>
+                            <button class="block-md-1 block-xs-12 button background-warning-gradient" disabled>Warning Button</button>
+                            <button class="block-md-1 block-xs-12 button line-danger" disabled>Danger Button</button>
+                            <button class="block-md-1 block-xs-12 button line-light" disabled>Light Button</button>
+                    </div>
+                    
+                    <h3>Icon buttons</h3>
+                    
+                    <div class="shelf padding-xs-2">
+                        <button class="block-md-1 block-xs-12 button icon   background-primary"><i class="fa fa-info"></i></button>
+                        <button class="block-md-1 block-xs-12 button icon-2 background-secondary"><i class="fa fa-info"></i></button>
+                        <button class="block-md-1 block-xs-12 button icon-3 background-success-gradient"><i class="fa fa-info"></i></button>
+                        <button class="block-md-1 block-xs-12 button icon-4 background-warning-gradient"><i class="fa fa-info"></i></button>
+                        <button class="block-md-1 block-xs-12 button icon-5 line-danger"><i class="fa fa-info"></i></button>
+                        <button class="block-md-1 block-xs-12 button icon-6 line-light"><i class="fa fa-info"></i></button>
+                    </div> 
 
-                <div class="block">
-                    <div class="card">
-                        <h1>Inputs</h1>
+                    <!-- Text -->
+                    <h2>Text</h2>
 
-                        <div class="block">
+                    <h3>Text colors</h3>
+
+                    <div class="shelf padding-xs-2">
+                        <div class="block text-primary">Primary text color</div>
+                        <div class="block text-secondary">Secondary text color</div>
+                        <div class="block text-success">Success text color</div>
+                        <div class="block text-warning">Warning text color</div>
+                        <div class="block text-danger">Danger text color</div>
+                        <div class="block text-light">Light text color</div>
+                    </div>
+
+                    <h3>Text alignment</h3>
+
+                    <div class="shelf padding-xs-2">
+                        <div class="block text-left">Text aligned to left</div>
+                        <div class="block text-center">Text aligned to center</div>
+                        <div class="block text-right">Text aligned to right</div>
+                    </div>
+
+                    <h3>Text title and subtitle</h3>
+
+                    <div class="shelf padding-xs-2">
+                        <h4 class="title">Title</h4>
+                        <h4 class="subtitle">Sub-Title</h4>
+                    </div>
+
+                    <h3>Headers</h3>
+
+                    <div class="shelf padding-xs-2">
+                        <h1>Header 1</h1>
+                        <h2>Header 2</h2>
+                        <h3>Header 3</h3>
+                        <h4>Header 4</h4>
+                        <h5>Header 5</h5>
+                        <h6>Header 6</h6>
+                    </div>
+
+                    <!-- Form -->
+
+                    <h2>Form (Basic)</h2>
+
+                    <h3>Input</h3>
+
+                    <div class="shelf">
+                        <div class="block-6 padding-4">
                             <div class="form-group">
                                 <label>input label</label>
                                 <input class="form-input" />
                             </div>
                         </div>
+                        <div class="block-6 padding-4">
+                            <div class="form-group">
+                                <label>disabled input label</label>
+                                <input class="form-input" disabled />
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Select</h3>
+
+                    <div class="shelf">
+                        <div class="block-6 padding-4">
+                            <div class="form-group">
+                                <label>select label</label>
+                                <select class="form-input">
+                                    <option>hey</option>
+                                    <option>hey</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="block-6 padding-4">
+                            <div class="form-group">
+                                <label>disabled select label</label>
+                                <select disabled class="form-input">
+                                    <option>hey</option>
+                                    <option>hey</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Checkbox</h3>
+
+                    <div class="shelf padding-xs-2">
+                        <div class="block-6">
+                            <div class="form-checkbox">
+                                <input for="checkbox1" id="checkbox1" type="checkbox" />
+                                <label for="checkbox1">checkbox label</label>
+                            </div>
+                        </div>
+                        <div class="block-6">
+                            <div class="form-checkbox">
+                                <input for="checkbox2" id="checkbox2" type="checkbox" disabled />
+                                <label for="checkbox2">disabled checkbox label</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Textarea</h3>
+
+                    <div class="shelf">
+                        <div class="block-6 padding-4">
+                            <div class="form-group">
+                                <label>input label</label>
+                                <textarea class="form-input"></textarea>
+                            </div>
+                        </div>
+                        <div class="block-6 padding-4">
+                            <div class="form-group">
+                                <label>disabled input label</label>
+                                <textarea class="form-input" disabled></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Animations -->
+
+                    <h2>Animations</h2>
+
+                    <div class="shelf">
+                        <div class="block-6">
+                            <div class="block-4 push-4">
+                                <img class="img-responsive float" src="img/yamiassu_white.png" />
+                            </div>
+                        </div>
+                        
+                        <div class="block-6">
+                                <div class="block-4 push-4">
+                                    <img class="img-responsive twinkle" src="img/yamiassu_white.png" />
+                                </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+
+                    <h2>Notifications</h2>
+
+                    <h3>Inline colors</h3>
+
+                    <div class="shelf">
+                        <div class="notification-inline background-primary">
+                            Primary inline notification
+                        </div>
+                        <div class="notification-inline background-secondary">
+                            Secondary inline notification
+                        </div>
+                        <div class="notification-inline background-success-gradient">
+                            Success gradient inline notification
+                        </div>
+                        <div class="notification-inline background-warning-gradient">
+                            Warning gradient inline notification
+                        </div>
+                    </div>
+
+                    <h3>Alert</h3>
+
+                    <div class="shelf">
+                        
+                    </div>
+
+                    <h3>Pop-up</h3>
+
+                    <div class="shelf">
+                        
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scripts -->
+        <section id="scripts">
+            <!-- Custom script -->
+            <script src="index.js"></script>
+        </section>
     </body>
 </html>

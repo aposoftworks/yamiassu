@@ -1,0 +1,15 @@
+// Main button structure
+[class*=#{$_notification_name}] {
+    padding: 10px 20px !important;
+    position: relative;
+    transition: all .2s;
+    margin: get_var("__margin_size");
+    width: 100%;
+
+    // Content positioning
+    display: flex;
+    align-content: center;
+
+    // Border
+    @include round_border;
+}

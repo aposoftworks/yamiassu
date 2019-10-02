@@ -18,6 +18,7 @@ $_large_name:               "lg"        !default;
 $_extra_large_name:         "xl"        !default;
 
 // Responsivity - general
+$_responsive_name:          "responsive"    !default;
 $_emulate_name:             "emulate"       !default;
 $_breakpoint_name:          "breakpoint"    !default;
 
@@ -59,12 +60,25 @@ $_icon_name:                "icon"          !default;
 $_fullscreen_name:          "fullscreen"    !default;
 $_sample_name:              "sample"        !default;
 $_line_name:                "line"          !default;
+$_all_name:                 "all"           !default;
+$_star_name:                "star"          !default;
+$_starfield_name:           "starfield"     !default;
+$_float_name:               "float"         !default;
+$_image_name:               "img"           !default;
+$_twinkle_name:             "twinkle"       !default;
 
 // Form
 $_form_name:                "form"          !default;
 $_input_name:               "input"         !default;
 $_select_name:              "select"        !default;
 $_textarea_name:            "textarea"      !default;
+$_checkbox_name:            "checkbox"      !default;
+
+// Notification
+$_notification_name:        "notification"  !default;
+$_inline_name:              "inline"        !default;
+$_popup_name:               "popup"         !default;
+$_alert_name:               "alert"         !default;
 
 // Coloring
 $_primary_name:             "primary"   !default;

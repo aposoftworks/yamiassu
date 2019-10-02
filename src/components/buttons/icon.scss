@@ -4,8 +4,8 @@
     width: calc(#{get_var("__font_normal_size")} * 2);
     height: calc(#{get_var("__font_normal_size")} * 2);
     line-height: calc(#{get_var("__font_normal_size")} * 2);
-    padding: 0;
-
+    padding: 0 !important;
+    text-align: center;
 }
 
 //Sizing icons
@@ -15,7 +15,7 @@
             width: calc(#{get_var("__font_normal_size")} * #{$i});
             height: calc(#{get_var("__font_normal_size")} * #{$i});
             line-height: calc(#{get_var("__font_normal_size")} * #{$i});
-            font-size: calc(#{get_var("__font_normal_size")} * #{($i - 1)});
+            font-size: calc(#{get_var("__font_normal_size")} * #{($i - 2)});
         }
     }
 }

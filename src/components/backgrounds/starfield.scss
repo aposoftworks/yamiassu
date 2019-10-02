@@ -1,0 +1,14 @@
+.#{$_star_name} {
+    $size: (random(2) + 1);
+
+    width: #{$size}px;
+    height: #{$size}px;
+
+    position: absolute;
+    border-radius: 50%;
+}
+
+.#{$_starfield_name} {
+    position: absolute;
+    overflow: hidden;
+}

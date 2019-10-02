@@ -11,15 +11,18 @@
 .#{$_fullscreen_name} {
     position: relative;
     min-height: 100vh;
+    background-attachment: inherit !important;
 }
 
 // Imports
 @import "taints";
+@import "starfield";
 
  /*
   * Placeholder images
   */
 
-.#{$_background_name}.#{$_placeholder_name} {
+[class*=#{$_background_name}].#{$_placeholder_name} {
+    background-attachment: fixed;
     background-image: url(https://picsum.photos/1920/1080);
 }

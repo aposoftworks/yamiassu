@@ -1,69 +1,53 @@
 /*
- * Individual tiles
- */
-
-//Extra small
-@mixin media-xs {
-    @media screen and (max-width: $__extra_small_breakpoint) {
-        &-#{$_extra_small_name} {
-            @content;
-        }
-    }
-}
-
-//Small
-@mixin media-sm {
-    @media screen and (min-width: $__extra_small_breakpoint) and (max-width: $__small_breakpoint) {
-        &-#{$_small_name} {
-            @content;
-        }
-    }
-}
-
-//Medium
-@mixin media-md {
-    @media screen and (min-width: $__small_breakpoint) and (max-width: $__medium_breakpoint) {
-        &-#{$_medium_name} {
-            @content;
-        }
-    }
-}
-
-//Large
-@mixin media-lg {
-    @media screen and (min-width: $__medium_breakpoint) and (max-width: $__large_breakpoint) {
-        &-#{$_large_name} {
-            @content;
-        }
-    }
-}
-
-//Extra large
-@mixin media-xl {
-    @media screen and (min-width: $__large_breakpoint) {
-        &-#{$_extra_large_name} {
-            @content;
-        }
-    }
-}
-
-/*
  * All tiles
  */
-@mixin media {
-    @include media-xl() {
+@mixin media_all ($type: "default") {
+    //Default state (without responsivity)
+    @content(1);
+
+    // Size states
+    $states: ("xl", "lg", "md", "sm", "xs");
+
+    // Check if responsivity is enabled
+    @if ($__responsive_behaviour != "none") {
+        $offset: 0;
+
+        @each $state in $states {
+            $step: 0;
+
+            @each $substate in $states {
+                $rule: media_rule($substate, $offset + $step);
+
+                //Only spawn the rule if it passes
+                @if ($rule != "false") {
+                    @media screen and #{nth($rule, 1)} {
+                        &-#{nth($rule, 2)} {
+                            @content(media_track($offset + $step, $type));
+                        }
+                    }
+                }
+
+                $step: $step + 1;
+            }
+        }
+
+        $offset: $offset - 1;
+    }
+}
+/*
+ * Sided tiles
+ */
+@mixin media_sided {
+    &-#{$_top_name} {
         @content;
     }
-    @include media-lg() {
+    &-#{$_bottom_name} {
         @content;
     }
-    @include media-md() {
+    &-#{$_left_name} {
         @content;
     }
-    @include media-sm() {
-        @content;
-    }
-    @include media-xs() {
+    &-#{$_right_name} {
         @content;
     }
 }

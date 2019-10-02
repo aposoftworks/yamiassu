@@ -1,64 +1,21 @@
-@mixin column_count ($column_count) {
-
-    //Calculate grid size
-    @for $col from 1 to $__column_count {
-        @if ($col == 1) {
-            & {
-                width: 100%;
-            }
-        }
-
-        &-#{$col} {
-            @if ((100% / $column_count) * $col < $__fill_size_threshold) {
-                width: (100% / $column_count) * $col;
-            }
-            @else {
-                width: 100%;
-            }
-        }
-    }
-}
-
-@mixin media_size ($xs:$__column_count, $sm:$__column_count, $md:$__column_count, $lg:$__column_count, $xl:$__column_count) {
-    @media screen and (max-width: $__extra_small_breakpoint) {
-        @include column_count(fill_size($xs));
-    }
-
-    @media screen and (min-width: $__extra_small_breakpoint) and (max-width: $__small_breakpoint) {
-        @include column_count(fill_size($sm));
-    }
-
-    @media screen and (min-width: $__small_breakpoint) and (max-width: $__medium_breakpoint) {
-        @include column_count(fill_size($md));
-    }
-
-    @media screen and (min-width: $__medium_breakpoint) and (max-width: $__large_breakpoint) {
-        @include column_count(fill_size($lg));
-    }
-
-    @media screen and (min-width: $__large_breakpoint) {
-        @include column_count(fill_size($xl));
-    }
-}
-
-@mixin round_border () {
+@mixin round_border ($multiplier: 1) {
     // Border
     @if ($__use_rounded) {
-        border-radius: get_var("__border_size");
+        border-radius: calc(#{get_var("__border_size")} * #{$multiplier});
 
         //Prepare the before element for being rounded
         &:before {
-            border-radius: get_var("__border_size");
+            border-radius: calc(#{get_var("__border_size")} * #{$multiplier});
         }
     }
 
     // Force rounding
     &.#{$_round_name} {
-        border-radius: get_var("__border_size");
+        border-radius: calc(#{get_var("__border_size")} * #{$multiplier});
 
         //Prepare the before element for being rounded
         &:before {
-            border-radius: get_var("__border_size");
+            border-radius: calc(#{get_var("__border_size")} * #{$multiplier});
         }
     }
     
@@ -70,43 +27,5 @@
         &:before {
             border-radius: 0;
         }
-    }
-}
-
-@mixin offset_count ($column_count) {
-
-    //Calculate grid size
-    @for $col from 1 to $__column_count {
-        @if ($col == 1) {
-            & {
-                margin-left: 100%;
-            }
-        }
-
-        &-#{$col} {
-            margin-left: (100% / $column_count) * $col;
-        }
-    }
-}
-
-@mixin offset_size ($xs:$__column_count, $sm:$__column_count, $md:$__column_count, $lg:$__column_count, $xl:$__column_count) {
-    @media screen and (max-width: $__extra_small_breakpoint) {
-        @include offset_count(fill_size($xs));
-    }
-
-    @media screen and (min-width: $__extra_small_breakpoint) and (max-width: $__small_breakpoint) {
-        @include offset_count(fill_size($sm));
-    }
-
-    @media screen and (min-width: $__small_breakpoint) and (max-width: $__medium_breakpoint) {
-        @include offset_count(fill_size($md));
-    }
-
-    @media screen and (min-width: $__medium_breakpoint) and (max-width: $__large_breakpoint) {
-        @include offset_count(fill_size($lg));
-    }
-
-    @media screen and (min-width: $__large_breakpoint) {
-        @include offset_count(fill_size($xl));
     }
 }

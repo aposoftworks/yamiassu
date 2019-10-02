@@ -1,0 +1,26 @@
+.#{$_text_name} {
+
+    /*
+     * Taints main colors
+     */
+
+    @include loop_colors ("solid") using ($color) {
+        &-#{str_replace(nth($color, 1), "_color", "")} {
+            & {
+                color: get_var(nth($color, 1)) !important;
+            }
+        }
+    }
+
+    /*
+     * Taints main generic colors
+     */
+
+     @include loop_colors ("solid") using ($color) {
+        &-#{str_replace(nth($color, 1), "_color", "")}-#{$_all_name} * {
+            & {
+                color: get_var(nth($color, 1));
+            }
+        }
+    }
+}

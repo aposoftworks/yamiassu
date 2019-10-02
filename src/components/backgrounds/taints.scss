@@ -15,7 +15,7 @@
      */
 
     @include loop_colors ($__official_gradient_colors) using ($color) {
-        &-#{$_taint_name}-#{str_replace(nth($color, 1), "_color", "")} {
+        &-#{$_taint_name}-#{str_replace(nth($color, 1), "_color", "")}-#{$_gradient_name} {
             @include taint_before(nth($color, 1));
         }
     }
@@ -35,7 +35,7 @@
      */
 
     @include loop_colors ($__official_gradient_colors) using ($color) {
-        &-#{str_replace(nth($color, 1), "_color", "")} {
+        &-#{str_replace(nth($color, 1), "_color", "")}-#{$_gradient_name} {
             @include taint_background(nth($color, 1));
         }
     }

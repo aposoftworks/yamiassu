@@ -1,6 +1,24 @@
-@mixin loop_colors ($colors) {
+@mixin loop_colors ($type: "all") {
+    //Solid and gradient
+    @if ($type == "all") {
+        $_colors: join($__official_colors, $__official_gradient_colors);
+    }
+    //Only solid
+    @if ($type == "solid") {
+        $_colors: join($__official_colors, ());
+    }
+    //Only gradient
+    @if ($type == "gradient") {
+        $_colors: join($__official_gradient_colors, ());
+    }
+
+    //Not valid type
+    @if ((variable-exists(_colors)) not true) {
+        $_colors: join($__official_colors, $__official_gradient_colors);
+    }
+
     // Loop through colors
-    @each $color in $colors {
+    @each $color in $_colors {
         @content ($color);
     }
 }
@@ -8,7 +26,7 @@
 @mixin taint_before ($color, $hoverable: false, $opacity: 0.5) {
     &:before {
         //variable
-        background: get_var($color);
+        background: get_var($color) !important;
         opacity: $opacity;
 
         //static
@@ -24,7 +42,7 @@
     //Hover
     @if ($hoverable == true) {
         &:hover:not([disabled]) {
-            background: lighten_color($color, 20%);
+            background: lighten_color($color, 20%) !important;
             box-shadow: 0px 0px 3px 1px get_var(str_replace($color,"_gradient",""));
         }
     
@@ -36,28 +54,23 @@
 }
 
 @mixin taint_background ($color) {
-    & {
-        //variable
-        background: get_var($color);
-    }
+    //variable
+    background: get_var($color) !important;
 }
 
 @mixin taint_line ($color, $font_color: "dark_color") {
-    & {
-        //variable
-        color: get_var($color);
-        background: none;
-        border: 2px solid get_var($color);
-        
-        &:hover:not([disabled]) {
-            color: get_var($font_color);
-            background: get_var($color);
-            box-shadow: 0px 0px 3px 1px get_var($color);
-        }
+    //variable
+    color: get_var($color) !important;
+    background: none;
+    border: 2px solid get_var($color) !important;
+    
+    &:hover:not([disabled]) {
+        color: get_var($font_color) !important;
+        background: get_var($color) !important;
+        box-shadow: 0px 0px 3px 1px get_var($color);
+    }
 
-        &:active:not([disabled]) {
-            box-shadow: none;
-        }
+    &:active:not([disabled]) {
+        box-shadow: none;
     }
 }
-

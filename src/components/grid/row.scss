@@ -1,5 +1,7 @@
 .#{$_row_name} {
     display: flex;
     position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
 }

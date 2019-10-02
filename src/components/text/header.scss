@@ -1,6 +1,8 @@
 @for $i from 1 to 7 {
     h#{$i} {
+        font-size: calc((#{get_var("__font_normal_size")} * 5) / #{$i});
         margin-left: calc((#{get_var("__margin_size")} * 16) / (#{$i + 1}));
-        margin-bottom: calc((#{get_var("__margin_size")} * 8) / (#{$i + 1}));
+        margin-top: calc((#{get_var("__margin_size")} * 32) / (#{$i + 1}));
+        margin-bottom: calc((#{get_var("__margin_size")} * 8) / (#{$i}));
     }
 }

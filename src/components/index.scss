@@ -3,15 +3,25 @@
 
 @import "components/grid";
 
+// Coloring
+//##########################
+
+@import "colors";
+
 // Spacement
 //##########################
 
 @import "components/spacement";
 
+// Animations
+//##########################
+
+@import "components/animations";
+
 // Alignment
 //##########################
 
-@import "components/alignment/text";
+@import "components/alignment";
 
 // Background
 //##########################
@@ -42,3 +52,8 @@
 //##########################
 
 @import "buttons";
+
+// Notifications
+//##########################
+
+@import "notification";

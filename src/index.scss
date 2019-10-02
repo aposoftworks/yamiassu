@@ -9,15 +9,15 @@
 
 @import "properties";
 
-// Mixins
-//##########################
-
-@import "mixins";
-
 // Functions
 //##########################
 
 @import "functions";
+
+// Mixins
+//##########################
+
+@import "mixins";
 
 // Reset
 //##########################
@@ -37,6 +37,11 @@
 
 @import "https://fonts.googleapis.com/css?family=Oxygen";
 @import "components/fonts";
+
+// Font Awesome
+//##########################
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all";
 
 // Components
 //##########################

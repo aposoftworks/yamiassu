@@ -1,0 +1,17 @@
+.#{$_float_name} {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+      transform: translate(0,10px);
+    }
+    
+    50% {
+      transform: translate(0,-10px);
+    }
+    
+    100% {
+      transform: translate(0,10px);
+    }
+  }

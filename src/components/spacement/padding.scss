@@ -1,29 +1,11 @@
 .#{$_padding_name} {
-    //Default sizing
-    @include padding_count();
+    @include media_all () using ($multiplier) {
+        $padding_count: $__padding_size * $multiplier;
 
-    //Calculate grid size based on screen size - extra small
-    &-#{$_extra_small_name} {
-        @include padding_size($__padding_size, $__padding_size * $__size_multiplier, $__padding_size * $__size_multiplier * 2, $__padding_size * $__size_multiplier * 3, $__padding_size * $__size_multiplier * 4);
-    }
-    
-    //Calculate grid size based on screen size - small
-    &-#{$_small_name} {
-        @include padding_size($__padding_size / $__size_multiplier, $__padding_size, $__padding_size * $__size_multiplier, $__padding_size * $__size_multiplier * 2, $__padding_size * $__size_multiplier * 3);
-    }
-    
-    //Calculate grid size based on screen size - medium
-    &-#{$_medium_name} {
-        @include padding_size($__padding_size / ($__size_multiplier * 2), $__padding_size / $__size_multiplier, $__padding_size, $__padding_size * $__size_multiplier, $__padding_size * $__size_multiplier * 2 );
-    }
-    
-    //Calculate grid size based on screen size - large
-    &-#{$_large_name} {
-        @include padding_size($__padding_size / ($__size_multiplier * 3), $__padding_size / ($__size_multiplier * 2), $__padding_size / $__size_multiplier, $__padding_size, $__padding_size * $__size_multiplier);
-    }
-    
-    //Calculate grid size based on screen size - extra large
-    &-#{$_extra_large_name} {
-        @include padding_size($__padding_size / ($__size_multiplier * 4), $__padding_size / ($__size_multiplier * 3), $__padding_size / ($__size_multiplier * 2), $__padding_size / $__size_multiplier, $__padding_size);
+        @for $c from 0 to $__loop_count {
+            &-#{$c} {
+                padding: $padding_count * $c !important;
+            }
+        }
     }
 }

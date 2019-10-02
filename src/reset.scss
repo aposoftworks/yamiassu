@@ -12,6 +12,7 @@ body {
 
 * {
     box-sizing: border-box;
+    text-align: justify;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,6 +25,8 @@ button,input[type=button] {
     border: none;
     padding: 0;
     margin: 0;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
         cursor: pointer;

@@ -12,41 +12,31 @@
     &:not(.#{$_padless_name}) {
         padding: get_var("__padding_size");
     }
+
+    //Aligment
+    
 }
 
 .#{$_column_name} {
-    /*
-     * Philosophy:
-     * 
-     */
+    @include media_all () using ($multiplier) {
+        $column_count: fill_size($__column_count * $multiplier);
 
-    //Default sizing
-    @include media_size();
-
-    //Calculate grid size based on screen size - extra small
-    &-#{$_extra_small_name} {
-        @include media_size();
-    }
-
-    $column_count: get_raw("__column_count");
+        //Calculate grid size
+        @for $col from 1 to ($__column_count + 1) {
+            @if ($col == 1) {
+                & {
+                    width: 100%;
+                }
+            }
     
-    //Calculate grid size based on screen size - small
-    &-#{$_small_name} {
-        @include media_size($column_count/2, $column_count, $column_count ,$column_count, $column_count);
-    }
-    
-    //Calculate grid size based on screen size - medium
-    &-#{$_medium_name} {
-        @include media_size($column_count/4, $column_count/2, $column_count, $column_count, $column_count);
-    }
-    
-    //Calculate grid size based on screen size - large
-    &-#{$_large_name} {
-        @include media_size($column_count/8, $column_count/4, $column_count/2, $column_count, $column_count);
-    }
-    
-    //Calculate grid size based on screen size - extra large
-    &-#{$_extra_large_name} {
-        @include media_size($column_count/16, $column_count/8, $column_count/4, $column_count/2, $column_count);
+            &-#{$col} {
+                @if ((100% / $column_count) * $col < $__fill_size_threshold or true) {
+                    width: (100% / $column_count) * $col;
+                }
+                @else {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
