@@ -1,0 +1,25 @@
+/*
+ * Solid main colors
+ */
+.#{$_image_name} {
+    @include loop_colors ("solid") using ($color) {
+        //Static
+        &-#{str_replace(nth($color, 1), "_color", "")} {
+            color: get_var(nth($color, 2)) !important;
+            @include taint_before(nth($color, 1));
+        }
+
+        //Interactible
+        &-#{str_replace(nth($color, 1), "_color", "")}-#{$_interactive_name} {
+            color: get_var(nth($color, 2)) !important;
+            @include taint_before(nth($color, 1), true);
+        }
+    }
+}
+
+//General fix
+[class*=#{$_image_name}][class*=#{$_button_name}] {
+    > * {
+        position: relative;
+    }
+}

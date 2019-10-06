@@ -5,20 +5,16 @@
      */
 
     @include loop_colors ("solid") using ($color) {
+        //Static
         &-#{str_replace(nth($color, 1), "_color", "")} {
             color: get_var(nth($color, 1)) !important;
-            @include taint_line(nth($color, 1));
+            @include taint_line(nth($color, 1), nth($color, 2));
         }
-    }
 
-    /*
-    * Gradient main colors
-    */
-
-    @include loop_colors ("gradient") using ($color) {
-        &-#{str_replace(nth($color, 1), "_gradient_color", "")}-#{$_gradient_name} {
-            color: get_var(nth($color, 2)) !important;
-            @include taint_line(nth($color, 1));
+        //Interactible
+        &-#{str_replace(nth($color, 1), "_color", "")}-#{$_interactive_name} {
+            color: get_var(nth($color, 1)) !important;
+            @include taint_line(nth($color, 1), nth($color, 2), true);
         }
     }
 }

@@ -24,3 +24,15 @@
         }
     }
 }
+
+//Correct text color depending on its context
+
+.#{$_context_name} {
+    &-#{$_light_name} * {
+        color: get_var("dark_color");
+    }
+
+    &-#{$_dark_name} * {
+        color: get_var("light_color");
+    }
+}

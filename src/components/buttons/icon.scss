@@ -6,6 +6,7 @@
     line-height: calc(#{get_var("__font_normal_size")} * 2);
     padding: 0 !important;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 //Sizing icons

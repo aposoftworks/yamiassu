@@ -15,14 +15,13 @@
 }
 
 // Imports
-@import "taints";
 @import "starfield";
 
  /*
   * Placeholder images
   */
 
-[class*=#{$_background_name}].#{$_placeholder_name} {
-    background-attachment: fixed;
+.#{$_placeholder_name} {
+    background-size: cover;
     background-image: url(https://picsum.photos/1920/1080);
 }

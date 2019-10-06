@@ -1,24 +1,8 @@
 @mixin loop_colors ($type: "all") {
-    //Solid and gradient
-    @if ($type == "all") {
-        $_colors: join($__official_colors, $__official_gradient_colors);
-    }
-    //Only solid
-    @if ($type == "solid") {
-        $_colors: join($__official_colors, ());
-    }
-    //Only gradient
-    @if ($type == "gradient") {
-        $_colors: join($__official_gradient_colors, ());
-    }
-
-    //Not valid type
-    @if ((variable-exists(_colors)) not true) {
-        $_colors: join($__official_colors, $__official_gradient_colors);
-    }
+    $colors: colors($type);
 
     // Loop through colors
-    @each $color in $_colors {
+    @each $color in $colors {
         @content ($color);
     }
 }
@@ -28,6 +12,7 @@
         //variable
         background: get_var($color) !important;
         opacity: $opacity;
+        transition: all .2s;
 
         //static
         content: "";
@@ -38,6 +23,27 @@
         left: 0;
         top: 0;
     }
+        
+    //Hover
+    @if ($hoverable == true) {
+        &:hover:not([disabled]) {
+            &:before {
+                opacity: 0.8;
+            }
+            
+            box-shadow: 0px 0px 3px 1px get_var(str_replace($color,"_gradient",""));
+        }
+    
+        //Active
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
+    }
+}
+
+@mixin taint_background ($color, $hoverable: false) {
+    //variable
+    background: get_var($color) !important;
         
     //Hover
     @if ($hoverable == true) {
@@ -53,24 +59,22 @@
     }
 }
 
-@mixin taint_background ($color) {
-    //variable
-    background: get_var($color) !important;
-}
-
-@mixin taint_line ($color, $font_color: "dark_color") {
+@mixin taint_line ($color, $font_color: "dark_color", $hoverable: false) {
     //variable
     color: get_var($color) !important;
     background: none;
     border: 2px solid get_var($color) !important;
     
-    &:hover:not([disabled]) {
-        color: get_var($font_color) !important;
-        background: get_var($color) !important;
-        box-shadow: 0px 0px 3px 1px get_var($color);
-    }
+    //Hover
+    @if ($hoverable == true) {
+        &:hover:not([disabled]) {
+            color: get_var($font_color) !important;
+            background: get_var($color) !important;
+            box-shadow: 0px 0px 3px 1px get_var($color);
+        }
 
-    &:active:not([disabled]) {
-        box-shadow: none;
+        &:active:not([disabled]) {
+            box-shadow: none;
+        }
     }
 }

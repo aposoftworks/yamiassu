@@ -20,6 +20,10 @@ h1,h2,h3,h4,h5,h6 {
     width: 100%;
 }
 
+p {
+    text-indent: calc(#{get_var("__margin_size")} * 10);
+}
+
 button,input[type=button] {
     background: white;
     border: none;

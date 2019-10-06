@@ -10,6 +10,30 @@
         padding: 12px;
     }
 
+    // Fix content color
+    * {
+        color: get_var("dark_color");
+    }
+
+    // Card header
+    .#{$_card_name}-#{$_header_name} {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // Card body
+    .#{$_card_name}-#{$_body_name} {
+        padding: calc(#{get_var("__padding_size")} * 10) calc(#{get_var("__padding_size")} * 4);
+    }
+
+    // Card bottom
+    .#{$_card_name}-#{$_bottom_name} {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     // Border
     @if ($__use_rounded) {
         border-radius: get_var("__border_size");

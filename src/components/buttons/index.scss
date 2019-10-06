@@ -10,11 +10,6 @@
     align-content: center;
     justify-content: center;
 
-    // Fix problem due to indexing
-    &:before {
-        z-index: -1;
-    }
-
     // Border
     @include round_border;
 

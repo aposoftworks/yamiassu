@@ -35,3 +35,21 @@
 @function print_gradient ($gradient) {
     @return linear-gradient(map-get($gradient, "direction"), map-get($gradient, "colors"));
 }
+
+/*
+ * Get officialized colors from string
+ */
+
+@function colors ($type) {
+    //Only solid
+    @if ($type == "solid") {
+        @return $__official_colors;
+    }
+    //Only gradient
+    @if ($type == "gradient") {
+        @return $__official_gradient_colors;
+    }
+    
+    //Solid and gradient
+    @return join($__official_colors, $__official_gradient_colors);
+}

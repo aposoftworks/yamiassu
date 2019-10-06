@@ -1,24 +1,39 @@
-// Coloring
+/*
+ * Solid main colors
+ */
 .#{$_background_name} {
-    /*
-     * Solid main colors
-     */
+    
 
     @include loop_colors ("solid") using ($color) {
+        //Static
         &-#{str_replace(nth($color, 1), "_color", "")} {
             color: get_var(nth($color, 2)) !important;
             @include taint_background(nth($color, 1));
         }
+
+        //Interactible
+        &-#{str_replace(nth($color, 1), "_color", "")}-#{$_interactive_name} {
+            color: get_var(nth($color, 2)) !important;
+            @include taint_background(nth($color, 1), true);
+        }
     }
+}
 
-    /*
-    * Gradient main colors
-    */
 
+/*
+ * Gradient main colors
+ */
+.#{$_gradient_name} {
     @include loop_colors ("gradient") using ($color) {
-        &-#{str_replace(nth($color, 1), "_gradient_color", "")}-#{$_gradient_name} {
+        &-#{str_replace(nth($color, 1), "_gradient_color", "")} {
             color: get_var(nth($color, 2)) !important;
             @include taint_background(nth($color, 1));
+        }
+
+        //Interactible
+        &-#{str_replace(nth($color, 1), "_gradient_color", "")}-#{$_interactive_name} {
+            color: get_var(nth($color, 2)) !important;
+            @include taint_background(nth($color, 1), true);
         }
     }
 }
