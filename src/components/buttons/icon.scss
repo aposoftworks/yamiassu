@@ -7,6 +7,10 @@
     padding: 0 !important;
     text-align: center;
     flex-wrap: wrap;
+
+    &:before {
+        border-radius: 50%;
+    }
 }
 
 //Sizing icons
