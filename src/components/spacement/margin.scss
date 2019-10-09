@@ -4,7 +4,13 @@
 
         @for $c from 0 to $__loop_count {
             &-#{$c} {
-                margin: $margin_count * $c !important;
+                margin: calc(#{get_var("__margin_size")} * #{$c}) !important;
+            }
+
+            @include axial_all () using ($position) {
+                &-#{$c} {
+                    margin-#{$position}: calc(#{get_var("__margin_size")} * #{$c}) !important;
+                }
             }
         }
     }

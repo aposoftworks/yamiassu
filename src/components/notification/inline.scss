@@ -1,6 +1,6 @@
 // Main button structure
 [class*=#{$_notification_name}] {
-    padding: calc(#{get_var("__padding_size")} * 10)calc(#{get_var("__padding_size")} * 10) !important;
+    padding: calc(#{get_var("__padding_size")} * 3)calc(#{get_var("__padding_size")} * 3) !important;
     position: relative;
     transition: all .2s;
     margin: get_var("__margin_size");

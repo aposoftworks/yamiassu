@@ -29,3 +29,25 @@
         }
     }
 }
+
+@mixin axial_all () {
+    //Top
+    &-#{$_top_name} {
+        @content ($_top_name);
+    }
+
+    //Right
+    &-#{$_right_name} {
+        @content ($_right_name);
+    }
+    
+    //Bottom
+    &-#{$_bottom_name} {
+        @content ($_bottom_name);
+    }
+    
+    //Left
+    &-#{$_left_name} {
+        @content ($_left_name);
+    }
+}

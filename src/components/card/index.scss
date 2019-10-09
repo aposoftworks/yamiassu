@@ -24,7 +24,7 @@
 
     // Card body
     .#{$_card_name}-#{$_body_name} {
-        padding: calc(#{get_var("__padding_size")} * 10) calc(#{get_var("__padding_size")} * 4);
+        padding: calc(#{get_var("__padding_size")} * 5) calc(#{get_var("__padding_size")} * 2);
     }
 
     // Card bottom

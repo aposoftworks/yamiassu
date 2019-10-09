@@ -1,0 +1,8 @@
+/dist/img
+/dist/fonts
+/dist/index.js
+/dist/index.html
+/fonts
+/node_modules
+.gitignore
+webpack.mix.js

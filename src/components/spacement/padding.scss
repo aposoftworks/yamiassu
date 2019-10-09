@@ -4,7 +4,13 @@
 
         @for $c from 0 to $__loop_count {
             &-#{$c} {
-                padding: $padding_count * $c !important;
+                padding: calc(#{get_var("__padding_size")} * #{$c}) !important;
+            }
+
+            @include axial_all () using ($position) {
+                &-#{$c} {
+                    padding-#{$position}: calc(#{get_var("__padding_size")} * #{$c}) !important;
+                }
             }
         }
     }

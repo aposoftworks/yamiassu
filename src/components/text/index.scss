@@ -1,8 +1,9 @@
-// Titles and headers
+// Paragraph reset
+p {
+    text-indent: calc(#{get_var("__margin_size")} * 5);
+}
+
+// Imports
 @import "header";
-
-// Subtitles
 @import "title";
-
-// Colors
 @import "color";
