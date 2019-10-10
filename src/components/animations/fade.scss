@@ -1,0 +1,23 @@
+//Invisible to visible
+@keyframes fade_in {
+    from {
+        opacity: 0;
+        pointer-events: none;
+    }
+    to {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+//Visible to invisible
+@keyframes fade_out {
+    from {
+        opacity: 1;
+        pointer-events: all;
+    }
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

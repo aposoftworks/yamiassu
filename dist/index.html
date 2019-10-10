@@ -356,35 +356,57 @@
 
                     <h2>Visibility</h2>
                     
-                    <p>You should inspect the html elements here, not everything will be visible at the same time.</p>
-                    <p>You can use CSS targetting to toggle conditional visibility.</p>
+                    <p>You should inspect the html elements here, not everything will be visible at the same time.
+                        Since the objective here is to show how you can hide and display to users on certain occasions.
+                        You can also use CSS targetting to toggle conditional visibility.</p>
 
                     <h3>Hide</h3>
 
-                    <div class="notification-inline background-primary hide-target" id="hideme">
-                        Targetable object, write #hideme on the url to hide
-                    </div>
-                    
-                    <div class="notification-inline background-primary hide-xs">
-                        Will hide on extra small size
-                    </div>
-                    
-                    <div class="notification-inline background-primary hide-xl">
-                        Will hide on extra large size
+                    <div class="shelf">
+                        <div class="notification-inline background-primary hide-target" id="hideme">
+                            Targetable object, write #hideme on the url to hide
+                        </div>
+                        
+                        <div class="notification-inline background-primary hide-xs">
+                            Will hide on extra small size
+                        </div>
+                        
+                        <div class="notification-inline background-primary hide-xl">
+                            Will hide on extra large size
+                        </div>
                     </div>
 
                     <h3>Display</h3>
 
-                    <div class="notification-inline background-primary display-target" id="displayme" style="display:none">
-                        Targetable object, write #displayme on the url to display
+                    <div class="shelf">
+                        <div class="notification-inline background-primary display-target" id="displayme" style="display:none">
+                            Targetable object, write #displayme on the url to display
+                        </div>
+                        
+                        <div class="notification-inline background-primary display-xs" style="display:none">
+                            Will display on extra small size
+                        </div>
+                        
+                        <div class="notification-inline background-primary display-xl" style="display:none">
+                            Will display on extra large size
+                        </div>
                     </div>
-                    
-                    <div class="notification-inline background-primary display-xs" style="display:none">
-                        Will display on extra small size
-                    </div>
-                    
-                    <div class="notification-inline background-primary display-xl" style="display:none">
-                        Will display on extra large size
+
+                    <!-- Fade -->
+
+                    <h3>Fade</h3>
+
+                    <div class="shelf">
+                        <div class="block-6">
+                            <a href="#displayme2"   class="block button background-primary-interactive">Fade in</a>
+                            <a href="#hideme2"      class="block button background-primary-interactive">Fade out</a>
+                            <a href=""              class="block button background-primary-interactive">Clear fade</a>
+                        </div>
+                        <div class="block-6">
+                            <div class="block-4 push-4">
+                                <img class="img-responsive fade-out-target" src="img/yamiassu_white.png" id="hideme2" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

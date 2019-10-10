@@ -1,0 +1,9 @@
+@mixin targetable {
+    // Normal
+    @content;
+
+    // Target
+    &-#{$_target_name}:target {
+        @content;
+    }
+}

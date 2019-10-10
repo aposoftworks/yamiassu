@@ -13,6 +13,11 @@
     // Border
     @include round_border;
 
+    // Cursor
+    &:hover {
+        cursor: pointer;
+    }
+
     // Disabled properties
     &[disabled] {
         cursor: not-allowed;

@@ -120,6 +120,10 @@ input {
   border: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*
  * Solid main colors
  */
@@ -18360,6 +18364,54 @@ readers do not read off random characters that represent icons */
   }
 }
 
+@-webkit-keyframes fade_in {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@-webkit-keyframes fade_out {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .text-left {
   text-align: left;
   display: flex;
@@ -19606,6 +19658,26 @@ readers do not read off random characters that represent icons */
   }
 }
 
+[class*=fade] {
+  transition: opacity 0.2s;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-in-target:target {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-out-target:target {
+  opacity: 0;
+}
+
 /*
  * Solid main colors
  */
@@ -20111,6 +20183,10 @@ h6 {
 
 [class*=button].flat:before {
   border-radius: 0;
+}
+
+[class*=button]:hover {
+  cursor: pointer;
 }
 
 [class*=button][disabled] {

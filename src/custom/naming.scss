@@ -25,6 +25,7 @@ $_breakpoint_name:          "breakpoint"    !default;
 // Visibility
 $_hide_name:                "hide"      !default;
 $_display_name:             "display"   !default;
+$_fade_name:                "fade"      !default;
 
 // Padding
 $_padding_name:             "padding"   !default;
@@ -76,6 +77,8 @@ $_starfield_name:           "starfield"     !default;
 // Animation
 $_float_name:               "float"         !default;
 $_twinkle_name:             "twinkle"       !default;
+$_in_name:                  "in"            !default;
+$_out_name:                 "out"           !default;
 
 // Form
 $_form_name:                "form"          !default;
