@@ -1,6 +1,6 @@
 // Main button structure
 [class*=#{$_button_name}] {
-    padding: 10px 20px !important;
+    padding: calc(#{get_var("__padding_size")} * 1.5) calc(#{get_var("__padding_size")} * 3) !important;
     position: relative;
     transition: all .2s;
     margin: get_var("__margin_size");

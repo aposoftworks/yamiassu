@@ -19,7 +19,7 @@
 
     // Input
     input.#{$_form_name}-#{$_input_name} {
-        &[type=text],&:not([type]) {
+        &[type=text],&[type=password],&:not([type]) {
             width: 100%;
             padding: calc(#{get_var("__padding_size")});
             border: 2px solid get_var("primary_color");

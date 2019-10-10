@@ -1,6 +1,6 @@
 {
 	"name": "@aposoftworks/yamiassu",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "The default css styling framework used by Apo Softworks",
 	"main": "index.js",
 	"scripts": {
@@ -15,9 +15,9 @@
 		"type": "git",
 		"url": "git+https://github.com/aposoftworks/yamiassu.git"
 	},
-	"keywords": [],
+	"keywords": ["css", "styling", "yamiassu", "framework"],
 	"author": "",
-	"license": "ISC",
+	"license": "BSD-3-Clause",
 	"bugs": {
 		"url": "https://github.com/aposoftworks/yamiassu/issues"
 	},

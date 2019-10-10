@@ -1,0 +1,11 @@
+.#{$_hide_name} {
+    // Media cases
+    @include media_all ("static") using ($multiplier) {
+        display: none !important;
+
+        //Target hide
+        &-#{$_target_name}:target {
+            display: none !important;
+        }
+    }
+}

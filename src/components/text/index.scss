@@ -1,5 +1,6 @@
 // Paragraph reset
 p {
+    width: 100%;
     text-indent: calc(#{get_var("__margin_size")} * 5);
 }
 

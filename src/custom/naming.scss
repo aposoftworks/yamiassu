@@ -22,7 +22,9 @@ $_responsive_name:          "responsive"    !default;
 $_emulate_name:             "emulate"       !default;
 $_breakpoint_name:          "breakpoint"    !default;
 
-// Aligment
+// Visibility
+$_hide_name:                "hide"      !default;
+$_display_name:             "display"   !default;
 
 // Padding
 $_padding_name:             "padding"   !default;
@@ -65,6 +67,7 @@ $_image_name:               "img"           !default;
 $_interactive_name:         "interactive"   !default;
 $_context_name:             "context"       !default;
 $_body_name:                "body"          !default;
+$_target_name:              "target"        !default;
 
 // Stars
 $_star_name:                "star"          !default;
