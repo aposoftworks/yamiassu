@@ -21222,6 +21222,41 @@ h6 {
   border: 2px solid var(--dark_gradient_color) !important;
 }
 
+.button-1 {
+  padding: calc(var(--__padding_size) * 1) calc(var(--__padding_size) * 2) !important;
+  font-size: calc(var(--__font_normal_size) * 1);
+}
+
+.button-2 {
+  padding: calc(var(--__padding_size) * 2) calc(var(--__padding_size) * 4) !important;
+  font-size: calc(var(--__font_normal_size) * 1.5);
+}
+
+.button-3 {
+  padding: calc(var(--__padding_size) * 3) calc(var(--__padding_size) * 6) !important;
+  font-size: calc(var(--__font_normal_size) * 2);
+}
+
+.button-4 {
+  padding: calc(var(--__padding_size) * 4) calc(var(--__padding_size) * 8) !important;
+  font-size: calc(var(--__font_normal_size) * 2.5);
+}
+
+.button-5 {
+  padding: calc(var(--__padding_size) * 5) calc(var(--__padding_size) * 10) !important;
+  font-size: calc(var(--__font_normal_size) * 3);
+}
+
+.button-6 {
+  padding: calc(var(--__padding_size) * 6) calc(var(--__padding_size) * 12) !important;
+  font-size: calc(var(--__font_normal_size) * 3.5);
+}
+
+.button-7 {
+  padding: calc(var(--__padding_size) * 7) calc(var(--__padding_size) * 14) !important;
+  font-size: calc(var(--__font_normal_size) * 4);
+}
+
 [class*=notification] {
   padding: calc(var(--__padding_size) * 3) calc(var(--__padding_size) * 3) !important;
   position: relative;

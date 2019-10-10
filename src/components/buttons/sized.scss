@@ -1,0 +1,6 @@
+@for $i from 2 to $__loop_count {
+    .#{$_button_name}-#{($i - 1)} {
+        padding: calc(#{get_var("__padding_size")} * #{($i - 1)}) calc(#{get_var("__padding_size")} * #{($i - 1) * 2}) !important;
+        font-size: calc(#{get_var("__font_normal_size")} * #{($i) * 0.5});
+    }
+}
