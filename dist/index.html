@@ -12,11 +12,11 @@
     </head>
 
     <body>
-        <div class="background-dark fullscreen text-light-all">
+        <div class="background-dark  text-light-all">
             <!-- Header -->
-            <div class="background-dark fullscreen" style="overflow: hidden">
-                <canvas class="fullscreen starfield" data-starfield="300"></canvas>
-                <div class="background fullscreen" style="background-image:url(img/background_01.svg)">
+            <div class="background-dark" style="overflow: hidden">
+                <canvas class="starfield" data-starfield="300"></canvas>
+                <div class="background" style="background-image:url(img/background_01.svg);min-height: 100vh;">
                     <div class="block-xl-2 push-xl-5 block-lg-4 push-lg-4 block-md-6 push-md-3 block-sm-10 push-sm-1 block-xs-10 push-xs-1">
                         <div class="margin-top-6 block">
                             <img src="img/yamiassu.png" class="img-responsive">
@@ -347,10 +347,38 @@
 
                     <h3>Alert</h3>
 
-                    <p class="padding-xs-2">Alert notifications are the ones that appear in the screen as a modal and block the use of the rest of the content while opened.</p>
+                    <p class="padding-xs-2">Alert notifications are the ones that appear in the screen as a modal and block the use of the rest of the content while opened.
+                        <a href="#notificationalertexample">Click here</a> to toggle a full example of the alert notification.
+                    </p>
+
+                    <div class="fullscreen img-dark hide display-target" id="notificationalertexample">
+                            <div class="notification-alert background-light">
+                                <div class="title">
+                                    Notification title
+                                </div>
+    
+                                Notification body
+                                
+                                <div class="bottom">
+                                    <a href="#close" class="block-md-1 block-xs-12 button background-primary-interactive">Accept</a>
+                                    <a href="#close" class="block-md-1 block-xs-12 button background-secondary-interactive">Cancel</a>
+                                </div>
+                            </div>
+                    </div>
 
                     <div class="shelf">
-                        
+                        <div class="notification-alert background-light">
+                            <div class="title">
+                                Notification title
+                            </div>
+
+                            Notification body
+                            
+                            <div class="bottom">
+                                <button class="block-md-1 block-xs-12 button background-primary-interactive">Accept</button>
+                                <button class="block-md-1 block-xs-12 button background-secondary-interactive">Cancel</button>
+                            </div>
+                        </div>
                     </div>
 
                     <h3>Pop-up</h3>
@@ -358,7 +386,13 @@
                     <p class="padding-xs-2">Pop-up notifications are little boxes that appear on the edge of the screen to display temporarily something that interests you.</p>
 
                     <div class="shelf">
-                        
+                            <a class="notification-popup background-light">
+                                <div class="options">
+                                    <button class="button icon background-primary-interactive">X</button>
+                                </div>
+
+                                Notification body
+                            </a>
                     </div>
 
                     <!-- Display/Hide -->
@@ -409,7 +443,7 @@
                         <div class="block-6">
                             <a href="#displayme2"   class="block button background-primary-interactive">Fade in</a>
                             <a href="#hideme2"      class="block button background-primary-interactive">Fade out</a>
-                            <a href=""              class="block button background-primary-interactive">Clear fade</a>
+                            <a href="#close"        class="block button background-primary-interactive">Clear fade</a>
                         </div>
                         <div class="block-6">
                             <div class="block-4 push-4">

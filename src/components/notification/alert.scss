@@ -1,0 +1,31 @@
+// Base class
+.#{$_notification_name}-#{$_alert_name} {
+    background-color: get_var("light_color");
+    display: flex;
+    flex-direction: column;
+    width: calc(#{get_var("__extra_small_breakpoint")} / 2);
+    margin: auto;
+    text-align: center;
+    padding: get_var("__padding_size") !important;
+
+    .#{$_title_name} {
+        font-weight: bold;
+        margin-bottom: calc(#{get_var("__margin_size")} * 4);
+        margin-left: calc(#{get_var("__margin_size")} * 2);
+    }
+
+    .#{$_bottom_name} {
+        margin-top: calc(#{get_var("__margin_size")} * 4);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    // Fix content color
+    * {
+        color: get_var("dark_color");
+    }
+
+    // Border
+    @include round_border;
+}

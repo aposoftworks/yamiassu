@@ -33,6 +33,11 @@ button,input[type=button] {
     }
 }
 
+a {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
 input {
     border: none;
 }

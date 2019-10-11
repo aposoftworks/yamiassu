@@ -35,7 +35,5 @@
     }
 
     // Border
-    @if ($__use_rounded) {
-        border-radius: get_var("__border_size");
-    }
+    @include round_border;
 }

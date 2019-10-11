@@ -1,0 +1,9 @@
+a {
+    transition: opacity .2s;
+    color: get_var("primary_color") !important;
+    opacity: 0.8;
+
+    &:hover {
+        opacity: 1;
+    }
+}

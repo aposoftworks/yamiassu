@@ -1,0 +1,27 @@
+// Base class
+.#{$_notification_name}-#{$_popup_name} {
+    background-color: get_var("light_color");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(#{get_var("__extra_small_breakpoint")} / 2);
+    min-height: calc(#{get_var("__extra_small_breakpoint")} / 5);
+    margin: auto;
+    text-align: center;
+    padding: calc(#{get_var("__padding_size")} * 3) !important;
+
+    // Options / close
+    .#{$_options_name} {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    // Fix content color
+    * {
+        color: get_var("dark_color");
+    }
+
+    // Border
+    @include round_border;
+}
