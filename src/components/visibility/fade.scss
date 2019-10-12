@@ -4,18 +4,22 @@
 
 .#{$_fade_name} {
     &-#{$_in_name} {
-        opacity: 1;
+        opacity: 1 !important;
+        pointer-events: all !important;
         
         &-#{$_target_name}:target {
-            opacity: 1;
+            opacity: 1 !important;
+            pointer-events: all !important;
         }
     }
     
     &-#{$_out_name} {
-        opacity: 0;
+        opacity: 0 !important;
+        pointer-events: none !important;
         
         &-#{$_target_name}:target {
-            opacity:0;
+            opacity:0 !important;
+            pointer-events: none !important;
         }
     }
 }

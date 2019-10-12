@@ -6080,7 +6080,7 @@ readers do not read off random characters that represent icons */
  * Container data and it's responsivity
  */
 
-.container {
+.stand {
   display: flex;
   margin: auto;
   max-width: var(--__container_size);
@@ -7521,6 +7521,10 @@ readers do not read off random characters that represent icons */
  * Offset data and it's responsivity
  */
 
+.push-0 {
+  margin-left: 0%;
+}
+
 .push {
   margin-left: 100%;
 }
@@ -7570,6 +7574,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 1200px) {
+  .push-xl-0 {
+    margin-left: 0%;
+  }
+
   .push-xl {
     margin-left: 100%;
   }
@@ -7620,6 +7628,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .push-lg-0 {
+    margin-left: 0%;
+  }
+
   .push-lg {
     margin-left: 100%;
   }
@@ -7670,6 +7682,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .push-md-0 {
+    margin-left: 0%;
+  }
+
   .push-md {
     margin-left: 100%;
   }
@@ -7720,6 +7736,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .push-sm-0 {
+    margin-left: 0%;
+  }
+
   .push-sm {
     margin-left: 100%;
   }
@@ -7770,6 +7790,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (max-width: 576px) {
+  .push-xs-0 {
+    margin-left: 0%;
+  }
+
   .push-xs {
     margin-left: 100%;
   }
@@ -7820,6 +7844,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 1200px) {
+  .push-xl-0 {
+    margin-left: 0%;
+  }
+
   .push-xl {
     margin-left: 100%;
   }
@@ -7870,6 +7898,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .push-lg-0 {
+    margin-left: 0%;
+  }
+
   .push-lg {
     margin-left: 100%;
   }
@@ -7920,6 +7952,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .push-md-0 {
+    margin-left: 0%;
+  }
+
   .push-md {
     margin-left: 100%;
   }
@@ -7970,6 +8006,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .push-sm-0 {
+    margin-left: 0%;
+  }
+
   .push-sm {
     margin-left: 100%;
   }
@@ -8020,6 +8060,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (max-width: 576px) {
+  .push-xs-0 {
+    margin-left: 0%;
+  }
+
   .push-xs {
     margin-left: 100%;
   }
@@ -8070,6 +8114,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 1200px) {
+  .push-xl-0 {
+    margin-left: 0%;
+  }
+
   .push-xl {
     margin-left: 100%;
   }
@@ -8120,6 +8168,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .push-lg-0 {
+    margin-left: 0%;
+  }
+
   .push-lg {
     margin-left: 100%;
   }
@@ -8170,6 +8222,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .push-md-0 {
+    margin-left: 0%;
+  }
+
   .push-md {
     margin-left: 100%;
   }
@@ -8220,6 +8276,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .push-sm-0 {
+    margin-left: 0%;
+  }
+
   .push-sm {
     margin-left: 100%;
   }
@@ -8270,6 +8330,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (max-width: 576px) {
+  .push-xs-0 {
+    margin-left: 0%;
+  }
+
   .push-xs {
     margin-left: 100%;
   }
@@ -8320,6 +8384,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 1200px) {
+  .push-xl-0 {
+    margin-left: 0%;
+  }
+
   .push-xl {
     margin-left: 100%;
   }
@@ -8370,6 +8438,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .push-lg-0 {
+    margin-left: 0%;
+  }
+
   .push-lg {
     margin-left: 100%;
   }
@@ -8420,6 +8492,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .push-md-0 {
+    margin-left: 0%;
+  }
+
   .push-md {
     margin-left: 100%;
   }
@@ -8470,6 +8546,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .push-sm-0 {
+    margin-left: 0%;
+  }
+
   .push-sm {
     margin-left: 100%;
   }
@@ -8520,6 +8600,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (max-width: 576px) {
+  .push-xs-0 {
+    margin-left: 0%;
+  }
+
   .push-xs {
     margin-left: 100%;
   }
@@ -8570,6 +8654,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 1200px) {
+  .push-xl-0 {
+    margin-left: 0%;
+  }
+
   .push-xl {
     margin-left: 100%;
   }
@@ -8620,6 +8708,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .push-lg-0 {
+    margin-left: 0%;
+  }
+
   .push-lg {
     margin-left: 100%;
   }
@@ -8670,6 +8762,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .push-md-0 {
+    margin-left: 0%;
+  }
+
   .push-md {
     margin-left: 100%;
   }
@@ -8720,6 +8816,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
+  .push-sm-0 {
+    margin-left: 0%;
+  }
+
   .push-sm {
     margin-left: 100%;
   }
@@ -8770,6 +8870,10 @@ readers do not read off random characters that represent icons */
 }
 
 @media screen and (max-width: 576px) {
+  .push-xs-0 {
+    margin-left: 0%;
+  }
+
   .push-xs {
     margin-left: 100%;
   }
@@ -18937,6 +19041,7 @@ readers do not read off random characters that represent icons */
 
 .img-responsive {
   max-width: 100%;
+  height: auto;
 }
 
 .hide {
@@ -19668,19 +19773,23 @@ readers do not read off random characters that represent icons */
 }
 
 .fade-in {
-  opacity: 1;
+  opacity: 1 !important;
+  pointer-events: all !important;
 }
 
 .fade-in-target:target {
-  opacity: 1;
+  opacity: 1 !important;
+  pointer-events: all !important;
 }
 
 .fade-out {
-  opacity: 0;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 .fade-out-target:target {
-  opacity: 0;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /*

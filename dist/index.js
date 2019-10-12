@@ -7,12 +7,12 @@ var quantity 		= canvasElement.getAttribute("data-starfield");
 var stars = [];
 
 //Set canvas size
-canvasElement.width 	= window.innerWidth;
-canvasElement.height 	= window.innerHeight;
+canvasElement.width 	= canvasElement.parentElement.clientWidth;
+canvasElement.height 	= canvasElement.parentElement.clientHeight;
 
 window.onresize = function () {
-	canvasElement.width 	= window.innerWidth;
-	canvasElement.height 	= window.innerHeight;
+	canvasElement.width 	= canvasElement.parentElement.clientWidth;
+	canvasElement.height 	= canvasElement.parentElement.clientHeight;
 
 	//Reposition stars
 	for (let i = 0; i < quantity; i++) {

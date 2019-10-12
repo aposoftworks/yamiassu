@@ -27,7 +27,7 @@
             </div>
 
             <div class="background-dark">
-                <div class="container">
+                <div class="stand">
                     <!-- Description -->
                     <div class="block-8 push-2">
                         <h3 class="text-center">Welcome to Yamiassu, a framework oriented to variables developed by APO Softworks to enhance content creation and edition at runtime.</h3>
@@ -49,113 +49,190 @@
                         They both can be toggled interactive, that would enable you to place them on buttons or anything else that should interact with user events.
                     </p>
 
+                    <!-- Grid -->
+
+                    <h2>Grid system</h2>
+
+                    <p class="padding-xs-2">Our grid system is based on a 12-column (or called blocks by us) grid. Totally changeable in the scss configuration.
+                        Sadly, due to css limitations, we cannot do it runtime. But complains aside, we let you customize your own responsivity rules.</p>
+
+                    <h3>Blocks</h3>
+
+                    <p class="padding-xs-2">Those are the building blocks (pun not intended) of every application.</p>
+                    
+                    <div class="shelf">
+                        <div class="shelf margin-bottom-1">
+                            <div class="line-primary flat block">.block-12</div>
+                        </div>
+                        
+                        <div class="shelf margin-bottom-1">
+                            <div class="line-primary flat block-6">.block-6</div>
+                            <div class="line-primary flat block-6">.block-6</div>
+                        </div>
+                        
+                        <div class="shelf margin-bottom-1">
+                            <div class="line-primary flat block-3">.block-3</div>
+                            <div class="line-primary flat block-2">.block-2</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Pushs</h3>
+                    
+                    <p class="padding-xs-2">When you need spacing between your blocks, you may use pushs to do that.
+                        They Fall under the same rules as blocks, 12 columns.</p>
+                    
+                    <div class="shelf">
+                        <div class="shelf margin-bottom-1">
+                            <div class="line-primary flat push-6 block-6">.push-6 .block-6</div>
+                        </div>
+                        
+                        <div class="shelf margin-bottom-1">
+                            <div class="line-primary flat block-4">.block-4</div>
+                            <div class="line-primary flat block-4 push-4">.block-4 .push-4</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Shelves</h3>
+                    
+                    <p class="padding-xs-2">A shelf is a row that won't let your children mix with other shelves. They are absolute on in it's line.</p>
+                    
+                    <div class="shelf">
+                        <div class="shelf margin-bottom-1">
+                            <div class="line-primary flat block-3">.block-3</div>
+                        </div>
+                        
+                        <div class="shelf">
+                            <div class="line-primary flat block-3">.block-3</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Stands</h3>
+                    
+                    <p class="padding-xs-2">A stand is a display stand, intended to make sure the content is always displayed on the middle of the screen.</p>
+                    
+                </div>
+
+                <div class="shelf margin-bottom-1">
+                    <div class="block line-primary flat">A block without a stand</div>
+                </div>
+                
+                <div class="stand">
+                    <div class="shelf">
+                        <div class="block line-primary flat">A block with a stand</div>
+                    </div>
+
+                    <!-- Responsive -->
+                    <h2>Responsive Grid System</h2>
+
+                    <p class="padding-xs-2">We follow the idea that the grid size should scale accordlying, and snap it to fill for full size after a threshold is fullfield.</p>
+
                     <!-- Buttons -->
                     <h2>Buttons</h2>
 
                     <h3>Basic buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 button background-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 button background-success-interactive">Success Button</button>
-                        <button class="block-md-1 block-xs-12 button background-warning-interactive">Warning Button</button>
-                        <button class="block-md-1 block-xs-12 button background-danger-interactive">Danger Button</button>
-                        <button class="block-md-1 block-xs-12 button background-light-interactive">Light Button</button>
-                        <button class="block-md-1 block-xs-12 button background-dark-interactive">Dark Button</button>
+                        <button class="block-md-2 block-xs-12 button background-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 button background-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 button background-success-interactive">Success Button</button>
+                        <button class="block-md-2 block-xs-12 button background-warning-interactive">Warning Button</button>
+                        <button class="block-md-2 block-xs-12 button background-danger-interactive">Danger Button</button>
+                        <button class="block-md-2 block-xs-12 button background-light-interactive">Light Button</button>
+                        <button class="block-md-2 block-xs-12 button background-dark-interactive">Dark Button</button>
                     </div> 
                     
                     <h3>Gradient buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button gradient-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-success-interactive">Success Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-warning-interactive">Warning Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-danger-interactive">Danger Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-light-interactive">Light Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-dark-interactive">Dark Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-success-interactive">Success Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-warning-interactive">Warning Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-danger-interactive">Danger Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-light-interactive">Light Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-dark-interactive">Dark Button</button>
                     </div>
                     
                     <h3>Image buttons</h3>
 
-                    <p>Sadly, due to CSS limitations, if you wish to use an image as background, wrap everything inside an element instead of leaving them as a child of the button.</p>
+                    <p class="padding-xs-2">Sadly, due to CSS limitations, if you wish to use an image as background, wrap everything inside an element instead of leaving them as a child of the button.</p>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button placeholder img-primary-interactive"><div>Primary Button</div></button>
-                        <button class="block-md-1 block-xs-12 button placeholder img-secondary-interactive"><div>Secondary Button</div></button>
-                        <button class="block-md-1 block-xs-12 button placeholder img-success-interactive"><div>Success Button</div></button>
-                        <button class="block-md-1 block-xs-12 button placeholder img-warning-interactive"><div>Warning Button</div></button>
-                        <button class="block-md-1 block-xs-12 button placeholder img-danger-interactive"><div>Danger Button</div></button>
-                        <button class="block-md-1 block-xs-12 button placeholder img-light-interactive"><div>Light Button</div></button>
-                        <button class="block-md-1 block-xs-12 button placeholder img-dark-interactive"><div>Dark Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-primary-interactive"><div>Primary Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-secondary-interactive"><div>Secondary Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-success-interactive"><div>Success Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-warning-interactive"><div>Warning Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-danger-interactive"><div>Danger Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-light-interactive"><div>Light Button</div></button>
+                        <button class="block-md-2 block-xs-12 button placeholder img-dark-interactive"><div>Dark Button</div></button>
                     </div>
                     
                     <h3>Line buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button line-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 button line-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 button line-success-interactive">Success Button</button>
-                        <button class="block-md-1 block-xs-12 button line-warning-interactive">Warning Button</button>
-                        <button class="block-md-1 block-xs-12 button line-danger-interactive">Danger Button</button>
-                        <button class="block-md-1 block-xs-12 button line-light-interactive">Light Button</button>
-                        <button class="block-md-1 block-xs-12 button line-dark-interactive">Dark Button</button>
+                        <button class="block-md-2 block-xs-12 button line-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 button line-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 button line-success-interactive">Success Button</button>
+                        <button class="block-md-2 block-xs-12 button line-warning-interactive">Warning Button</button>
+                        <button class="block-md-2 block-xs-12 button line-danger-interactive">Danger Button</button>
+                        <button class="block-md-2 block-xs-12 button line-light-interactive">Light Button</button>
+                        <button class="block-md-2 block-xs-12 button line-dark-interactive">Dark Button</button>
                     </div>
                     
                     <h3>Flat buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 flat button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 flat button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 flat button img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-1 block-xs-12 flat button line-warning-interactive">Warning Button</button>
+                        <button class="block-md-2 block-xs-12 flat button background-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 flat button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 flat button img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="block-md-2 block-xs-12 flat button line-warning-interactive">Warning Button</button>
                     </div>
                     
                     <h3>Round buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 round button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 round button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 round button img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-1 block-xs-12 round button line-warning-interactive">Warning Button</button>
+                        <button class="block-md-2 block-xs-12 round button background-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 round button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 round button img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="block-md-2 block-xs-12 round button line-warning-interactive">Warning Button</button>
                     </div>
                     
                     <h3>Group buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 group button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 group button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 group button img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-1 block-xs-12 group button line-warning-interactive">Warning Button</button>
+                        <button class="block-md-2 block-xs-12 group button background-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 group button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 group button img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="block-md-2 block-xs-12 group button line-warning-interactive">Warning Button</button>
                     </div>
                     
                     <h3>Disabled buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button background-primary-interactive" disabled>Primary Button</button>
-                        <button class="block-md-1 block-xs-12 button gradient-secondary-interactive" disabled>Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 button img-success-interactive placeholder" disabled><div>Success Button</div></button>
-                        <button class="block-md-1 block-xs-12 button line-warning-interactive" disabled>Warning Button</button>
+                        <button class="block-md-2 block-xs-12 button background-primary-interactive" disabled>Primary Button</button>
+                        <button class="block-md-2 block-xs-12 button gradient-secondary-interactive" disabled>Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 button img-success-interactive placeholder" disabled><div>Success Button</div></button>
+                        <button class="block-md-2 block-xs-12 button line-warning-interactive" disabled>Warning Button</button>
                     </div>
                     
                     <h3>Icon buttons</h3>
                     
                     <div class="shelf padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button icon   background-primary-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-1 block-xs-12 button icon-2 gradient-secondary-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-1 block-xs-12 button icon-3 img-success-interactive placeholder"><i class="fa fa-info"></i></button>
-                        <button class="block-md-1 block-xs-12 button icon-4 line-warning-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-1 block-xs-12 button icon-5 line-danger-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-1 block-xs-12 button icon-6 line-light-interactive"><i class="fa fa-info"></i></button>
+                        <button class="block-md-2 block-xs-12 button icon   background-primary-interactive"><i class="fa fa-info"></i></button>
+                        <button class="block-md-2 block-xs-12 button icon-2 gradient-secondary-interactive"><i class="fa fa-info"></i></button>
+                        <button class="block-md-2 block-xs-12 button icon-3 img-success-interactive placeholder"><i class="fa fa-info"></i></button>
+                        <button class="block-md-2 block-xs-12 button icon-4 line-warning-interactive"><i class="fa fa-info"></i></button>
+                        <button class="block-md-2 block-xs-12 button icon-5 line-danger-interactive"><i class="fa fa-info"></i></button>
+                        <button class="block-md-2 block-xs-12 button icon-6 line-light-interactive"><i class="fa fa-info"></i></button>
                     </div>
 
                     <h3>Sized buttons</h3>
 
-                    <div class="padding-xs-2">
-                        <button class="block-md-1 block-xs-12 button-1 background-primary-interactive">Primary Button</button>
-                        <button class="block-md-1 block-xs-12 button-2 gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-1 block-xs-12 button-3 img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-1 block-xs-12 button-4 line-warning-interactive">Warning Button</button>
+                    <div class="shelf padding-xs-2">
+                        <button class="block-md-2 block-xs-12 button-1 background-primary-interactive">Primary Button</button>
+                        <button class="block-md-2 block-xs-12 button-2 gradient-secondary-interactive">Secondary Button</button>
+                        <button class="block-md-2 block-xs-12 button-3 img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="block-md-2 block-xs-12 button-4 line-warning-interactive">Warning Button</button>
                     </div>
 
                     <!-- Text -->
@@ -349,10 +426,11 @@
 
                     <p class="padding-xs-2">Alert notifications are the ones that appear in the screen as a modal and block the use of the rest of the content while opened.
                         <a href="#notificationalertexample">Click here</a> to toggle a full example of the alert notification.
+                        Attention: don't confuse alert notifications with modals, they are for different purposes and ends.
                     </p>
 
-                    <div class="fullscreen img-dark hide display-target" id="notificationalertexample">
-                            <div class="notification-alert background-light">
+                    <div class="fullscreen img-dark fade-in-target" style="opacity:0;pointer-events: none;" id="notificationalertexample">
+                            <div class="notification-alert background-light margin-top-8">
                                 <div class="title">
                                     Notification title
                                 </div>
@@ -386,13 +464,13 @@
                     <p class="padding-xs-2">Pop-up notifications are little boxes that appear on the edge of the screen to display temporarily something that interests you.</p>
 
                     <div class="shelf">
-                            <a class="notification-popup background-light">
+                            <div class="notification-popup background-light">
                                 <div class="options">
                                     <button class="button icon background-primary-interactive">X</button>
                                 </div>
 
                                 Notification body
-                            </a>
+                            </div>
                     </div>
 
                     <!-- Display/Hide -->
@@ -446,7 +524,7 @@
                             <a href="#close"        class="block button background-primary-interactive">Clear fade</a>
                         </div>
                         <div class="block-6">
-                            <div class="block-4 push-4">
+                            <div class="block-4 push-4 block-xs-12 push-xs-0">
                                 <img class="img-responsive fade-out-target" src="img/yamiassu_white.png" id="hideme2" />
                             </div>
                         </div>
