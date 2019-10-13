@@ -44,11 +44,14 @@
 @mixin taint_background ($color, $hoverable: false) {
     //variable
     background: get_var($color) !important;
-        
+    
     //Hover
     @if ($hoverable == true) {
+        opacity: 0.9;
+        
         &:hover:not([disabled]) {
-            background: lighten_color($color, 20%) !important;
+            opacity: 1;
+            background: get_var($color) !important;
             box-shadow: 0px 0px 3px 1px get_var(str_replace($color,"_gradient",""));
         }
     

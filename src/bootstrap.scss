@@ -27,6 +27,22 @@ $bootstrap_variables: ();
     @return get_raw($key);
 }
 
+// Force serialization
+@mixin force_var ($key, $value) {
+    $is_map: map_to_gradient(get_raw($key));
+    
+    // Map type
+    :root {
+        @if ($is_map != false) {
+            --#{$key}: #{$is_map};
+        }
+        // Base type
+        @else {
+            --#{$key}: #{$var};
+        }
+    }
+}
+
 // Print to a context all the variables saved
 @mixin print_var {
     :root {

@@ -19813,8 +19813,8 @@ readers do not read off random characters that represent icons */
 }
 
 .star {
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
   position: absolute;
   border-radius: 50%;
 }
@@ -21572,10 +21572,12 @@ a:hover {
 .background-primary-interactive {
   color: var(--light_color) !important;
   background: var(--primary_color) !important;
+  opacity: 0.9;
 }
 
 .background-primary-interactive:hover:not([disabled]) {
-  background: #d050cc !important;
+  opacity: 1;
+  background: var(--primary_color) !important;
   box-shadow: 0px 0px 3px 1px var(--primary_color);
 }
 
@@ -21591,10 +21593,12 @@ a:hover {
 .background-secondary-interactive {
   color: var(--light_color) !important;
   background: var(--secondary_color) !important;
+  opacity: 0.9;
 }
 
 .background-secondary-interactive:hover:not([disabled]) {
-  background: #7592cb !important;
+  opacity: 1;
+  background: var(--secondary_color) !important;
   box-shadow: 0px 0px 3px 1px var(--secondary_color);
 }
 
@@ -21610,10 +21614,12 @@ a:hover {
 .background-success-interactive {
   color: var(--light_color) !important;
   background: var(--success_color) !important;
+  opacity: 0.9;
 }
 
 .background-success-interactive:hover:not([disabled]) {
-  background: #1ac792 !important;
+  opacity: 1;
+  background: var(--success_color) !important;
   box-shadow: 0px 0px 3px 1px var(--success_color);
 }
 
@@ -21629,10 +21635,12 @@ a:hover {
 .background-danger-interactive {
   color: var(--light_color) !important;
   background: var(--danger_color) !important;
+  opacity: 0.9;
 }
 
 .background-danger-interactive:hover:not([disabled]) {
-  background: #e49f9f !important;
+  opacity: 1;
+  background: var(--danger_color) !important;
   box-shadow: 0px 0px 3px 1px var(--danger_color);
 }
 
@@ -21648,10 +21656,12 @@ a:hover {
 .background-warning-interactive {
   color: var(--light_color) !important;
   background: var(--warning_color) !important;
+  opacity: 0.9;
 }
 
 .background-warning-interactive:hover:not([disabled]) {
-  background: #dec49f !important;
+  opacity: 1;
+  background: var(--warning_color) !important;
   box-shadow: 0px 0px 3px 1px var(--warning_color);
 }
 
@@ -21667,10 +21677,12 @@ a:hover {
 .background-light-interactive {
   color: var(--dark_color) !important;
   background: var(--light_color) !important;
+  opacity: 0.9;
 }
 
 .background-light-interactive:hover:not([disabled]) {
-  background: white !important;
+  opacity: 1;
+  background: var(--light_color) !important;
   box-shadow: 0px 0px 3px 1px var(--light_color);
 }
 
@@ -21686,10 +21698,12 @@ a:hover {
 .background-dark-interactive {
   color: var(--light_color) !important;
   background: var(--dark_color) !important;
+  opacity: 0.9;
 }
 
 .background-dark-interactive:hover:not([disabled]) {
-  background: #474747 !important;
+  opacity: 1;
+  background: var(--dark_color) !important;
   box-shadow: 0px 0px 3px 1px var(--dark_color);
 }
 
@@ -21709,10 +21723,12 @@ a:hover {
 .gradient-primary-interactive {
   color: var(--light_color) !important;
   background: var(--primary_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-primary-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, #9a59cb, #d050cc) !important;
+  opacity: 1;
+  background: var(--primary_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--primary_color);
 }
 
@@ -21728,10 +21744,12 @@ a:hover {
 .gradient-secondary-interactive {
   color: var(--light_color) !important;
   background: var(--secondary_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-secondary-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, #b2c2e1, #8da1ca) !important;
+  opacity: 1;
+  background: var(--secondary_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--secondary_color);
 }
 
@@ -21747,10 +21765,12 @@ a:hover {
 .gradient-success-interactive {
   color: var(--light_color) !important;
   background: var(--success_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-success-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, #1ac792, #14b485) !important;
+  opacity: 1;
+  background: var(--success_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--success_color);
 }
 
@@ -21766,10 +21786,12 @@ a:hover {
 .gradient-danger-interactive {
   color: var(--light_color) !important;
   background: var(--danger_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-danger-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, #e49f9f, #cc6d6d) !important;
+  opacity: 1;
+  background: var(--danger_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--danger_color);
 }
 
@@ -21785,10 +21807,12 @@ a:hover {
 .gradient-warning-interactive {
   color: var(--light_color) !important;
   background: var(--warning_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-warning-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, #dec49f, #cdac7a) !important;
+  opacity: 1;
+  background: var(--warning_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--warning_color);
 }
 
@@ -21804,10 +21828,12 @@ a:hover {
 .gradient-light-interactive {
   color: var(--dark_color) !important;
   background: var(--light_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-light-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, white, white) !important;
+  opacity: 1;
+  background: var(--light_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--light_color);
 }
 
@@ -21823,10 +21849,12 @@ a:hover {
 .gradient-dark-interactive {
   color: var(--light_color) !important;
   background: var(--dark_gradient_color) !important;
+  opacity: 0.9;
 }
 
 .gradient-dark-interactive:hover:not([disabled]) {
-  background: linear-gradient(to right, #555555, #524c4c) !important;
+  opacity: 1;
+  background: var(--dark_gradient_color) !important;
   box-shadow: 0px 0px 3px 1px var(--dark_color);
 }
 
