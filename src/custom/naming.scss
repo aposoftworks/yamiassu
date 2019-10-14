@@ -43,6 +43,10 @@ $_right_name:               "right"         !default;
 $_center_name:              "center"        !default;
 $_middle_name:              "middle"        !default;
 
+// Orientation
+$_horizontal_name:          "horizontal"    !default;
+$_vertical_name:            "vertical"      !default;
+
 // Background
 $_background_name:          "background"    !default;
 $_taint_name:               "taint"         !default;
@@ -70,6 +74,8 @@ $_context_name:             "context"       !default;
 $_body_name:                "body"          !default;
 $_target_name:              "target"        !default;
 $_options_name:             "options"       !default;
+$_end_name:                 "end"           !default;
+$_start_name:               "start"         !default;
 
 // Stars
 $_star_name:                "star"          !default;

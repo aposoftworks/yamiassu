@@ -5,6 +5,10 @@
  */
 
 /*
+ * Instantiate colors
+ */
+
+/*
  * Enable conceptual transitions to create simple animations to smooth
  * the use of the framework
  */
@@ -103,7 +107,7 @@ h6 {
 
 button,
 input[type=button] {
-  background: white;
+  background: transparent;
   border: none;
   padding: 0;
   margin: 0;
@@ -119,6 +123,10 @@ input[type=button]:hover {
 a {
   outline: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 input {
@@ -7517,6 +7525,14 @@ readers do not read off random characters that represent icons */
   width: 100%;
 }
 
+.shelf-vertical {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+
 /*
  * Offset data and it's responsivity
  */
@@ -8921,6 +8937,18 @@ readers do not read off random characters that represent icons */
   .push-xs-11 {
     margin-left: 91.6666666667%;
   }
+}
+
+.shelf-start {
+  justify-content: start;
+}
+
+.shelf-middle {
+  justify-content: center;
+}
+
+.shelf-end {
+  justify-content: end;
 }
 
 .margin-0 {

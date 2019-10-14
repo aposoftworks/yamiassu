@@ -1,7 +1,17 @@
+// Normal (horizontal row)
 .#{$_row_name} {
     display: flex;
     position: relative;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
+}
+
+// Vertical row
+.#{$_row_name}-#{$_vertical_name} {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
 }

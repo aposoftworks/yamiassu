@@ -21,7 +21,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 button,input[type=button] {
-    background: white;
+    background: transparent;
     border: none;
     padding: 0;
     margin: 0;
@@ -36,6 +36,10 @@ button,input[type=button] {
 a {
     outline: none;
     -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 input {

@@ -48,15 +48,18 @@ $bootstrap_variables: ();
     :root {
         // Print the variables
         @each $key, $var in $bootstrap_variables {
-            $is_map: map_to_gradient(get_raw($key));
-            
-            // Map type
-            @if ($is_map != false) {
-                --#{$key}: #{$is_map};
-            }
-            // Base type
-            @else {
-                --#{$key}: #{$var};
+            // Check if it is a color and we require to instanciate it
+            @if ($__use_colors == true or not(str_index($key, "color"))) {
+                $is_map: map_to_gradient(get_raw($key));
+                
+                // Map type
+                @if ($is_map != false) {
+                    --#{$key}: #{$is_map};
+                }
+                // Base type
+                @else {
+                    --#{$key}: #{$var};
+                }
             }
         }
     }

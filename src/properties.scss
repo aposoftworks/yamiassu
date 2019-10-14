@@ -2,14 +2,20 @@
  * Let appropriate borders be created around certain elements.
  */
 
-$__use_rounded:     true;
+$__use_rounded:     true !default;
+
+/*
+ * Instantiate colors
+ */
+
+ $__use_colors:     true !default;
 
 /*
  * Enable conceptual transitions to create simple animations to smooth
  * the use of the framework
  */
 
-$__use_transitions: true;
+$__use_transitions: true !default;
 
 /*
  * Use the entire word or just its abbreviation.
@@ -17,14 +23,14 @@ $__use_transitions: true;
  * PS: This will be ignored if you use a custom naming
  */
 
-$__use_abbreviation: true;
+$__use_abbreviation: true !default;
 
 /*
  * Have imported some default images that may help you quickstart your
  * project for later change
  */
 
-$__use_placeholders: true;
+$__use_placeholders: true !default;
 
 /*
  * You can use a custom naming convetion leading to another file.
@@ -34,12 +40,12 @@ $__use_placeholders: true;
  * PS: Leave empty to use the default naming
  */
 
-$__custom_naming: "custom/naming.scss";
+$__custom_naming: "custom/naming.scss" !default;
 
 /*
  * You can preset some default fonts for starters, if not set.
  * Those values will be set by us.
  */
 
-$__default_font: "Oxygen";
-$__titling_font: "Oxygen";
+$__default_font: "Oxygen" !default;
+$__titling_font: "Oxygen" !default;

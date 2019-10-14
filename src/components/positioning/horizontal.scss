@@ -1,0 +1,35 @@
+// Shelf
+.#{$_row_name} {
+    // Start
+    &-#{$_start_name} {
+        justify-content: start;
+    }
+
+    // Middle
+    &-#{$_middle_name} {
+        justify-content: center;
+    }
+
+    // End
+    &-#{$_end_name} {
+        justify-content: end;
+    }
+}
+
+// Item
+// .#{$_column_name} {
+//     // Start
+//     &-#{$_start_name} {
+//         justify-content: start;
+//     }
+
+//     // Middle
+//     &-#{$_middle_name} {
+//         justify-content: center;
+//     }
+
+//     // End
+//     &-#{$_end_name} {
+//         justify-content: end;
+//     }
+// }
