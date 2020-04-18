@@ -18,9 +18,18 @@
     // Card header
     .#{$_card_name}-#{$_header_name} {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+		align-items: center;
+		padding: 0;
+		padding-left: get_var("__padding_size");
+		justify-content: space-between;
+		background-color: transparent;
+		border-bottom: transparent;
+	}
+	
+	// Options / close
+	.#{$_card_name}-#{$_options_name} {
+		font-size: 12px;
+	}
 
     // Card body
     .#{$_card_name}-#{$_body_name} {

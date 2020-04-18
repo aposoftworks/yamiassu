@@ -1,6 +1,6 @@
 {
 	"name": "@aposoftworks/yamiassu",
-	"version": "0.3.1",
+	"version": "0.3.3",
 	"description": "The default css styling framework used by Apo Softworks",
 	"main": "index.js",
 	"scripts": {
@@ -28,7 +28,6 @@
 	},
 	"homepage": "https://github.com/aposoftworks/yamiassu#readme",
 	"devDependencies": {
-		"@fortawesome/fontawesome-free": "^5.11.2",
 		"cross-env": "^5.2.1",
 		"laravel-mix": "^4.1.2",
 		"resolve-url-loader": "^3.1.0",

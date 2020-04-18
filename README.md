@@ -1,6 +1,6 @@
 # Yamiassu
 
-Welcome to APO Softworks official CSS framework. We openly support customization and encourage you to do so in your own terms. We created some conventions to help keep things organized. But you are free to override them.
+Welcome to APO Softworks official CSS framework. We openly support customization and encourage you to do so in your own terms. We created some conventions to help keep things organized. But you are free to override them. We separate everything in modules, so they can be easily re-used and combined to create on the run components. Attention: this framework does not support grid and such, we recommend bootstrap for that.
 
 ## Installation
 

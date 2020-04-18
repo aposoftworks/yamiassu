@@ -1,14 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- General Info -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Iframe Meta tags -->
+
+		<meta charset="utf-8" />
+		<title>Yamiassu - a styling CSS framework for all your needs</title>
         <link rel="shortcut icon" href="img/yamiassu.png" />
-        <title>Yamiassu - styling</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#93278f" />
+		<meta name="keywords" content="css,framework,module,variable,dark">
+		<meta name="author" content="Rafael Correa">
+		<meta
+		  name="description"
+		  content="Welcome to Yamiassu, a framework oriented to variables developed by APO Softworks to enhance content creation and edition at runtime."
+		/>
+	
+		<!-- Facebook Meta tags -->
+	  
+		<meta property="og:title" content="Yamiassu - a styling CSS framework for all your needs" />
+		<meta property="og:image" content="img/yamiassu.png" />
+		<meta property="og:site_name" content="Reserve+" />
+		<meta property="og:url" content="https://yamiassu.aposoftworks.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description"
+		  content="Welcome to Yamiassu, a framework oriented to variables developed by APO Softworks to enhance content creation and edition at runtime." />
+		<meta property="fb:page_id" content="397191520442003" />
+	
+		<!-- Twitter Meta tags -->
+	
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:url" content="https://yamiassu.aposoftworks.com">
+		<meta name="twitter:title" content="Yamiassu - a styling CSS framework for all your needs">
+		<meta name="twitter:description" content="Welcome to Yamiassu, a framework oriented to variables developed by APO Softworks to enhance content creation and edition at runtime.">
+		<meta name="twitter:image" content="img/yamiassu.png">
+	 
+
+		<!-- External packages -->
+		<link rel="stylesheet" type="text/css" href="external/bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="external/fontawesome/css/all.min.css" />
+		
+		<!-- Fonts -->
+		<style type="text/css">
+			@font-face {
+				font-family: "Oxygen";
+				src: url(external/oxygen/Oxygen-Regular.ttf) format("truetype");
+			}
+		</style>
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="index.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
     </head>
 
     <body>
@@ -17,254 +57,147 @@
             <div class="background-dark" style="overflow: hidden">
                 <canvas class="starfield" data-starfield="300"></canvas>
                 <div class="background" style="background-image:url(img/background_01.svg);min-height: 100vh;">
-                    <div class="block-xl-2 push-xl-5 block-lg-4 push-lg-4 block-md-6 push-md-3 block-sm-10 push-sm-1 block-xs-10 push-xs-1">
-                        <div class="margin-top-6 block">
-                            <img src="img/yamiassu.png" class="img-responsive">
+                    <div class="container d-flex align-items-center flex-column">
+                        <div class="mt-5 col-4">
+                            <img src="img/yamiassu.png" class="img-fluid">
                         </div>
-                        <h1 class="text-center margin-0">YAMIASSU</h1>
+                        <h1 class="text-center font-weight-bold m-0">YAMIASSU</h1>
                     </div>
                 </div>
             </div>
 
-            <div class="background-dark">
-                <div class="stand">
+            <div class="background-dark pb-5 pt-5">
+                <div class="container">
                     <!-- Description -->
-                    <div class="block-8 push-2">
+                    <div class="col-8 offset-2 pb-4">
                         <h3 class="text-center">Welcome to Yamiassu, a framework oriented to variables developed by APO Softworks to enhance content creation and edition at runtime.</h3>
                     </div>
     
-                    <p class="padding-xs-2">We welcome you to our framework.
+                    <p>We welcome you to our framework.
                         Here we develop a better way to build your applications in a record time and make it fully customizable to any need you may have.
                         Yamiassu comes from the brazilian indigenous language Tupi-Guarani, it means the great(açu/assu) night(yami). Hence the theme of the style we created.
                         You will find the conventions used by our team to make the best out of everything provided.</p>
     
                     <h2>About our philosophy</h2>
                     
-                    <p class="padding-xs-2">We highly believe that less is more and that you shouldn't need to steep your eyes when using an application during the night. So sit back and enjoy the night sky.</p>
+                    <p>We highly believe that less is more and that you shouldn't need to steep your eyes when using an application during the dark. So sit back and enjoy the night sky. We separate everything in modules, so they can be easily re-used and combined to create on the run components.</p>
 
                     <h2>Our color system</h2>
 
-                    <p class="padding-xs-2">We modularly integrated the colors that are in the framework with the content, so they are not actually within each of the components.
+                    <p>We modularly integrated the colors that are in the framework with the content, so they are not actually within each of the components.
                         So they are easy to toggle and do not exponentially scale the size of the css file. There are two types of pre-configured colors that you can use: background and line.
                         They both can be toggled interactive, that would enable you to place them on buttons or anything else that should interact with user events.
                     </p>
 
-                    <!-- Grid -->
-
-                    <h2>Grid system</h2>
-
-                    <p class="padding-xs-2">Our grid system is based on a 12-column (or called blocks by us) grid. Totally changeable in the scss configuration.
-                        Sadly, due to css limitations, we cannot do it runtime. But complains aside, we let you customize your own responsivity rules.</p>
-
-                    <h3>Blocks</h3>
-
-                    <p class="padding-xs-2">Those are the building blocks (pun not intended) of every application.</p>
-                    
-                    <div class="shelf">
-                        <div class="shelf margin-bottom-1">
-                            <div class="line-primary flat block">.block-12</div>
-                        </div>
-                        
-                        <div class="shelf margin-bottom-1">
-                            <div class="line-primary flat block-6">.block-6</div>
-                            <div class="line-primary flat block-6">.block-6</div>
-                        </div>
-                        
-                        <div class="shelf margin-bottom-1">
-                            <div class="line-primary flat block-3">.block-3</div>
-                            <div class="line-primary flat block-2">.block-2</div>
-                        </div>
-                    </div>
-                    
-                    <h3>Pushs</h3>
-                    
-                    <p class="padding-xs-2">When you need spacing between your blocks, you may use pushs to do that.
-                        They Fall under the same rules as blocks, 12 columns.</p>
-                    
-                    <div class="shelf">
-                        <div class="shelf margin-bottom-1">
-                            <div class="line-primary flat push-6 block-6">.push-6 .block-6</div>
-                        </div>
-                        
-                        <div class="shelf margin-bottom-1">
-                            <div class="line-primary flat block-4">.block-4</div>
-                            <div class="line-primary flat block-4 push-4">.block-4 .push-4</div>
-                        </div>
-                    </div>
-                    
-                    <h3>Shelves</h3>
-                    
-                    <p class="padding-xs-2">A shelf is a row that won't let your children mix with other shelves. They are absolute on in it's line.</p>
-                    
-                    <div class="shelf">
-                        <div class="shelf margin-bottom-1">
-                            <div class="line-primary flat block-3">.block-3</div>
-                        </div>
-                        
-                        <div class="shelf">
-                            <div class="line-primary flat block-3">.block-3</div>
-                        </div>
-                    </div>
-
-                    <p class="padding-xs-2">You can also use a vertical shelf to align your itens accordling</p>
-                    
-                    <div class="shelf">
-                        <div class="shelf-vertical">
-                            <div class="line-primary flat block-3">.block-3</div>
-                            <div class="line-primary flat block-3">.block-3</div>
-                            <div class="line-primary flat block-3">.block-3</div>
-                        </div>
-                    </div>
-
-                    <h3>Stands</h3>
-                    
-                    <p class="padding-xs-2">A stand is a display stand, intended to make sure the content is always displayed on the middle of the screen.</p>
-                    
-                </div>
-
-                <div class="shelf margin-bottom-1">
-                    <div class="block line-primary flat">A block without a stand</div>
-                </div>
-                
-                <div class="stand">
-                    <div class="shelf">
-                        <div class="block line-primary flat">A block with a stand</div>
-                    </div>
-
-                    <!-- Responsive -->
-                    <h2>Responsive Grid System</h2>
-
-                    <p class="padding-xs-2">We follow the idea that the grid size should scale accordlying, and snap it to fill for full size after a threshold is fullfield.</p>
-
-                    <!-- Positioning -->
-                    <h2>Positioning</h2>
-
-                    <h3>Shelf start</h3>
-
-                    <div class="shelf shelf-start">
-                        <div class="block-2 line-primary flat">.block-2</div>
-                    </div>
-
-                    <h3>Shelf middle</h3>
-
-                    <div class="shelf shelf-middle">
-                        <div class="block-2 line-primary flat">.block-2</div>
-                    </div>
-
-                    <h3>Shelf end</h3>
-
-                    <div class="shelf shelf-end">
-                        <div class="block-2 line-primary flat">.block-2</div>
-                    </div>
-
-                    <!-- Buttons -->
+					<!-- Buttons -->
+					
                     <h2>Buttons</h2>
 
                     <h3>Basic buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-2 block-xs-12 button background-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 button background-success-interactive">Success Button</button>
-                        <button class="block-md-2 block-xs-12 button background-warning-interactive">Warning Button</button>
-                        <button class="block-md-2 block-xs-12 button background-danger-interactive">Danger Button</button>
-                        <button class="block-md-2 block-xs-12 button background-light-interactive">Light Button</button>
-                        <button class="block-md-2 block-xs-12 button background-dark-interactive">Dark Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 button background-primary-interactive">Primary Button</button>
+                        <button class="col-md-2 col-xs-12 button background-secondary-interactive">Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 button background-success-interactive">Success Button</button>
+                        <button class="col-md-2 col-xs-12 button background-warning-interactive">Warning Button</button>
+                        <button class="col-md-2 col-xs-12 button background-danger-interactive">Danger Button</button>
+                        <button class="col-md-2 col-xs-12 button background-light-interactive">Light Button</button>
+                        <button class="col-md-2 col-xs-12 button background-dark-interactive">Dark Button</button>
                     </div> 
                     
                     <h3>Gradient buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 button gradient-primary-interactive">Primary Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-success-interactive">Success Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-warning-interactive">Warning Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-danger-interactive">Danger Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-light-interactive">Light Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-dark-interactive">Dark Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 button gradient-primary-interactive">Primary Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-success-interactive">Success Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-warning-interactive">Warning Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-danger-interactive">Danger Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-light-interactive">Light Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-dark-interactive">Dark Button</button>
                     </div>
                     
                     <h3>Image buttons</h3>
 
-                    <p class="padding-xs-2">Sadly, due to CSS limitations, if you wish to use an image as background, wrap everything inside an element instead of leaving them as a child of the button.</p>
+                    <p class="p-xs-2">Sadly, due to CSS limitations, if you wish to use an image as background, wrap everything inside an element instead of leaving them as a child of the button.</p>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 button placeholder img-primary-interactive"><div>Primary Button</div></button>
-                        <button class="block-md-2 block-xs-12 button placeholder img-secondary-interactive"><div>Secondary Button</div></button>
-                        <button class="block-md-2 block-xs-12 button placeholder img-success-interactive"><div>Success Button</div></button>
-                        <button class="block-md-2 block-xs-12 button placeholder img-warning-interactive"><div>Warning Button</div></button>
-                        <button class="block-md-2 block-xs-12 button placeholder img-danger-interactive"><div>Danger Button</div></button>
-                        <button class="block-md-2 block-xs-12 button placeholder img-light-interactive"><div>Light Button</div></button>
-                        <button class="block-md-2 block-xs-12 button placeholder img-dark-interactive"><div>Dark Button</div></button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 button placeholder img-primary-interactive"><div>Primary Button</div></button>
+                        <button class="col-md-2 col-xs-12 button placeholder img-secondary-interactive"><div>Secondary Button</div></button>
+                        <button class="col-md-2 col-xs-12 button placeholder img-success-interactive"><div>Success Button</div></button>
+                        <button class="col-md-2 col-xs-12 button placeholder img-warning-interactive"><div>Warning Button</div></button>
+                        <button class="col-md-2 col-xs-12 button placeholder img-danger-interactive"><div>Danger Button</div></button>
+                        <button class="col-md-2 col-xs-12 button placeholder img-light-interactive"><div>Light Button</div></button>
+                        <button class="col-md-2 col-xs-12 button placeholder img-dark-interactive"><div>Dark Button</div></button>
                     </div>
                     
                     <h3>Line buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 button line-primary-interactive">Primary Button</button>
-                        <button class="block-md-2 block-xs-12 button line-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 button line-success-interactive">Success Button</button>
-                        <button class="block-md-2 block-xs-12 button line-warning-interactive">Warning Button</button>
-                        <button class="block-md-2 block-xs-12 button line-danger-interactive">Danger Button</button>
-                        <button class="block-md-2 block-xs-12 button line-light-interactive">Light Button</button>
-                        <button class="block-md-2 block-xs-12 button line-dark-interactive">Dark Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 button line-primary-interactive">Primary Button</button>
+                        <button class="col-md-2 col-xs-12 button line-secondary-interactive">Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 button line-success-interactive">Success Button</button>
+                        <button class="col-md-2 col-xs-12 button line-warning-interactive">Warning Button</button>
+                        <button class="col-md-2 col-xs-12 button line-danger-interactive">Danger Button</button>
+                        <button class="col-md-2 col-xs-12 button line-light-interactive">Light Button</button>
+                        <button class="col-md-2 col-xs-12 button line-dark-interactive">Dark Button</button>
                     </div>
                     
                     <h3>Flat buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 flat button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-2 block-xs-12 flat button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 flat button img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-2 block-xs-12 flat button line-warning-interactive">Warning Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 flat button background-primary-interactive">Primary Button</button>
+                        <button class="col-md-2 col-xs-12 flat button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 flat button img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="col-md-2 col-xs-12 flat button line-warning-interactive">Warning Button</button>
                     </div>
                     
                     <h3>Round buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 round button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-2 block-xs-12 round button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 round button img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-2 block-xs-12 round button line-warning-interactive">Warning Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 round button background-primary-interactive">Primary Button</button>
+                        <button class="col-md-2 col-xs-12 round button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 round button img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="col-md-2 col-xs-12 round button line-warning-interactive">Warning Button</button>
                     </div>
                     
                     <h3>Group buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 group button background-primary-interactive">Primary Button</button>
-                        <button class="block-md-2 block-xs-12 group button gradient-secondary-interactive">Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 group button img-success-interactive placeholder"><div>Success Button</div></button>
-                        <button class="block-md-2 block-xs-12 group button line-warning-interactive">Warning Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 group button background-primary-interactive">Primary Button</button>
+                        <button class="col-md-2 col-xs-12 group button gradient-secondary-interactive">Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 group button img-success-interactive placeholder"><div>Success Button</div></button>
+                        <button class="col-md-2 col-xs-12 group button line-warning-interactive">Warning Button</button>
                     </div>
                     
                     <h3>Disabled buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 button background-primary-interactive" disabled>Primary Button</button>
-                        <button class="block-md-2 block-xs-12 button gradient-secondary-interactive" disabled>Secondary Button</button>
-                        <button class="block-md-2 block-xs-12 button img-success-interactive placeholder" disabled><div>Success Button</div></button>
-                        <button class="block-md-2 block-xs-12 button line-warning-interactive" disabled>Warning Button</button>
+                    <div class="row p-xs-2">
+                        <button class="col-md-2 col-xs-12 button background-primary-interactive" disabled>Primary Button</button>
+                        <button class="col-md-2 col-xs-12 button gradient-secondary-interactive" disabled>Secondary Button</button>
+                        <button class="col-md-2 col-xs-12 button img-success-interactive placeholder" disabled><div>Success Button</div></button>
+                        <button class="col-md-2 col-xs-12 button line-warning-interactive" disabled>Warning Button</button>
                     </div>
                     
                     <h3>Icon buttons</h3>
                     
-                    <div class="shelf padding-xs-2">
-                        <button class="block-md-2 block-xs-12 button icon   background-primary-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-2 block-xs-12 button icon-2 gradient-secondary-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-2 block-xs-12 button icon-3 img-success-interactive placeholder"><i class="fa fa-info"></i></button>
-                        <button class="block-md-2 block-xs-12 button icon-4 line-warning-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-2 block-xs-12 button icon-5 line-danger-interactive"><i class="fa fa-info"></i></button>
-                        <button class="block-md-2 block-xs-12 button icon-6 line-light-interactive"><i class="fa fa-info"></i></button>
+                    <div class="row p-xs-2">
+                        <button class="button icon   background-primary-interactive"><i class="fa fa-info"></i></button>
+                        <button class="button icon-2 gradient-secondary-interactive"><i class="fa fa-info"></i></button>
+                        <button class="button icon-3 img-success-interactive placeholder"><i class="fa fa-info"></i></button>
+                        <button class="button icon-4 line-warning-interactive"><i class="fa fa-info"></i></button>
+                        <button class="button icon-5 line-danger-interactive"><i class="fa fa-info"></i></button>
+                        <button class="button icon-6 line-light-interactive"><i class="fa fa-info"></i></button>
                     </div>
 
                     <h3>Sized buttons</h3>
 
-                    <div class="shelf">
-                        <div class="padding-xs-2">
-                            <button class="block-md-2 block-xs-12 button-1 background-primary-interactive">Primary Button</button>
-                            <button class="block-md-2 block-xs-12 button-2 gradient-secondary-interactive">Secondary Button</button>
-                            <button class="block-md-2 block-xs-12 button-3 img-success-interactive placeholder"><div>Success Button</div></button>
-                            <button class="block-md-2 block-xs-12 button-4 line-warning-interactive">Warning Button</button>
+                    <div class="row">
+                        <div class="p-xs-2">
+                            <button class="col col-xs-12 button-1 background-primary-interactive">Primary Button</button>
+                            <button class="col col-xs-12 button-2 gradient-secondary-interactive">Secondary Button</button>
+                            <button class="col col-xs-12 button-3 img-success-interactive placeholder"><div>Success Button</div></button>
+                            <button class="col col-xs-12 button-4 line-warning-interactive">Warning Button</button>
                         </div>
                     </div>
 
@@ -273,39 +206,20 @@
 
                     <h3>Text colors</h3>
 
-                    <div class="shelf padding-xs-2">
-                        <div class="block text-primary">Primary text color</div>
-                        <div class="block text-secondary">Secondary text color</div>
-                        <div class="block text-success">Success text color</div>
-                        <div class="block text-warning">Warning text color</div>
-                        <div class="block text-danger">Danger text color</div>
-                        <div class="block text-light">Light text color</div>
-                    </div>
-
-                    <h3>Text alignment</h3>
-
-                    <div class="shelf padding-xs-2">
-                        <div class="block text-left">Text aligned to left</div>
-                        <div class="block text-center">Text aligned to center</div>
-                        <div class="block text-right">Text aligned to right</div>
+                    <div class="p-xs-2">
+                        <div class="col text-primary">Primary text color</div>
+                        <div class="col text-secondary">Secondary text color</div>
+                        <div class="col text-success">Success text color</div>
+                        <div class="col text-warning">Warning text color</div>
+                        <div class="col text-danger">Danger text color</div>
+                        <div class="col text-light">Light text color</div>
                     </div>
 
                     <h3>Text title and subtitle</h3>
 
-                    <div class="shelf padding-xs-2">
-                        <h4 class="title">Title</h4>
-                        <h4 class="subtitle">Sub-Title</h4>
-                    </div>
-
-                    <h3>Headers</h3>
-
-                    <div class="shelf padding-xs-2">
-                        <h1>Header 1</h1>
-                        <h2>Header 2</h2>
-                        <h3>Header 3</h3>
-                        <h4>Header 4</h4>
-                        <h5>Header 5</h5>
-                        <h6>Header 6</h6>
+                    <div class="row p-xs-2">
+                        <h2 class="title">Title</h2>
+                        <h2 class="subtitle">Sub-Title</h2>
                     </div>
 
                     <!-- Form -->
@@ -314,14 +228,14 @@
 
                     <h3>Input</h3>
 
-                    <div class="shelf">
-                        <div class="block-6 block-sm-12 block-xs-12 padding-4">
+                    <div class="row">
+                        <div class="col-6 p-4">
                             <div class="form-group">
                                 <label>input label</label>
                                 <input class="form-input" />
                             </div>
                         </div>
-                        <div class="block-6 block-sm-12 block-xs-12 padding-4">
+                        <div class="col-6 p-4">
                             <div class="form-group">
                                 <label>disabled input label</label>
                                 <input class="form-input" disabled />
@@ -331,8 +245,8 @@
 
                     <h3>Select</h3>
 
-                    <div class="shelf">
-                        <div class="block-6 block-sm-12 block-xs-12 padding-4">
+                    <div class="row">
+                        <div class="col-6 p-4">
                             <div class="form-group">
                                 <label>select label</label>
                                 <select class="form-input">
@@ -341,7 +255,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="block-6 block-sm-12 block-xs-12 padding-4">
+                        <div class="col-6 p-4">
                             <div class="form-group">
                                 <label>disabled select label</label>
                                 <select disabled class="form-input">
@@ -354,14 +268,14 @@
 
                     <h3>Checkbox</h3>
 
-                    <div class="shelf padding-xs-2">
-                        <div class="block-6 block-sm-12 block-xs-12">
+                    <div class="row p-xs-2">
+                        <div class="col-6">
                             <div class="form-checkbox">
                                 <input for="checkbox1" id="checkbox1" type="checkbox" />
                                 <label for="checkbox1">checkbox label</label>
                             </div>
                         </div>
-                        <div class="block-6 block-sm-12 block-xs-12">
+                        <div class="col-6">
                             <div class="form-checkbox">
                                 <input for="checkbox2" id="checkbox2" type="checkbox" disabled />
                                 <label for="checkbox2">disabled checkbox label</label>
@@ -371,14 +285,14 @@
 
                     <h3>Textarea</h3>
 
-                    <div class="shelf">
-                        <div class="block-6 block-sm-12 block-xs-12 padding-4">
+                    <div class="row">
+                        <div class="col-6 p-4">
                             <div class="form-group">
                                 <label>input label</label>
                                 <textarea class="form-input"></textarea>
                             </div>
                         </div>
-                        <div class="block-6 block-sm-12 block-xs-12 padding-4">
+                        <div class="col-6 p-4">
                             <div class="form-group">
                                 <label>disabled input label</label>
                                 <textarea class="form-input" disabled></textarea>
@@ -390,18 +304,18 @@
 
                     <h2>Animations</h2>
 
-                    <div class="shelf">
-                        <div class="block-6">
-                            <div class="block-4 push-4">
-                                <img class="img-responsive float" src="img/yamiassu_white.png" />
-                                <div class="block text-center">float</div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="col-4 offset-4">
+                                <img class="img-fluid float" src="img/yamiassu_white.png" />
+                                <div class="col mt-5 text-center">float</div>
                             </div>
                         </div>
                         
-                        <div class="block-6">
-                            <div class="block-4 push-4">
-                                <img class="img-responsive twinkle" src="img/yamiassu_white.png" />
-                                <div class="block text-center">twinkle</div>
+                        <div class="col-6">
+                            <div class="col-4 offset-4">
+                                <img class="img-fluid twinkle" src="img/yamiassu_white.png" />
+                                <div class="col mt-5 text-center">twinkle</div>
                             </div>
                         </div>
                     </div>
@@ -410,13 +324,13 @@
 
                     <h2>Cards</h2>
 
-                    <div class="shelf padding-xs-2">
+                    <div class="row p-xs-2">
                         <div class="card">
                             <div class="card-header">
                                 Card title
 
                                 <div class="card-options">
-                                    <button class="button icon background-primary-interactive"><i class="fa text-light fa-info"></i></button>
+                                    <button class="button icon background-primary-interactive"><i class="fa text-light fa-times"></i></button>
                                 </div>
                             </div>
                             
@@ -436,9 +350,9 @@
                     <h2>Notifications</h2>
 
                     <h3>Inline</h3>
-                    <p class="padding-xs-2">Inline notifications are notifications that highlight parts of the text and blend with them.</p>
+                    <p class="p-xs-2">Inline notifications are notifications that highlight parts of the text and blend with them.</p>
 
-                    <div class="shelf">
+                    <div class="row">
                         <div class="notification-inline background-primary">
                             Primary inline notification
                         </div>
@@ -457,13 +371,13 @@
 
                     <h3>Alert</h3>
 
-                    <p class="padding-xs-2">Alert notifications are the ones that appear in the screen as a modal and block the use of the rest of the content while opened.
+                    <p class="p-xs-2">Alert notifications are the ones that appear in the screen as a modal and col the use of the rest of the content while opened.
                         <a href="#notificationalertexample">Click here</a> to toggle a full example of the alert notification.
                         Attention: don't confuse alert notifications with modals, they are for different purposes and ends.
                     </p>
 
                     <div class="fullscreen img-dark fade-in-target" style="opacity:0;pointer-events: none;" id="notificationalertexample">
-                            <div class="notification-alert background-light margin-top-8">
+                            <div class="notification-alert background-light m-top-8">
                                 <div class="title">
                                     Notification title
                                 </div>
@@ -471,13 +385,13 @@
                                 Notification body
                                 
                                 <div class="bottom">
-                                    <a href="#close" class="block-md-1 block-xs-12 button background-primary-interactive">Accept</a>
-                                    <a href="#close" class="block-md-1 block-xs-12 button background-secondary-interactive">Cancel</a>
+                                    <a href="#close" class="button background-primary-interactive">Accept</a>
+                                    <a href="#close" class="button background-secondary-interactive">Cancel</a>
                                 </div>
                             </div>
                     </div>
 
-                    <div class="shelf">
+                    <div class="row">
                         <div class="notification-alert background-light">
                             <div class="title">
                                 Notification title
@@ -486,81 +400,24 @@
                             Notification body
                             
                             <div class="bottom">
-                                <button class="block-md-1 block-xs-12 button background-primary-interactive">Accept</button>
-                                <button class="block-md-1 block-xs-12 button background-secondary-interactive">Cancel</button>
+                                <button class="button background-primary-interactive">Accept</button>
+                                <button class="button background-secondary-interactive">Cancel</button>
                             </div>
                         </div>
                     </div>
 
                     <h3>Pop-up</h3>
 
-                    <p class="padding-xs-2">Pop-up notifications are little boxes that appear on the edge of the screen to display temporarily something that interests you.</p>
+                    <p class="p-xs-2">Pop-up notifications are little boxes that appear on the edge of the screen to display temporarily something that interests you.</p>
 
-                    <div class="shelf">
+                    <div class="row">
                             <div class="notification-popup background-light">
                                 <div class="options">
-                                    <button class="button icon background-primary-interactive">X</button>
+                                    <button class="button icon background-primary-interactive"><i class="fa text-light fa-times"></i></button>
                                 </div>
 
                                 Notification body
                             </div>
-                    </div>
-
-                    <!-- Display/Hide -->
-
-                    <h2>Visibility</h2>
-                    
-                    <p class="padding-xs-2">You should inspect the html elements here, not everything will be visible at the same time.
-                        Since the objective here is to show how you can hide and display to users on certain occasions.
-                        You can also use CSS targetting to toggle conditional visibility.</p>
-
-                    <h3>Hide</h3>
-
-                    <div class="shelf">
-                        <div class="notification-inline background-primary hide-target" id="hideme">
-                            Targetable object, write #hideme on the url to hide
-                        </div>
-                        
-                        <div class="notification-inline background-primary hide-xs">
-                            Will hide on extra small size
-                        </div>
-                        
-                        <div class="notification-inline background-primary hide-xl">
-                            Will hide on extra large size
-                        </div>
-                    </div>
-
-                    <h3>Display</h3>
-
-                    <div class="shelf">
-                        <div class="notification-inline background-primary display-target" id="displayme" style="display:none">
-                            Targetable object, write #displayme on the url to display
-                        </div>
-                        
-                        <div class="notification-inline background-primary display-xs" style="display:none">
-                            Will display on extra small size
-                        </div>
-                        
-                        <div class="notification-inline background-primary display-xl" style="display:none">
-                            Will display on extra large size
-                        </div>
-                    </div>
-
-                    <!-- Fade -->
-
-                    <h3>Fade</h3>
-
-                    <div class="shelf">
-                        <div class="block-6">
-                            <a href="#displayme2"   class="block button background-primary-interactive">Fade in</a>
-                            <a href="#hideme2"      class="block button background-primary-interactive">Fade out</a>
-                            <a href="#close"        class="block button background-primary-interactive">Clear fade</a>
-                        </div>
-                        <div class="block-6">
-                            <div class="block-4 push-4 block-xs-12 push-xs-0">
-                                <img class="img-responsive fade-out-target" src="img/yamiassu_white.png" id="hideme2" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
